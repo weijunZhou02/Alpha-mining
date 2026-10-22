@@ -1,0 +1,3 @@
+id,ic,ic_t,ls_bp,verdict,what
+RANDOM,0.0016,0.47,6.1,no,Pure noise: must score about zero
+ORACLE,1.0,inf,1082.2,strong,Peeks at tomorrow's return: must score about one

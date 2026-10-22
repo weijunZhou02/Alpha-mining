@@ -1,0 +1,361 @@
+method,month,alpha,weight,family
+IC-weighted · core,2024-01,A101_055,0.0777,Price-volume divergence
+IC-weighted · core,2024-01,CRYPTO_HMRW_PREMIUM,0.0602,Perp premium
+IC-weighted · core,2024-01,A101_067,0.035,Fade recent pushes
+IC-weighted · core,2024-01,GTJA_095,0.0895,Size and liquidity
+IC-weighted · core,2024-01,Q158_WVMA5,0.0848,Uneven volume
+IC-weighted · core,2024-01,GTJA_102,0.094,Volume cooling
+IC-weighted · core,2024-01,A101_007,0.0559,Volume cooling
+IC-weighted · core,2024-01,Q158_VMA60,0.1372,Volume cooling
+IC-weighted · core,2024-01,GTJA_108,0.0183,Fade recent pushes
+IC-weighted · core,2024-01,GTJA_131,0.0279,Fade recent pushes
+IC-weighted · core,2024-01,A101_001,0.0675,Fade recent pushes
+IC-weighted · core,2024-01,Q158_IMAX5,0.0651,Fade recent pushes
+IC-weighted · core,2024-01,A101_073,0.0535,Big recent movers
+IC-weighted · core,2024-01,A101_059,0.0126,Sector price-volume link
+IC-weighted · core,2024-01,Q158_WVMA20,0.1208,Uneven volume
+IC-weighted · core,2024-02,A101_055,0.0773,Price-volume divergence
+IC-weighted · core,2024-02,CRYPTO_HMRW_PREMIUM,0.0587,Perp premium
+IC-weighted · core,2024-02,A101_067,0.0314,Fade recent pushes
+IC-weighted · core,2024-02,GTJA_095,0.0873,Size and liquidity
+IC-weighted · core,2024-02,Q158_WVMA5,0.0896,Uneven volume
+IC-weighted · core,2024-02,GTJA_102,0.1,Volume cooling
+IC-weighted · core,2024-02,A101_007,0.0649,Volume cooling
+IC-weighted · core,2024-02,Q158_VMA60,0.1425,Volume cooling
+IC-weighted · core,2024-02,GTJA_108,0.007,Fade recent pushes
+IC-weighted · core,2024-02,GTJA_131,0.0184,Fade recent pushes
+IC-weighted · core,2024-02,A101_001,0.0715,Fade recent pushes
+IC-weighted · core,2024-02,Q158_IMAX5,0.0673,Fade recent pushes
+IC-weighted · core,2024-02,A101_073,0.0495,Big recent movers
+IC-weighted · core,2024-02,A101_059,0.0104,Sector price-volume link
+IC-weighted · core,2024-02,Q158_WVMA20,0.1244,Uneven volume
+IC-weighted · core,2024-03,A101_055,0.075,Price-volume divergence
+IC-weighted · core,2024-03,CRYPTO_HMRW_PREMIUM,0.0524,Perp premium
+IC-weighted · core,2024-03,A101_067,0.0388,Fade recent pushes
+IC-weighted · core,2024-03,GTJA_095,0.0886,Size and liquidity
+IC-weighted · core,2024-03,Q158_WVMA5,0.0947,Uneven volume
+IC-weighted · core,2024-03,GTJA_102,0.0953,Volume cooling
+IC-weighted · core,2024-03,A101_007,0.0631,Volume cooling
+IC-weighted · core,2024-03,Q158_VMA60,0.1326,Volume cooling
+IC-weighted · core,2024-03,GTJA_108,0.0138,Fade recent pushes
+IC-weighted · core,2024-03,GTJA_131,0.0267,Fade recent pushes
+IC-weighted · core,2024-03,A101_001,0.0732,Fade recent pushes
+IC-weighted · core,2024-03,Q158_IMAX5,0.0673,Fade recent pushes
+IC-weighted · core,2024-03,A101_073,0.0408,Big recent movers
+IC-weighted · core,2024-03,A101_059,0.0105,Sector price-volume link
+IC-weighted · core,2024-03,Q158_WVMA20,0.1273,Uneven volume
+IC-weighted · core,2024-04,A101_055,0.0771,Price-volume divergence
+IC-weighted · core,2024-04,CRYPTO_HMRW_PREMIUM,0.0382,Perp premium
+IC-weighted · core,2024-04,A101_067,0.0381,Fade recent pushes
+IC-weighted · core,2024-04,GTJA_095,0.0873,Size and liquidity
+IC-weighted · core,2024-04,Q158_WVMA5,0.096,Uneven volume
+IC-weighted · core,2024-04,GTJA_102,0.1052,Volume cooling
+IC-weighted · core,2024-04,A101_007,0.0634,Volume cooling
+IC-weighted · core,2024-04,Q158_VMA60,0.1295,Volume cooling
+IC-weighted · core,2024-04,GTJA_108,0.0086,Fade recent pushes
+IC-weighted · core,2024-04,GTJA_131,0.0262,Fade recent pushes
+IC-weighted · core,2024-04,A101_001,0.0775,Fade recent pushes
+IC-weighted · core,2024-04,Q158_IMAX5,0.0818,Fade recent pushes
+IC-weighted · core,2024-04,A101_073,0.042,Big recent movers
+IC-weighted · core,2024-04,A101_059,0.0128,Sector price-volume link
+IC-weighted · core,2024-04,Q158_WVMA20,0.1161,Uneven volume
+IC-weighted · core,2024-05,A101_055,0.0735,Price-volume divergence
+IC-weighted · core,2024-05,CRYPTO_HMRW_PREMIUM,0.0375,Perp premium
+IC-weighted · core,2024-05,A101_067,0.039,Fade recent pushes
+IC-weighted · core,2024-05,GTJA_095,0.0843,Size and liquidity
+IC-weighted · core,2024-05,Q158_WVMA5,0.0883,Uneven volume
+IC-weighted · core,2024-05,GTJA_102,0.102,Volume cooling
+IC-weighted · core,2024-05,A101_007,0.0621,Volume cooling
+IC-weighted · core,2024-05,Q158_VMA60,0.1276,Volume cooling
+IC-weighted · core,2024-05,GTJA_108,0.0107,Fade recent pushes
+IC-weighted · core,2024-05,GTJA_131,0.0418,Fade recent pushes
+IC-weighted · core,2024-05,A101_001,0.0818,Fade recent pushes
+IC-weighted · core,2024-05,Q158_IMAX5,0.079,Fade recent pushes
+IC-weighted · core,2024-05,A101_073,0.0447,Big recent movers
+IC-weighted · core,2024-05,A101_059,0.0199,Sector price-volume link
+IC-weighted · core,2024-05,Q158_WVMA20,0.1078,Uneven volume
+IC-weighted · core,2024-06,A101_055,0.0762,Price-volume divergence
+IC-weighted · core,2024-06,CRYPTO_HMRW_PREMIUM,0.0332,Perp premium
+IC-weighted · core,2024-06,A101_067,0.0368,Fade recent pushes
+IC-weighted · core,2024-06,GTJA_095,0.09,Size and liquidity
+IC-weighted · core,2024-06,Q158_WVMA5,0.0815,Uneven volume
+IC-weighted · core,2024-06,GTJA_102,0.1033,Volume cooling
+IC-weighted · core,2024-06,A101_007,0.0705,Volume cooling
+IC-weighted · core,2024-06,Q158_VMA60,0.1331,Volume cooling
+IC-weighted · core,2024-06,GTJA_108,0.0107,Fade recent pushes
+IC-weighted · core,2024-06,GTJA_131,0.0475,Fade recent pushes
+IC-weighted · core,2024-06,A101_001,0.0871,Fade recent pushes
+IC-weighted · core,2024-06,Q158_IMAX5,0.0846,Fade recent pushes
+IC-weighted · core,2024-06,A101_073,0.0282,Big recent movers
+IC-weighted · core,2024-06,A101_059,0.0099,Sector price-volume link
+IC-weighted · core,2024-06,Q158_WVMA20,0.1072,Uneven volume
+IC-weighted · core,2024-07,A101_055,0.0882,Price-volume divergence
+IC-weighted · core,2024-07,CRYPTO_HMRW_PREMIUM,0.0222,Perp premium
+IC-weighted · core,2024-07,A101_067,0.038,Fade recent pushes
+IC-weighted · core,2024-07,GTJA_095,0.0776,Size and liquidity
+IC-weighted · core,2024-07,Q158_WVMA5,0.0739,Uneven volume
+IC-weighted · core,2024-07,GTJA_102,0.0977,Volume cooling
+IC-weighted · core,2024-07,A101_007,0.0746,Volume cooling
+IC-weighted · core,2024-07,Q158_VMA60,0.1323,Volume cooling
+IC-weighted · core,2024-07,GTJA_108,0.0115,Fade recent pushes
+IC-weighted · core,2024-07,GTJA_131,0.0507,Fade recent pushes
+IC-weighted · core,2024-07,A101_001,0.0959,Fade recent pushes
+IC-weighted · core,2024-07,Q158_IMAX5,0.0971,Fade recent pushes
+IC-weighted · core,2024-07,A101_073,0.0309,Big recent movers
+IC-weighted · core,2024-07,A101_059,0.0,Sector price-volume link
+IC-weighted · core,2024-07,Q158_WVMA20,0.1093,Uneven volume
+IC-weighted · core,2024-08,A101_055,0.0895,Price-volume divergence
+IC-weighted · core,2024-08,CRYPTO_HMRW_PREMIUM,0.0229,Perp premium
+IC-weighted · core,2024-08,A101_067,0.042,Fade recent pushes
+IC-weighted · core,2024-08,GTJA_095,0.0806,Size and liquidity
+IC-weighted · core,2024-08,Q158_WVMA5,0.0747,Uneven volume
+IC-weighted · core,2024-08,GTJA_102,0.0937,Volume cooling
+IC-weighted · core,2024-08,A101_007,0.0707,Volume cooling
+IC-weighted · core,2024-08,Q158_VMA60,0.129,Volume cooling
+IC-weighted · core,2024-08,GTJA_108,0.0,Fade recent pushes
+IC-weighted · core,2024-08,GTJA_131,0.054,Fade recent pushes
+IC-weighted · core,2024-08,A101_001,0.0944,Fade recent pushes
+IC-weighted · core,2024-08,Q158_IMAX5,0.1019,Fade recent pushes
+IC-weighted · core,2024-08,A101_073,0.0184,Big recent movers
+IC-weighted · core,2024-08,A101_059,0.0,Sector price-volume link
+IC-weighted · core,2024-08,Q158_WVMA20,0.1283,Uneven volume
+IC-weighted · core,2024-09,A101_055,0.0834,Price-volume divergence
+IC-weighted · core,2024-09,CRYPTO_HMRW_PREMIUM,0.0,Perp premium
+IC-weighted · core,2024-09,A101_067,0.0289,Fade recent pushes
+IC-weighted · core,2024-09,GTJA_095,0.0993,Size and liquidity
+IC-weighted · core,2024-09,Q158_WVMA5,0.0969,Uneven volume
+IC-weighted · core,2024-09,GTJA_102,0.0842,Volume cooling
+IC-weighted · core,2024-09,A101_007,0.0681,Volume cooling
+IC-weighted · core,2024-09,Q158_VMA60,0.1444,Volume cooling
+IC-weighted · core,2024-09,GTJA_108,0.0,Fade recent pushes
+IC-weighted · core,2024-09,GTJA_131,0.0375,Fade recent pushes
+IC-weighted · core,2024-09,A101_001,0.0921,Fade recent pushes
+IC-weighted · core,2024-09,Q158_IMAX5,0.0889,Fade recent pushes
+IC-weighted · core,2024-09,A101_073,0.0083,Big recent movers
+IC-weighted · core,2024-09,A101_059,0.0,Sector price-volume link
+IC-weighted · core,2024-09,Q158_WVMA20,0.1681,Uneven volume
+IC-weighted · core,2024-10,A101_055,0.0782,Price-volume divergence
+IC-weighted · core,2024-10,CRYPTO_HMRW_PREMIUM,0.0012,Perp premium
+IC-weighted · core,2024-10,A101_067,0.0286,Fade recent pushes
+IC-weighted · core,2024-10,GTJA_095,0.0902,Size and liquidity
+IC-weighted · core,2024-10,Q158_WVMA5,0.0922,Uneven volume
+IC-weighted · core,2024-10,GTJA_102,0.0823,Volume cooling
+IC-weighted · core,2024-10,A101_007,0.0671,Volume cooling
+IC-weighted · core,2024-10,Q158_VMA60,0.1447,Volume cooling
+IC-weighted · core,2024-10,GTJA_108,0.0,Fade recent pushes
+IC-weighted · core,2024-10,GTJA_131,0.0308,Fade recent pushes
+IC-weighted · core,2024-10,A101_001,0.0906,Fade recent pushes
+IC-weighted · core,2024-10,Q158_IMAX5,0.1071,Fade recent pushes
+IC-weighted · core,2024-10,A101_073,0.0123,Big recent movers
+IC-weighted · core,2024-10,A101_059,0.0,Sector price-volume link
+IC-weighted · core,2024-10,Q158_WVMA20,0.1745,Uneven volume
+IC-weighted · core,2024-11,A101_055,0.0679,Price-volume divergence
+IC-weighted · core,2024-11,CRYPTO_HMRW_PREMIUM,0.0,Perp premium
+IC-weighted · core,2024-11,A101_067,0.0199,Fade recent pushes
+IC-weighted · core,2024-11,GTJA_095,0.0692,Size and liquidity
+IC-weighted · core,2024-11,Q158_WVMA5,0.0975,Uneven volume
+IC-weighted · core,2024-11,GTJA_102,0.1063,Volume cooling
+IC-weighted · core,2024-11,A101_007,0.0887,Volume cooling
+IC-weighted · core,2024-11,Q158_VMA60,0.153,Volume cooling
+IC-weighted · core,2024-11,GTJA_108,0.0,Fade recent pushes
+IC-weighted · core,2024-11,GTJA_131,0.0043,Fade recent pushes
+IC-weighted · core,2024-11,A101_001,0.107,Fade recent pushes
+IC-weighted · core,2024-11,Q158_IMAX5,0.1216,Fade recent pushes
+IC-weighted · core,2024-11,A101_073,0.0006,Big recent movers
+IC-weighted · core,2024-11,A101_059,0.0,Sector price-volume link
+IC-weighted · core,2024-11,Q158_WVMA20,0.164,Uneven volume
+IC-weighted · core,2024-12,A101_055,0.0951,Price-volume divergence
+IC-weighted · core,2024-12,CRYPTO_HMRW_PREMIUM,0.0,Perp premium
+IC-weighted · core,2024-12,A101_067,0.0194,Fade recent pushes
+IC-weighted · core,2024-12,GTJA_095,0.0718,Size and liquidity
+IC-weighted · core,2024-12,Q158_WVMA5,0.087,Uneven volume
+IC-weighted · core,2024-12,GTJA_102,0.0772,Volume cooling
+IC-weighted · core,2024-12,A101_007,0.0663,Volume cooling
+IC-weighted · core,2024-12,Q158_VMA60,0.1364,Volume cooling
+IC-weighted · core,2024-12,GTJA_108,0.0,Fade recent pushes
+IC-weighted · core,2024-12,GTJA_131,0.0281,Fade recent pushes
+IC-weighted · core,2024-12,A101_001,0.1129,Fade recent pushes
+IC-weighted · core,2024-12,Q158_IMAX5,0.1262,Fade recent pushes
+IC-weighted · core,2024-12,A101_073,0.0,Big recent movers
+IC-weighted · core,2024-12,A101_059,0.0,Sector price-volume link
+IC-weighted · core,2024-12,Q158_WVMA20,0.1796,Uneven volume
+Ridge · core,2024-01,A101_055,0.1046,Price-volume divergence
+Ridge · core,2024-01,CRYPTO_HMRW_PREMIUM,0.0892,Perp premium
+Ridge · core,2024-01,A101_067,0.0356,Fade recent pushes
+Ridge · core,2024-01,GTJA_095,0.083,Size and liquidity
+Ridge · core,2024-01,Q158_WVMA5,0.0747,Uneven volume
+Ridge · core,2024-01,GTJA_102,0.087,Volume cooling
+Ridge · core,2024-01,A101_007,0.0371,Volume cooling
+Ridge · core,2024-01,Q158_VMA60,0.1523,Volume cooling
+Ridge · core,2024-01,GTJA_108,-0.0066,Fade recent pushes
+Ridge · core,2024-01,GTJA_131,0.0097,Fade recent pushes
+Ridge · core,2024-01,A101_001,0.0725,Fade recent pushes
+Ridge · core,2024-01,Q158_IMAX5,0.0643,Fade recent pushes
+Ridge · core,2024-01,A101_073,0.0314,Big recent movers
+Ridge · core,2024-01,A101_059,0.0226,Sector price-volume link
+Ridge · core,2024-01,Q158_WVMA20,0.1295,Uneven volume
+Ridge · core,2024-02,A101_055,0.1026,Price-volume divergence
+Ridge · core,2024-02,CRYPTO_HMRW_PREMIUM,0.0886,Perp premium
+Ridge · core,2024-02,A101_067,0.0357,Fade recent pushes
+Ridge · core,2024-02,GTJA_095,0.0813,Size and liquidity
+Ridge · core,2024-02,Q158_WVMA5,0.0735,Uneven volume
+Ridge · core,2024-02,GTJA_102,0.0896,Volume cooling
+Ridge · core,2024-02,A101_007,0.0375,Volume cooling
+Ridge · core,2024-02,Q158_VMA60,0.1523,Volume cooling
+Ridge · core,2024-02,GTJA_108,-0.0105,Fade recent pushes
+Ridge · core,2024-02,GTJA_131,0.0083,Fade recent pushes
+Ridge · core,2024-02,A101_001,0.0731,Fade recent pushes
+Ridge · core,2024-02,Q158_IMAX5,0.065,Fade recent pushes
+Ridge · core,2024-02,A101_073,0.0309,Big recent movers
+Ridge · core,2024-02,A101_059,0.0216,Sector price-volume link
+Ridge · core,2024-02,Q158_WVMA20,0.1294,Uneven volume
+Ridge · core,2024-03,A101_055,0.1022,Price-volume divergence
+Ridge · core,2024-03,CRYPTO_HMRW_PREMIUM,0.0863,Perp premium
+Ridge · core,2024-03,A101_067,0.0354,Fade recent pushes
+Ridge · core,2024-03,GTJA_095,0.0834,Size and liquidity
+Ridge · core,2024-03,Q158_WVMA5,0.0761,Uneven volume
+Ridge · core,2024-03,GTJA_102,0.0878,Volume cooling
+Ridge · core,2024-03,A101_007,0.0387,Volume cooling
+Ridge · core,2024-03,Q158_VMA60,0.1507,Volume cooling
+Ridge · core,2024-03,GTJA_108,-0.0109,Fade recent pushes
+Ridge · core,2024-03,GTJA_131,0.0083,Fade recent pushes
+Ridge · core,2024-03,A101_001,0.074,Fade recent pushes
+Ridge · core,2024-03,Q158_IMAX5,0.0636,Fade recent pushes
+Ridge · core,2024-03,A101_073,0.031,Big recent movers
+Ridge · core,2024-03,A101_059,0.021,Sector price-volume link
+Ridge · core,2024-03,Q158_WVMA20,0.1306,Uneven volume
+Ridge · core,2024-04,A101_055,0.1025,Price-volume divergence
+Ridge · core,2024-04,CRYPTO_HMRW_PREMIUM,0.0845,Perp premium
+Ridge · core,2024-04,A101_067,0.0372,Fade recent pushes
+Ridge · core,2024-04,GTJA_095,0.0809,Size and liquidity
+Ridge · core,2024-04,Q158_WVMA5,0.0755,Uneven volume
+Ridge · core,2024-04,GTJA_102,0.0892,Volume cooling
+Ridge · core,2024-04,A101_007,0.0384,Volume cooling
+Ridge · core,2024-04,Q158_VMA60,0.1478,Volume cooling
+Ridge · core,2024-04,GTJA_108,-0.0113,Fade recent pushes
+Ridge · core,2024-04,GTJA_131,0.0097,Fade recent pushes
+Ridge · core,2024-04,A101_001,0.0736,Fade recent pushes
+Ridge · core,2024-04,Q158_IMAX5,0.0676,Fade recent pushes
+Ridge · core,2024-04,A101_073,0.031,Big recent movers
+Ridge · core,2024-04,A101_059,0.0207,Sector price-volume link
+Ridge · core,2024-04,Q158_WVMA20,0.13,Uneven volume
+Ridge · core,2024-05,A101_055,0.1011,Price-volume divergence
+Ridge · core,2024-05,CRYPTO_HMRW_PREMIUM,0.0825,Perp premium
+Ridge · core,2024-05,A101_067,0.037,Fade recent pushes
+Ridge · core,2024-05,GTJA_095,0.0783,Size and liquidity
+Ridge · core,2024-05,Q158_WVMA5,0.0742,Uneven volume
+Ridge · core,2024-05,GTJA_102,0.0874,Volume cooling
+Ridge · core,2024-05,A101_007,0.0385,Volume cooling
+Ridge · core,2024-05,Q158_VMA60,0.1475,Volume cooling
+Ridge · core,2024-05,GTJA_108,-0.0133,Fade recent pushes
+Ridge · core,2024-05,GTJA_131,0.0152,Fade recent pushes
+Ridge · core,2024-05,A101_001,0.0762,Fade recent pushes
+Ridge · core,2024-05,Q158_IMAX5,0.0668,Fade recent pushes
+Ridge · core,2024-05,A101_073,0.0326,Big recent movers
+Ridge · core,2024-05,A101_059,0.0221,Sector price-volume link
+Ridge · core,2024-05,Q158_WVMA20,0.1272,Uneven volume
+Ridge · core,2024-06,A101_055,0.1219,Price-volume divergence
+Ridge · core,2024-06,CRYPTO_HMRW_PREMIUM,0.1129,Perp premium
+Ridge · core,2024-06,A101_067,0.0379,Fade recent pushes
+Ridge · core,2024-06,GTJA_095,0.0615,Size and liquidity
+Ridge · core,2024-06,Q158_WVMA5,0.0565,Uneven volume
+Ridge · core,2024-06,GTJA_102,0.0409,Volume cooling
+Ridge · core,2024-06,A101_007,0.0311,Volume cooling
+Ridge · core,2024-06,Q158_VMA60,0.166,Volume cooling
+Ridge · core,2024-06,GTJA_108,-0.037,Fade recent pushes
+Ridge · core,2024-06,GTJA_131,0.0026,Fade recent pushes
+Ridge · core,2024-06,A101_001,0.0871,Fade recent pushes
+Ridge · core,2024-06,Q158_IMAX5,0.0644,Fade recent pushes
+Ridge · core,2024-06,A101_073,0.0116,Big recent movers
+Ridge · core,2024-06,A101_059,0.0253,Sector price-volume link
+Ridge · core,2024-06,Q158_WVMA20,0.1434,Uneven volume
+Ridge · core,2024-07,A101_055,0.1247,Price-volume divergence
+Ridge · core,2024-07,CRYPTO_HMRW_PREMIUM,0.1118,Perp premium
+Ridge · core,2024-07,A101_067,0.0366,Fade recent pushes
+Ridge · core,2024-07,GTJA_095,0.056,Size and liquidity
+Ridge · core,2024-07,Q158_WVMA5,0.0549,Uneven volume
+Ridge · core,2024-07,GTJA_102,0.0325,Volume cooling
+Ridge · core,2024-07,A101_007,0.0317,Volume cooling
+Ridge · core,2024-07,Q158_VMA60,0.1739,Volume cooling
+Ridge · core,2024-07,GTJA_108,-0.0385,Fade recent pushes
+Ridge · core,2024-07,GTJA_131,0.0009,Fade recent pushes
+Ridge · core,2024-07,A101_001,0.0871,Fade recent pushes
+Ridge · core,2024-07,Q158_IMAX5,0.0684,Fade recent pushes
+Ridge · core,2024-07,A101_073,0.0154,Big recent movers
+Ridge · core,2024-07,A101_059,0.0188,Sector price-volume link
+Ridge · core,2024-07,Q158_WVMA20,0.1488,Uneven volume
+Ridge · core,2024-08,A101_055,0.1257,Price-volume divergence
+Ridge · core,2024-08,CRYPTO_HMRW_PREMIUM,0.1108,Perp premium
+Ridge · core,2024-08,A101_067,0.0373,Fade recent pushes
+Ridge · core,2024-08,GTJA_095,0.0543,Size and liquidity
+Ridge · core,2024-08,Q158_WVMA5,0.0503,Uneven volume
+Ridge · core,2024-08,GTJA_102,0.0338,Volume cooling
+Ridge · core,2024-08,A101_007,0.0328,Volume cooling
+Ridge · core,2024-08,Q158_VMA60,0.1718,Volume cooling
+Ridge · core,2024-08,GTJA_108,-0.0432,Fade recent pushes
+Ridge · core,2024-08,GTJA_131,-0.0008,Fade recent pushes
+Ridge · core,2024-08,A101_001,0.0846,Fade recent pushes
+Ridge · core,2024-08,Q158_IMAX5,0.0724,Fade recent pushes
+Ridge · core,2024-08,A101_073,0.012,Big recent movers
+Ridge · core,2024-08,A101_059,0.0173,Sector price-volume link
+Ridge · core,2024-08,Q158_WVMA20,0.1528,Uneven volume
+Ridge · core,2024-09,A101_055,0.1229,Price-volume divergence
+Ridge · core,2024-09,CRYPTO_HMRW_PREMIUM,0.1073,Perp premium
+Ridge · core,2024-09,A101_067,0.0358,Fade recent pushes
+Ridge · core,2024-09,GTJA_095,0.0556,Size and liquidity
+Ridge · core,2024-09,Q158_WVMA5,0.0522,Uneven volume
+Ridge · core,2024-09,GTJA_102,0.031,Volume cooling
+Ridge · core,2024-09,A101_007,0.0304,Volume cooling
+Ridge · core,2024-09,Q158_VMA60,0.174,Volume cooling
+Ridge · core,2024-09,GTJA_108,-0.0471,Fade recent pushes
+Ridge · core,2024-09,GTJA_131,-0.0027,Fade recent pushes
+Ridge · core,2024-09,A101_001,0.0839,Fade recent pushes
+Ridge · core,2024-09,Q158_IMAX5,0.0726,Fade recent pushes
+Ridge · core,2024-09,A101_073,0.0119,Big recent movers
+Ridge · core,2024-09,A101_059,0.0157,Sector price-volume link
+Ridge · core,2024-09,Q158_WVMA20,0.1567,Uneven volume
+Ridge · core,2024-10,A101_055,0.1199,Price-volume divergence
+Ridge · core,2024-10,CRYPTO_HMRW_PREMIUM,0.1037,Perp premium
+Ridge · core,2024-10,A101_067,0.0365,Fade recent pushes
+Ridge · core,2024-10,GTJA_095,0.0549,Size and liquidity
+Ridge · core,2024-10,Q158_WVMA5,0.0534,Uneven volume
+Ridge · core,2024-10,GTJA_102,0.0277,Volume cooling
+Ridge · core,2024-10,A101_007,0.0322,Volume cooling
+Ridge · core,2024-10,Q158_VMA60,0.1747,Volume cooling
+Ridge · core,2024-10,GTJA_108,-0.0474,Fade recent pushes
+Ridge · core,2024-10,GTJA_131,-0.0022,Fade recent pushes
+Ridge · core,2024-10,A101_001,0.0864,Fade recent pushes
+Ridge · core,2024-10,Q158_IMAX5,0.0748,Fade recent pushes
+Ridge · core,2024-10,A101_073,0.0119,Big recent movers
+Ridge · core,2024-10,A101_059,0.0157,Sector price-volume link
+Ridge · core,2024-10,Q158_WVMA20,0.1588,Uneven volume
+Ridge · core,2024-11,A101_055,0.1191,Price-volume divergence
+Ridge · core,2024-11,CRYPTO_HMRW_PREMIUM,0.1018,Perp premium
+Ridge · core,2024-11,A101_067,0.0363,Fade recent pushes
+Ridge · core,2024-11,GTJA_095,0.0518,Size and liquidity
+Ridge · core,2024-11,Q158_WVMA5,0.0537,Uneven volume
+Ridge · core,2024-11,GTJA_102,0.0299,Volume cooling
+Ridge · core,2024-11,A101_007,0.026,Volume cooling
+Ridge · core,2024-11,Q158_VMA60,0.1761,Volume cooling
+Ridge · core,2024-11,GTJA_108,-0.0496,Fade recent pushes
+Ridge · core,2024-11,GTJA_131,-0.0045,Fade recent pushes
+Ridge · core,2024-11,A101_001,0.0897,Fade recent pushes
+Ridge · core,2024-11,Q158_IMAX5,0.0773,Fade recent pushes
+Ridge · core,2024-11,A101_073,0.0079,Big recent movers
+Ridge · core,2024-11,A101_059,0.0163,Sector price-volume link
+Ridge · core,2024-11,Q158_WVMA20,0.1599,Uneven volume
+Ridge · core,2024-12,A101_055,0.126,Price-volume divergence
+Ridge · core,2024-12,CRYPTO_HMRW_PREMIUM,0.0992,Perp premium
+Ridge · core,2024-12,A101_067,0.036,Fade recent pushes
+Ridge · core,2024-12,GTJA_095,0.0549,Size and liquidity
+Ridge · core,2024-12,Q158_WVMA5,0.0542,Uneven volume
+Ridge · core,2024-12,GTJA_102,0.0304,Volume cooling
+Ridge · core,2024-12,A101_007,0.0241,Volume cooling
+Ridge · core,2024-12,Q158_VMA60,0.1709,Volume cooling
+Ridge · core,2024-12,GTJA_108,-0.0455,Fade recent pushes
+Ridge · core,2024-12,GTJA_131,0.0006,Fade recent pushes
+Ridge · core,2024-12,A101_001,0.0942,Fade recent pushes
+Ridge · core,2024-12,Q158_IMAX5,0.0779,Fade recent pushes
+Ridge · core,2024-12,A101_073,0.0061,Big recent movers
+Ridge · core,2024-12,A101_059,0.0155,Sector price-volume link
+Ridge · core,2024-12,Q158_WVMA20,0.1646,Uneven volume

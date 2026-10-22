@@ -1,0 +1,61 @@
+method,month,penalty,leaves,trees
+Equal weight · core,2024-01,,,
+Equal weight · core,2024-02,,,
+Equal weight · core,2024-03,,,
+Equal weight · core,2024-04,,,
+Equal weight · core,2024-05,,,
+Equal weight · core,2024-06,,,
+Equal weight · core,2024-07,,,
+Equal weight · core,2024-08,,,
+Equal weight · core,2024-09,,,
+Equal weight · core,2024-10,,,
+Equal weight · core,2024-11,,,
+Equal weight · core,2024-12,,,
+IC-weighted · core,2024-01,,,
+IC-weighted · core,2024-02,,,
+IC-weighted · core,2024-03,,,
+IC-weighted · core,2024-04,,,
+IC-weighted · core,2024-05,,,
+IC-weighted · core,2024-06,,,
+IC-weighted · core,2024-07,,,
+IC-weighted · core,2024-08,,,
+IC-weighted · core,2024-09,,,
+IC-weighted · core,2024-10,,,
+IC-weighted · core,2024-11,,,
+IC-weighted · core,2024-12,,,
+Ridge · core,2024-01,0.1,,
+Ridge · core,2024-02,0.1,,
+Ridge · core,2024-03,0.1,,
+Ridge · core,2024-04,0.1,,
+Ridge · core,2024-05,0.1,,
+Ridge · core,2024-06,0.001,,
+Ridge · core,2024-07,0.001,,
+Ridge · core,2024-08,0.0001,,
+Ridge · core,2024-09,0.0001,,
+Ridge · core,2024-10,0.0001,,
+Ridge · core,2024-11,0.0001,,
+Ridge · core,2024-12,0.0001,,
+Ridge · broad,2024-01,0.1,,
+Ridge · broad,2024-02,1.0,,
+Ridge · broad,2024-03,1.0,,
+Ridge · broad,2024-04,0.1,,
+Ridge · broad,2024-05,0.1,,
+Ridge · broad,2024-06,0.1,,
+Ridge · broad,2024-07,1.0,,
+Ridge · broad,2024-08,1.0,,
+Ridge · broad,2024-09,1.0,,
+Ridge · broad,2024-10,1.0,,
+Ridge · broad,2024-11,1.0,,
+Ridge · broad,2024-12,0.1,,
+Trees · broad,2024-01,,31.0,180.0
+Trees · broad,2024-02,,31.0,80.0
+Trees · broad,2024-03,,7.0,160.0
+Trees · broad,2024-04,,31.0,90.0
+Trees · broad,2024-05,,31.0,90.0
+Trees · broad,2024-06,,31.0,50.0
+Trees · broad,2024-07,,7.0,50.0
+Trees · broad,2024-08,,31.0,40.0
+Trees · broad,2024-09,,31.0,30.0
+Trees · broad,2024-10,,7.0,40.0
+Trees · broad,2024-11,,7.0,50.0
+Trees · broad,2024-12,,7.0,40.0

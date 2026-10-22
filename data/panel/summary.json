@@ -1,0 +1,23 @@
+{
+  "dates": "2020-01-01 to 2026-10-21 (research from 2021-01-01)",
+  "coins_in_panels": 594,
+  "coins_ever_in_universe": 538,
+  "universe_size_min_median_max": [
+    70,
+    80,
+    80
+  ],
+  "universe_days": 2120,
+  "coin_days_in_universe": 169293,
+  "funding_coverage_in_universe": 1.0,
+  "premium_coverage_in_universe": 0.998,
+  "daily_returns_above_+100pct": 78,
+  "daily_returns_below_-50pct": 72,
+  "universe_coin_days_without_next_day_return": 85,
+  "glitch_cells_blanked": 31,
+  "zombie_bars_removed": 42406,
+  "missing_days_inside_coin_life": 5,
+  "funding_missing_in_universe": 2,
+  "panel_size_mb": 67.8,
+  "raw_size_mb": 78.7
+}

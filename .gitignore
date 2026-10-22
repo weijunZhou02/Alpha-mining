@@ -1,0 +1,20 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Secrets: step 7 will need an LLM API key. Keep it in .env, never in git.
+.env
+*.key
+
+# Big or rebuildable data
+# 62k Binance files, 244 MB: run src/download_data.py
+data/raw/
+# 61 MB: run src/run_step3.py
+data/eval/alpha_ranks.parquet
+
+# Logs and OS files
+*.log
+.DS_Store
+Thumbs.db

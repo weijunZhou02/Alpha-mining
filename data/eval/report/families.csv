@@ -1,0 +1,16 @@
+id,family,family_note,verdict,category,ls_t,net_bp,turnover,n_twins,twins
+A101_055,Price-volume divergence,"Price near the top of its range without a volume rush is good; with a rush, bad.",strong,Price-volume,4.49,17.5,1.54,1,GTJA_176
+CRYPTO_HMRW_PREMIUM,Perp premium,"Buy coins whose perpetual trades cheap against spot, short the expensive ones.",strong,Carry / derivatives,3.54,20.2,2.76,0,
+A101_067,Fade recent pushes,Bet against coins that just made a fresh high or jumped in the last day or two.,strong,Mined combo,3.31,7.3,2.32,0,
+GTJA_095,Size and liquidity,"Buy coins with smaller, steadier trading value (the Liu-Tsyvinski-Wu effect).",maybe,Volume / activity,2.66,12.3,0.3,7,"GTJA_070, GTJA_081, GTJA_097, GTJA_100, GTJA_132, CRYPTO_LTW_PRCVOL, CRYPTO_LTW_STDPRCVOL"
+Q158_WVMA5,Uneven volume,"Buy coins whose price-moving volume is steady, short coins with bursty volume.",maybe,Volume / activity,2.89,8.6,1.68,0,
+GTJA_102,Volume cooling,"Buy coins whose trading is quieter than usual, short coins where volume is surging.",maybe,Volume / activity,2.89,9.2,2.09,13,"GTJA_080, GTJA_168, GTJA_188, Q158_VMA5, Q158_VMA10, Q158_VMA20, Q158_VSTD30, Q158_VSUMP5, Q158_VSUMP10, Q158_VSUMN5, Q158_VSUMN10, Q158_VSUMD5, Q158_VSUMD10"
+A101_007,Volume cooling,"Buy coins whose trading is quieter than usual, short coins where volume is surging.",maybe,Volume / activity,2.84,4.7,1.73,1,GTJA_180
+Q158_VMA60,Volume cooling,"Buy coins whose trading is quieter than usual, short coins where volume is surging.",maybe,Volume / activity,2.48,11.3,1.34,37,"GTJA_049, GTJA_050, GTJA_051, GTJA_071, GTJA_079, GTJA_109, GTJA_110, GTJA_112, GTJA_118, GTJA_145, GTJA_177, Q158_ROC10, Q158_MA20, Q158_MIN5, Q158_MIN10, Q158_QTLD10, Q158_QTLD20, Q158_QTLD30, Q158_RANK20, Q158_RANK30, Q158_RANK60, Q158_IMAX20, Q158_SUMP10, Q158_SUMN10, Q158_SUMD10, Q158_VMA30, Q158_VSTD60, Q158_VSUMP20, Q158_VSUMP30, Q158_VSUMP60, Q158_VSUMN20, Q158_VSUMN30, Q158_VSUMN60, Q158_VSUMD20, Q158_VSUMD30, Q158_VSUMD60, CRYPTO_BBD_VOLREV"
+GTJA_108,Fade recent pushes,Bet against coins that just made a fresh high or jumped in the last day or two.,maybe,Mined combo,2.42,2.8,2.3,0,
+GTJA_131,Fade recent pushes,Bet against coins that just made a fresh high or jumped in the last day or two.,maybe,Mined combo,2.37,2.5,2.25,0,
+A101_001,Fade recent pushes,Bet against coins that just made a fresh high or jumped in the last day or two.,maybe,Short-term reversal,2.35,2.4,2.11,0,
+Q158_IMAX5,Fade recent pushes,Bet against coins that just made a fresh high or jumped in the last day or two.,maybe,Technical indicator,2.35,3.1,1.79,1,Q158_IMXD5
+A101_073,Big recent movers,Short coins that moved a lot in either direction over the last few days.,maybe,Mined combo,2.34,4.7,1.78,0,
+A101_059,Sector price-volume link,"Buy coins whose sector-adjusted price has not moved with volume lately, short those where it has.",maybe,Mined combo,2.21,3.0,1.4,0,
+Q158_WVMA20,Uneven volume,"Buy coins whose price-moving volume is steady, short coins with bursty volume.",maybe,Volume / activity,2.03,9.1,0.61,2,"Q158_WVMA10, Q158_WVMA30"

@@ -1,0 +1,2 @@
+Copied from https://github.com/HKUDS/Vibe-Trading (agent/src/factors, MIT license) on 2026-10-22.
+Used only as an independent reference to cross-check our alpha calculations (src/check_vs_vibe.py).

@@ -1,0 +1,2556 @@
+method,date,cum_net_pct
+Equal weight · core,2024-01-01,-1.09
+IC-weighted · core,2024-01-01,-0.64
+Ridge · broad,2024-01-01,-0.51
+Ridge · core,2024-01-01,-1.66
+Single alpha · A101_055,2024-01-01,-0.21
+Trees · broad,2024-01-01,-1.99
+Trees · broad + buffer,2024-01-01,-1.99
+Equal weight · core,2024-01-02,-11.96
+IC-weighted · core,2024-01-02,-10.6
+Ridge · broad,2024-01-02,-6.12
+Ridge · core,2024-01-02,-11.4
+Single alpha · A101_055,2024-01-02,-6.31
+Trees · broad,2024-01-02,-6.22
+Trees · broad + buffer,2024-01-02,-5.01
+Equal weight · core,2024-01-03,-7.58
+IC-weighted · core,2024-01-03,-5.38
+Ridge · broad,2024-01-03,-5.0
+Ridge · core,2024-01-03,-5.81
+Single alpha · A101_055,2024-01-03,-4.15
+Trees · broad,2024-01-03,-5.49
+Trees · broad + buffer,2024-01-03,-3.31
+Equal weight · core,2024-01-04,-15.13
+IC-weighted · core,2024-01-04,-11.42
+Ridge · broad,2024-01-04,-8.59
+Ridge · core,2024-01-04,-11.85
+Single alpha · A101_055,2024-01-04,-4.15
+Trees · broad,2024-01-04,-8.5
+Trees · broad + buffer,2024-01-04,-6.99
+Equal weight · core,2024-01-05,-18.55
+IC-weighted · core,2024-01-05,-10.99
+Ridge · broad,2024-01-05,-5.99
+Ridge · core,2024-01-05,-10.96
+Single alpha · A101_055,2024-01-05,-5.76
+Trees · broad,2024-01-05,-6.8
+Trees · broad + buffer,2024-01-05,-5.04
+Equal weight · core,2024-01-06,-16.63
+IC-weighted · core,2024-01-06,-9.81
+Ridge · broad,2024-01-06,-4.38
+Ridge · core,2024-01-06,-9.9
+Single alpha · A101_055,2024-01-06,-7.33
+Trees · broad,2024-01-06,-4.39
+Trees · broad + buffer,2024-01-06,-2.34
+Equal weight · core,2024-01-07,-10.68
+IC-weighted · core,2024-01-07,-3.92
+Ridge · broad,2024-01-07,-3.03
+Ridge · core,2024-01-07,-4.63
+Single alpha · A101_055,2024-01-07,-5.6
+Trees · broad,2024-01-07,-2.81
+Trees · broad + buffer,2024-01-07,-1.75
+Equal weight · core,2024-01-08,-9.47
+IC-weighted · core,2024-01-08,-2.27
+Ridge · broad,2024-01-08,1.22
+Ridge · core,2024-01-08,-2.99
+Single alpha · A101_055,2024-01-08,-4.23
+Trees · broad,2024-01-08,1.37
+Trees · broad + buffer,2024-01-08,2.46
+Equal weight · core,2024-01-09,-8.39
+IC-weighted · core,2024-01-09,-1.98
+Ridge · broad,2024-01-09,1.81
+Ridge · core,2024-01-09,-3.32
+Single alpha · A101_055,2024-01-09,-8.91
+Trees · broad,2024-01-09,-0.35
+Trees · broad + buffer,2024-01-09,1.25
+Equal weight · core,2024-01-10,-8.59
+IC-weighted · core,2024-01-10,-1.87
+Ridge · broad,2024-01-10,0.28
+Ridge · core,2024-01-10,-3.91
+Single alpha · A101_055,2024-01-10,-12.51
+Trees · broad,2024-01-10,-3.45
+Trees · broad + buffer,2024-01-10,-1.68
+Equal weight · core,2024-01-11,-10.75
+IC-weighted · core,2024-01-11,-4.08
+Ridge · broad,2024-01-11,-2.5
+Ridge · core,2024-01-11,-6.55
+Single alpha · A101_055,2024-01-11,-13.52
+Trees · broad,2024-01-11,-5.76
+Trees · broad + buffer,2024-01-11,-4.36
+Equal weight · core,2024-01-12,-10.37
+IC-weighted · core,2024-01-12,-4.38
+Ridge · broad,2024-01-12,-2.33
+Ridge · core,2024-01-12,-6.34
+Single alpha · A101_055,2024-01-12,-14.12
+Trees · broad,2024-01-12,-5.67
+Trees · broad + buffer,2024-01-12,-3.22
+Equal weight · core,2024-01-13,-9.72
+IC-weighted · core,2024-01-13,-3.55
+Ridge · broad,2024-01-13,-0.34
+Ridge · core,2024-01-13,-5.49
+Single alpha · A101_055,2024-01-13,-13.78
+Trees · broad,2024-01-13,-4.72
+Trees · broad + buffer,2024-01-13,-2.3
+Equal weight · core,2024-01-14,-10.72
+IC-weighted · core,2024-01-14,-3.67
+Ridge · broad,2024-01-14,0.01
+Ridge · core,2024-01-14,-5.32
+Single alpha · A101_055,2024-01-14,-14.49
+Trees · broad,2024-01-14,-5.27
+Trees · broad + buffer,2024-01-14,-2.47
+Equal weight · core,2024-01-15,-8.1
+IC-weighted · core,2024-01-15,0.11
+Ridge · broad,2024-01-15,1.61
+Ridge · core,2024-01-15,-1.07
+Single alpha · A101_055,2024-01-15,-10.3
+Trees · broad,2024-01-15,-4.47
+Trees · broad + buffer,2024-01-15,-1.76
+Equal weight · core,2024-01-16,-8.2
+IC-weighted · core,2024-01-16,0.62
+Ridge · broad,2024-01-16,3.5
+Ridge · core,2024-01-16,-0.55
+Single alpha · A101_055,2024-01-16,-8.96
+Trees · broad,2024-01-16,-5.93
+Trees · broad + buffer,2024-01-16,-1.09
+Equal weight · core,2024-01-17,-7.82
+IC-weighted · core,2024-01-17,1.05
+Ridge · broad,2024-01-17,5.45
+Ridge · core,2024-01-17,-0.56
+Single alpha · A101_055,2024-01-17,-10.78
+Trees · broad,2024-01-17,-2.88
+Trees · broad + buffer,2024-01-17,0.01
+Equal weight · core,2024-01-18,-6.2
+IC-weighted · core,2024-01-18,2.33
+Ridge · broad,2024-01-18,9.53
+Ridge · core,2024-01-18,0.96
+Single alpha · A101_055,2024-01-18,-11.46
+Trees · broad,2024-01-18,0.69
+Trees · broad + buffer,2024-01-18,3.86
+Equal weight · core,2024-01-19,-6.08
+IC-weighted · core,2024-01-19,2.67
+Ridge · broad,2024-01-19,11.0
+Ridge · core,2024-01-19,2.05
+Single alpha · A101_055,2024-01-19,-10.38
+Trees · broad,2024-01-19,0.56
+Trees · broad + buffer,2024-01-19,4.3
+Equal weight · core,2024-01-20,-6.26
+IC-weighted · core,2024-01-20,2.43
+Ridge · broad,2024-01-20,11.3
+Ridge · core,2024-01-20,1.72
+Single alpha · A101_055,2024-01-20,-10.43
+Trees · broad,2024-01-20,1.29
+Trees · broad + buffer,2024-01-20,4.71
+Equal weight · core,2024-01-21,-6.59
+IC-weighted · core,2024-01-21,0.76
+Ridge · broad,2024-01-21,10.19
+Ridge · core,2024-01-21,-0.08
+Single alpha · A101_055,2024-01-21,-11.18
+Trees · broad,2024-01-21,2.37
+Trees · broad + buffer,2024-01-21,5.27
+Equal weight · core,2024-01-22,-5.78
+IC-weighted · core,2024-01-22,-0.51
+Ridge · broad,2024-01-22,7.73
+Ridge · core,2024-01-22,-0.18
+Single alpha · A101_055,2024-01-22,-11.74
+Trees · broad,2024-01-22,1.49
+Trees · broad + buffer,2024-01-22,3.85
+Equal weight · core,2024-01-23,-3.19
+IC-weighted · core,2024-01-23,2.88
+Ridge · broad,2024-01-23,9.34
+Ridge · core,2024-01-23,3.52
+Single alpha · A101_055,2024-01-23,-12.57
+Trees · broad,2024-01-23,3.19
+Trees · broad + buffer,2024-01-23,5.85
+Equal weight · core,2024-01-24,-2.34
+IC-weighted · core,2024-01-24,3.78
+Ridge · broad,2024-01-24,11.69
+Ridge · core,2024-01-24,3.24
+Single alpha · A101_055,2024-01-24,-11.77
+Trees · broad,2024-01-24,5.11
+Trees · broad + buffer,2024-01-24,6.82
+Equal weight · core,2024-01-25,-2.12
+IC-weighted · core,2024-01-25,3.89
+Ridge · broad,2024-01-25,8.38
+Ridge · core,2024-01-25,2.2
+Single alpha · A101_055,2024-01-25,-10.25
+Trees · broad,2024-01-25,2.89
+Trees · broad + buffer,2024-01-25,3.68
+Equal weight · core,2024-01-26,-0.65
+IC-weighted · core,2024-01-26,3.4
+Ridge · broad,2024-01-26,7.75
+Ridge · core,2024-01-26,2.03
+Single alpha · A101_055,2024-01-26,-9.85
+Trees · broad,2024-01-26,1.38
+Trees · broad + buffer,2024-01-26,2.29
+Equal weight · core,2024-01-27,-1.55
+IC-weighted · core,2024-01-27,4.04
+Ridge · broad,2024-01-27,10.74
+Ridge · core,2024-01-27,2.75
+Single alpha · A101_055,2024-01-27,-10.23
+Trees · broad,2024-01-27,3.05
+Trees · broad + buffer,2024-01-27,5.18
+Equal weight · core,2024-01-28,-1.01
+IC-weighted · core,2024-01-28,3.74
+Ridge · broad,2024-01-28,7.81
+Ridge · core,2024-01-28,2.59
+Single alpha · A101_055,2024-01-28,-12.28
+Trees · broad,2024-01-28,3.33
+Trees · broad + buffer,2024-01-28,4.5
+Equal weight · core,2024-01-29,-2.5
+IC-weighted · core,2024-01-29,3.38
+Ridge · broad,2024-01-29,6.95
+Ridge · core,2024-01-29,2.32
+Single alpha · A101_055,2024-01-29,-13.8
+Trees · broad,2024-01-29,2.25
+Trees · broad + buffer,2024-01-29,3.78
+Equal weight · core,2024-01-30,-2.71
+IC-weighted · core,2024-01-30,4.36
+Ridge · broad,2024-01-30,10.18
+Ridge · core,2024-01-30,3.39
+Single alpha · A101_055,2024-01-30,-13.99
+Trees · broad,2024-01-30,4.43
+Trees · broad + buffer,2024-01-30,5.92
+Equal weight · core,2024-01-31,-3.31
+IC-weighted · core,2024-01-31,4.54
+Ridge · broad,2024-01-31,9.34
+Ridge · core,2024-01-31,3.6
+Single alpha · A101_055,2024-01-31,-14.16
+Trees · broad,2024-01-31,4.41
+Trees · broad + buffer,2024-01-31,6.44
+Equal weight · core,2024-02-01,-0.3
+IC-weighted · core,2024-02-01,5.04
+Ridge · broad,2024-02-01,8.34
+Ridge · core,2024-02-01,2.81
+Single alpha · A101_055,2024-02-01,-14.64
+Trees · broad,2024-02-01,4.08
+Trees · broad + buffer,2024-02-01,6.18
+Equal weight · core,2024-02-02,1.14
+IC-weighted · core,2024-02-02,6.76
+Ridge · broad,2024-02-02,9.1
+Ridge · core,2024-02-02,4.41
+Single alpha · A101_055,2024-02-02,-12.21
+Trees · broad,2024-02-02,4.53
+Trees · broad + buffer,2024-02-02,6.66
+Equal weight · core,2024-02-03,0.28
+IC-weighted · core,2024-02-03,5.82
+Ridge · broad,2024-02-03,8.69
+Ridge · core,2024-02-03,3.84
+Single alpha · A101_055,2024-02-03,-11.95
+Trees · broad,2024-02-03,4.82
+Trees · broad + buffer,2024-02-03,7.17
+Equal weight · core,2024-02-04,0.54
+IC-weighted · core,2024-02-04,6.56
+Ridge · broad,2024-02-04,8.45
+Ridge · core,2024-02-04,4.71
+Single alpha · A101_055,2024-02-04,-13.12
+Trees · broad,2024-02-04,4.52
+Trees · broad + buffer,2024-02-04,6.93
+Equal weight · core,2024-02-05,1.53
+IC-weighted · core,2024-02-05,7.14
+Ridge · broad,2024-02-05,9.02
+Ridge · core,2024-02-05,5.21
+Single alpha · A101_055,2024-02-05,-12.71
+Trees · broad,2024-02-05,6.48
+Trees · broad + buffer,2024-02-05,7.85
+Equal weight · core,2024-02-06,1.55
+IC-weighted · core,2024-02-06,7.1
+Ridge · broad,2024-02-06,10.43
+Ridge · core,2024-02-06,5.38
+Single alpha · A101_055,2024-02-06,-14.46
+Trees · broad,2024-02-06,6.24
+Trees · broad + buffer,2024-02-06,7.81
+Equal weight · core,2024-02-07,0.9
+IC-weighted · core,2024-02-07,7.44
+Ridge · broad,2024-02-07,10.98
+Ridge · core,2024-02-07,5.66
+Single alpha · A101_055,2024-02-07,-11.96
+Trees · broad,2024-02-07,6.95
+Trees · broad + buffer,2024-02-07,9.54
+Equal weight · core,2024-02-08,3.15
+IC-weighted · core,2024-02-08,10.86
+Ridge · broad,2024-02-08,10.84
+Ridge · core,2024-02-08,8.26
+Single alpha · A101_055,2024-02-08,-13.41
+Trees · broad,2024-02-08,6.19
+Trees · broad + buffer,2024-02-08,9.96
+Equal weight · core,2024-02-09,2.51
+IC-weighted · core,2024-02-09,9.03
+Ridge · broad,2024-02-09,9.3
+Ridge · core,2024-02-09,6.61
+Single alpha · A101_055,2024-02-09,-13.56
+Trees · broad,2024-02-09,5.62
+Trees · broad + buffer,2024-02-09,9.26
+Equal weight · core,2024-02-10,4.13
+IC-weighted · core,2024-02-10,10.47
+Ridge · broad,2024-02-10,10.56
+Ridge · core,2024-02-10,8.33
+Single alpha · A101_055,2024-02-10,-13.23
+Trees · broad,2024-02-10,6.28
+Trees · broad + buffer,2024-02-10,11.1
+Equal weight · core,2024-02-11,4.97
+IC-weighted · core,2024-02-11,12.08
+Ridge · broad,2024-02-11,9.32
+Ridge · core,2024-02-11,9.76
+Single alpha · A101_055,2024-02-11,-14.42
+Trees · broad,2024-02-11,4.85
+Trees · broad + buffer,2024-02-11,9.1
+Equal weight · core,2024-02-12,6.63
+IC-weighted · core,2024-02-12,9.18
+Ridge · broad,2024-02-12,5.99
+Ridge · core,2024-02-12,6.76
+Single alpha · A101_055,2024-02-12,-16.78
+Trees · broad,2024-02-12,0.49
+Trees · broad + buffer,2024-02-12,5.3
+Equal weight · core,2024-02-13,2.74
+IC-weighted · core,2024-02-13,3.44
+Ridge · broad,2024-02-13,-0.41
+Ridge · core,2024-02-13,1.46
+Single alpha · A101_055,2024-02-13,-16.62
+Trees · broad,2024-02-13,-4.27
+Trees · broad + buffer,2024-02-13,1.19
+Equal weight · core,2024-02-14,3.68
+IC-weighted · core,2024-02-14,4.03
+Ridge · broad,2024-02-14,0.86
+Ridge · core,2024-02-14,1.8
+Single alpha · A101_055,2024-02-14,-16.49
+Trees · broad,2024-02-14,-2.9
+Trees · broad + buffer,2024-02-14,2.48
+Equal weight · core,2024-02-15,2.37
+IC-weighted · core,2024-02-15,4.7
+Ridge · broad,2024-02-15,3.01
+Ridge · core,2024-02-15,2.04
+Single alpha · A101_055,2024-02-15,-16.18
+Trees · broad,2024-02-15,-1.69
+Trees · broad + buffer,2024-02-15,5.54
+Equal weight · core,2024-02-16,-2.72
+IC-weighted · core,2024-02-16,-0.49
+Ridge · broad,2024-02-16,-0.09
+Ridge · core,2024-02-16,-3.25
+Single alpha · A101_055,2024-02-16,-19.07
+Trees · broad,2024-02-16,-5.75
+Trees · broad + buffer,2024-02-16,1.09
+Equal weight · core,2024-02-17,-4.67
+IC-weighted · core,2024-02-17,-2.01
+Ridge · broad,2024-02-17,-2.81
+Ridge · core,2024-02-17,-5.18
+Single alpha · A101_055,2024-02-17,-17.83
+Trees · broad,2024-02-17,-8.7
+Trees · broad + buffer,2024-02-17,-2.1
+Equal weight · core,2024-02-18,-6.56
+IC-weighted · core,2024-02-18,-3.95
+Ridge · broad,2024-02-18,-4.51
+Ridge · core,2024-02-18,-7.63
+Single alpha · A101_055,2024-02-18,-17.8
+Trees · broad,2024-02-18,-12.0
+Trees · broad + buffer,2024-02-18,-4.46
+Equal weight · core,2024-02-19,-5.94
+IC-weighted · core,2024-02-19,-3.21
+Ridge · broad,2024-02-19,-2.9
+Ridge · core,2024-02-19,-7.68
+Single alpha · A101_055,2024-02-19,-14.98
+Trees · broad,2024-02-19,-10.63
+Trees · broad + buffer,2024-02-19,-3.55
+Equal weight · core,2024-02-20,-6.81
+IC-weighted · core,2024-02-20,-5.03
+Ridge · broad,2024-02-20,-7.6
+Ridge · core,2024-02-20,-11.78
+Single alpha · A101_055,2024-02-20,-14.01
+Trees · broad,2024-02-20,-12.74
+Trees · broad + buffer,2024-02-20,-6.86
+Equal weight · core,2024-02-21,-10.84
+IC-weighted · core,2024-02-21,-8.69
+Ridge · broad,2024-02-21,-11.22
+Ridge · core,2024-02-21,-15.88
+Single alpha · A101_055,2024-02-21,-12.39
+Trees · broad,2024-02-21,-17.58
+Trees · broad + buffer,2024-02-21,-11.35
+Equal weight · core,2024-02-22,-11.3
+IC-weighted · core,2024-02-22,-8.86
+Ridge · broad,2024-02-22,-9.86
+Ridge · core,2024-02-22,-16.75
+Single alpha · A101_055,2024-02-22,-12.08
+Trees · broad,2024-02-22,-17.25
+Trees · broad + buffer,2024-02-22,-10.51
+Equal weight · core,2024-02-23,-14.91
+IC-weighted · core,2024-02-23,-10.91
+Ridge · broad,2024-02-23,-13.24
+Ridge · core,2024-02-23,-20.0
+Single alpha · A101_055,2024-02-23,-14.02
+Trees · broad,2024-02-23,-22.24
+Trees · broad + buffer,2024-02-23,-15.69
+Equal weight · core,2024-02-24,-19.15
+IC-weighted · core,2024-02-24,-12.07
+Ridge · broad,2024-02-24,-16.02
+Ridge · core,2024-02-24,-23.71
+Single alpha · A101_055,2024-02-24,-12.47
+Trees · broad,2024-02-24,-25.41
+Trees · broad + buffer,2024-02-24,-18.65
+Equal weight · core,2024-02-25,-15.43
+IC-weighted · core,2024-02-25,-7.71
+Ridge · broad,2024-02-25,-12.85
+Ridge · core,2024-02-25,-19.35
+Single alpha · A101_055,2024-02-25,-15.53
+Trees · broad,2024-02-25,-23.98
+Trees · broad + buffer,2024-02-25,-16.59
+Equal weight · core,2024-02-26,-15.05
+IC-weighted · core,2024-02-26,-8.76
+Ridge · broad,2024-02-26,-12.67
+Ridge · core,2024-02-26,-19.59
+Single alpha · A101_055,2024-02-26,-12.46
+Trees · broad,2024-02-26,-24.04
+Trees · broad + buffer,2024-02-26,-15.68
+Equal weight · core,2024-02-27,-16.38
+IC-weighted · core,2024-02-27,-12.59
+Ridge · broad,2024-02-27,-19.29
+Ridge · core,2024-02-27,-24.29
+Single alpha · A101_055,2024-02-27,-19.95
+Trees · broad,2024-02-27,-30.4
+Trees · broad + buffer,2024-02-27,-23.51
+Equal weight · core,2024-02-28,-14.23
+IC-weighted · core,2024-02-28,-13.07
+Ridge · broad,2024-02-28,-18.21
+Ridge · core,2024-02-28,-25.33
+Single alpha · A101_055,2024-02-28,-24.97
+Trees · broad,2024-02-28,-30.05
+Trees · broad + buffer,2024-02-28,-22.73
+Equal weight · core,2024-02-29,-13.09
+IC-weighted · core,2024-02-29,-13.64
+Ridge · broad,2024-02-29,-28.11
+Ridge · core,2024-02-29,-27.72
+Single alpha · A101_055,2024-02-29,-24.06
+Trees · broad,2024-02-29,-38.06
+Trees · broad + buffer,2024-02-29,-30.24
+Equal weight · core,2024-03-01,-11.44
+IC-weighted · core,2024-03-01,-14.32
+Ridge · broad,2024-03-01,-29.54
+Ridge · core,2024-03-01,-27.84
+Single alpha · A101_055,2024-03-01,-20.64
+Trees · broad,2024-03-01,-33.95
+Trees · broad + buffer,2024-03-01,-26.01
+Equal weight · core,2024-03-02,-9.89
+IC-weighted · core,2024-03-02,-16.63
+Ridge · broad,2024-03-02,-34.92
+Ridge · core,2024-03-02,-30.14
+Single alpha · A101_055,2024-03-02,-22.59
+Trees · broad,2024-03-02,-39.86
+Trees · broad + buffer,2024-03-02,-31.34
+Equal weight · core,2024-03-03,-10.76
+IC-weighted · core,2024-03-03,-22.46
+Ridge · broad,2024-03-03,-39.69
+Ridge · core,2024-03-03,-36.52
+Single alpha · A101_055,2024-03-03,-23.5
+Trees · broad,2024-03-03,-44.52
+Trees · broad + buffer,2024-03-03,-34.75
+Equal weight · core,2024-03-04,-3.75
+IC-weighted · core,2024-03-04,-14.2
+Ridge · broad,2024-03-04,-35.1
+Ridge · core,2024-03-04,-28.33
+Single alpha · A101_055,2024-03-04,-18.98
+Trees · broad,2024-03-04,-36.8
+Trees · broad + buffer,2024-03-04,-27.18
+Equal weight · core,2024-03-05,4.08
+IC-weighted · core,2024-03-05,-8.25
+Ridge · broad,2024-03-05,-35.15
+Ridge · core,2024-03-05,-22.42
+Single alpha · A101_055,2024-03-05,-15.39
+Trees · broad,2024-03-05,-32.6
+Trees · broad + buffer,2024-03-05,-26.58
+Equal weight · core,2024-03-06,6.17
+IC-weighted · core,2024-03-06,-5.27
+Ridge · broad,2024-03-06,-29.27
+Ridge · core,2024-03-06,-19.86
+Single alpha · A101_055,2024-03-06,-17.26
+Trees · broad,2024-03-06,-28.26
+Trees · broad + buffer,2024-03-06,-21.97
+Equal weight · core,2024-03-07,3.86
+IC-weighted · core,2024-03-07,-8.02
+Ridge · broad,2024-03-07,-40.29
+Ridge · core,2024-03-07,-22.4
+Single alpha · A101_055,2024-03-07,-20.16
+Trees · broad,2024-03-07,-37.25
+Trees · broad + buffer,2024-03-07,-32.93
+Equal weight · core,2024-03-08,6.31
+IC-weighted · core,2024-03-08,-7.53
+Ridge · broad,2024-03-08,-41.99
+Ridge · core,2024-03-08,-21.86
+Single alpha · A101_055,2024-03-08,-21.92
+Trees · broad,2024-03-08,-37.4
+Trees · broad + buffer,2024-03-08,-34.58
+Equal weight · core,2024-03-09,6.79
+IC-weighted · core,2024-03-09,-6.88
+Ridge · broad,2024-03-09,-40.77
+Ridge · core,2024-03-09,-22.1
+Single alpha · A101_055,2024-03-09,-23.13
+Trees · broad,2024-03-09,-35.94
+Trees · broad + buffer,2024-03-09,-33.77
+Equal weight · core,2024-03-10,9.07
+IC-weighted · core,2024-03-10,-2.3
+Ridge · broad,2024-03-10,-34.54
+Ridge · core,2024-03-10,-19.33
+Single alpha · A101_055,2024-03-10,-22.87
+Trees · broad,2024-03-10,-28.7
+Trees · broad + buffer,2024-03-10,-27.54
+Equal weight · core,2024-03-11,8.23
+IC-weighted · core,2024-03-11,-0.5
+Ridge · broad,2024-03-11,-32.41
+Ridge · core,2024-03-11,-18.03
+Single alpha · A101_055,2024-03-11,-19.69
+Trees · broad,2024-03-11,-30.14
+Trees · broad + buffer,2024-03-11,-27.46
+Equal weight · core,2024-03-12,6.89
+IC-weighted · core,2024-03-12,-1.5
+Ridge · broad,2024-03-12,-29.54
+Ridge · core,2024-03-12,-17.84
+Single alpha · A101_055,2024-03-12,-20.41
+Trees · broad,2024-03-12,-25.91
+Trees · broad + buffer,2024-03-12,-24.35
+Equal weight · core,2024-03-13,5.41
+IC-weighted · core,2024-03-13,-4.48
+Ridge · broad,2024-03-13,-37.66
+Ridge · core,2024-03-13,-20.69
+Single alpha · A101_055,2024-03-13,-21.8
+Trees · broad,2024-03-13,-31.55
+Trees · broad + buffer,2024-03-13,-29.85
+Equal weight · core,2024-03-14,2.69
+IC-weighted · core,2024-03-14,-7.24
+Ridge · broad,2024-03-14,-39.19
+Ridge · core,2024-03-14,-23.04
+Single alpha · A101_055,2024-03-14,-23.25
+Trees · broad,2024-03-14,-33.67
+Trees · broad + buffer,2024-03-14,-29.21
+Equal weight · core,2024-03-15,1.0
+IC-weighted · core,2024-03-15,-9.43
+Ridge · broad,2024-03-15,-36.78
+Ridge · core,2024-03-15,-22.78
+Single alpha · A101_055,2024-03-15,-23.94
+Trees · broad,2024-03-15,-31.91
+Trees · broad + buffer,2024-03-15,-25.2
+Equal weight · core,2024-03-16,1.26
+IC-weighted · core,2024-03-16,-8.6
+Ridge · broad,2024-03-16,-42.0
+Ridge · core,2024-03-16,-23.46
+Single alpha · A101_055,2024-03-16,-18.07
+Trees · broad,2024-03-16,-35.13
+Trees · broad + buffer,2024-03-16,-30.3
+Equal weight · core,2024-03-17,4.46
+IC-weighted · core,2024-03-17,-7.04
+Ridge · broad,2024-03-17,-36.65
+Ridge · core,2024-03-17,-22.22
+Single alpha · A101_055,2024-03-17,-17.55
+Trees · broad,2024-03-17,-28.45
+Trees · broad + buffer,2024-03-17,-22.75
+Equal weight · core,2024-03-18,4.09
+IC-weighted · core,2024-03-18,-6.26
+Ridge · broad,2024-03-18,-35.58
+Ridge · core,2024-03-18,-21.44
+Single alpha · A101_055,2024-03-18,-21.03
+Trees · broad,2024-03-18,-29.2
+Trees · broad + buffer,2024-03-18,-24.96
+Equal weight · core,2024-03-19,7.86
+IC-weighted · core,2024-03-19,-3.17
+Ridge · broad,2024-03-19,-37.81
+Ridge · core,2024-03-19,-18.53
+Single alpha · A101_055,2024-03-19,-17.98
+Trees · broad,2024-03-19,-27.41
+Trees · broad + buffer,2024-03-19,-25.46
+Equal weight · core,2024-03-20,7.85
+IC-weighted · core,2024-03-20,-1.11
+Ridge · broad,2024-03-20,-30.27
+Ridge · core,2024-03-20,-15.95
+Single alpha · A101_055,2024-03-20,-19.76
+Trees · broad,2024-03-20,-22.9
+Trees · broad + buffer,2024-03-20,-18.79
+Equal weight · core,2024-03-21,4.2
+IC-weighted · core,2024-03-21,-4.73
+Ridge · broad,2024-03-21,-33.73
+Ridge · core,2024-03-21,-18.98
+Single alpha · A101_055,2024-03-21,-21.15
+Trees · broad,2024-03-21,-24.85
+Trees · broad + buffer,2024-03-21,-20.75
+Equal weight · core,2024-03-22,3.53
+IC-weighted · core,2024-03-22,-5.19
+Ridge · broad,2024-03-22,-33.22
+Ridge · core,2024-03-22,-19.43
+Single alpha · A101_055,2024-03-22,-21.68
+Trees · broad,2024-03-22,-23.56
+Trees · broad + buffer,2024-03-22,-18.05
+Equal weight · core,2024-03-23,3.47
+IC-weighted · core,2024-03-23,-5.86
+Ridge · broad,2024-03-23,-35.25
+Ridge · core,2024-03-23,-20.45
+Single alpha · A101_055,2024-03-23,-24.47
+Trees · broad,2024-03-23,-25.18
+Trees · broad + buffer,2024-03-23,-21.13
+Equal weight · core,2024-03-24,2.4
+IC-weighted · core,2024-03-24,-9.18
+Ridge · broad,2024-03-24,-39.65
+Ridge · core,2024-03-24,-23.57
+Single alpha · A101_055,2024-03-24,-27.35
+Trees · broad,2024-03-24,-30.45
+Trees · broad + buffer,2024-03-24,-25.96
+Equal weight · core,2024-03-25,3.17
+IC-weighted · core,2024-03-25,-9.28
+Ridge · broad,2024-03-25,-37.92
+Ridge · core,2024-03-25,-23.04
+Single alpha · A101_055,2024-03-25,-27.91
+Trees · broad,2024-03-25,-31.85
+Trees · broad + buffer,2024-03-25,-26.59
+Equal weight · core,2024-03-26,2.05
+IC-weighted · core,2024-03-26,-9.3
+Ridge · broad,2024-03-26,-37.83
+Ridge · core,2024-03-26,-23.56
+Single alpha · A101_055,2024-03-26,-28.2
+Trees · broad,2024-03-26,-32.8
+Trees · broad + buffer,2024-03-26,-25.25
+Equal weight · core,2024-03-27,1.86
+IC-weighted · core,2024-03-27,-9.13
+Ridge · broad,2024-03-27,-37.85
+Ridge · core,2024-03-27,-23.62
+Single alpha · A101_055,2024-03-27,-27.81
+Trees · broad,2024-03-27,-33.07
+Trees · broad + buffer,2024-03-27,-26.23
+Equal weight · core,2024-03-28,1.78
+IC-weighted · core,2024-03-28,-8.31
+Ridge · broad,2024-03-28,-35.25
+Ridge · core,2024-03-28,-23.02
+Single alpha · A101_055,2024-03-28,-28.54
+Trees · broad,2024-03-28,-27.6
+Trees · broad + buffer,2024-03-28,-22.02
+Equal weight · core,2024-03-29,2.93
+IC-weighted · core,2024-03-29,-6.93
+Ridge · broad,2024-03-29,-37.23
+Ridge · core,2024-03-29,-22.81
+Single alpha · A101_055,2024-03-29,-28.41
+Trees · broad,2024-03-29,-28.1
+Trees · broad + buffer,2024-03-29,-23.44
+Equal weight · core,2024-03-30,-1.58
+IC-weighted · core,2024-03-30,-12.53
+Ridge · broad,2024-03-30,-42.25
+Ridge · core,2024-03-30,-28.71
+Single alpha · A101_055,2024-03-30,-30.45
+Trees · broad,2024-03-30,-31.75
+Trees · broad + buffer,2024-03-30,-26.52
+Equal weight · core,2024-03-31,-1.29
+IC-weighted · core,2024-03-31,-12.8
+Ridge · broad,2024-03-31,-41.95
+Ridge · core,2024-03-31,-29.36
+Single alpha · A101_055,2024-03-31,-32.04
+Trees · broad,2024-03-31,-31.16
+Trees · broad + buffer,2024-03-31,-26.33
+Equal weight · core,2024-04-01,-0.23
+IC-weighted · core,2024-04-01,-11.94
+Ridge · broad,2024-04-01,-39.09
+Ridge · core,2024-04-01,-29.48
+Single alpha · A101_055,2024-04-01,-31.24
+Trees · broad,2024-04-01,-29.01
+Trees · broad + buffer,2024-04-01,-23.31
+Equal weight · core,2024-04-02,1.07
+IC-weighted · core,2024-04-02,-10.86
+Ridge · broad,2024-04-02,-35.57
+Ridge · core,2024-04-02,-27.46
+Single alpha · A101_055,2024-04-02,-31.27
+Trees · broad,2024-04-02,-27.05
+Trees · broad + buffer,2024-04-02,-20.3
+Equal weight · core,2024-04-03,3.53
+IC-weighted · core,2024-04-03,-8.5
+Ridge · broad,2024-04-03,-35.33
+Ridge · core,2024-04-03,-25.44
+Single alpha · A101_055,2024-04-03,-31.06
+Trees · broad,2024-04-03,-26.74
+Trees · broad + buffer,2024-04-03,-19.9
+Equal weight · core,2024-04-04,1.52
+IC-weighted · core,2024-04-04,-12.15
+Ridge · broad,2024-04-04,-35.35
+Ridge · core,2024-04-04,-28.71
+Single alpha · A101_055,2024-04-04,-33.83
+Trees · broad,2024-04-04,-26.54
+Trees · broad + buffer,2024-04-04,-19.94
+Equal weight · core,2024-04-05,3.42
+IC-weighted · core,2024-04-05,-9.35
+Ridge · broad,2024-04-05,-34.67
+Ridge · core,2024-04-05,-26.77
+Single alpha · A101_055,2024-04-05,-33.3
+Trees · broad,2024-04-05,-24.35
+Trees · broad + buffer,2024-04-05,-19.82
+Equal weight · core,2024-04-06,3.8
+IC-weighted · core,2024-04-06,-8.81
+Ridge · broad,2024-04-06,-35.68
+Ridge · core,2024-04-06,-26.33
+Single alpha · A101_055,2024-04-06,-32.47
+Trees · broad,2024-04-06,-25.29
+Trees · broad + buffer,2024-04-06,-20.09
+Equal weight · core,2024-04-07,3.49
+IC-weighted · core,2024-04-07,-8.48
+Ridge · broad,2024-04-07,-35.83
+Ridge · core,2024-04-07,-25.59
+Single alpha · A101_055,2024-04-07,-32.16
+Trees · broad,2024-04-07,-25.91
+Trees · broad + buffer,2024-04-07,-20.49
+Equal weight · core,2024-04-08,1.08
+IC-weighted · core,2024-04-08,-11.74
+Ridge · broad,2024-04-08,-36.15
+Ridge · core,2024-04-08,-28.99
+Single alpha · A101_055,2024-04-08,-32.56
+Trees · broad,2024-04-08,-27.64
+Trees · broad + buffer,2024-04-08,-21.57
+Equal weight · core,2024-04-09,0.32
+IC-weighted · core,2024-04-09,-13.14
+Ridge · broad,2024-04-09,-37.19
+Ridge · core,2024-04-09,-29.05
+Single alpha · A101_055,2024-04-09,-31.72
+Trees · broad,2024-04-09,-29.0
+Trees · broad + buffer,2024-04-09,-22.78
+Equal weight · core,2024-04-10,2.47
+IC-weighted · core,2024-04-10,-11.06
+Ridge · broad,2024-04-10,-34.04
+Ridge · core,2024-04-10,-26.73
+Single alpha · A101_055,2024-04-10,-34.76
+Trees · broad,2024-04-10,-26.07
+Trees · broad + buffer,2024-04-10,-19.32
+Equal weight · core,2024-04-11,-1.07
+IC-weighted · core,2024-04-11,-14.33
+Ridge · broad,2024-04-11,-31.77
+Ridge · core,2024-04-11,-31.15
+Single alpha · A101_055,2024-04-11,-36.14
+Trees · broad,2024-04-11,-23.56
+Trees · broad + buffer,2024-04-11,-16.08
+Equal weight · core,2024-04-12,-1.21
+IC-weighted · core,2024-04-12,-13.62
+Ridge · broad,2024-04-12,-32.58
+Ridge · core,2024-04-12,-31.32
+Single alpha · A101_055,2024-04-12,-34.19
+Trees · broad,2024-04-12,-19.12
+Trees · broad + buffer,2024-04-12,-13.91
+Equal weight · core,2024-04-13,1.88
+IC-weighted · core,2024-04-13,-8.15
+Ridge · broad,2024-04-13,-36.78
+Ridge · core,2024-04-13,-26.53
+Single alpha · A101_055,2024-04-13,-34.25
+Trees · broad,2024-04-13,-17.15
+Trees · broad + buffer,2024-04-13,-14.13
+Equal weight · core,2024-04-14,2.24
+IC-weighted · core,2024-04-14,-8.2
+Ridge · broad,2024-04-14,-33.91
+Ridge · core,2024-04-14,-26.71
+Single alpha · A101_055,2024-04-14,-31.43
+Trees · broad,2024-04-14,-17.2
+Trees · broad + buffer,2024-04-14,-14.37
+Equal weight · core,2024-04-15,2.74
+IC-weighted · core,2024-04-15,-8.14
+Ridge · broad,2024-04-15,-33.8
+Ridge · core,2024-04-15,-27.15
+Single alpha · A101_055,2024-04-15,-32.73
+Trees · broad,2024-04-15,-17.59
+Trees · broad + buffer,2024-04-15,-14.87
+Equal weight · core,2024-04-16,5.24
+IC-weighted · core,2024-04-16,-6.23
+Ridge · broad,2024-04-16,-30.11
+Ridge · core,2024-04-16,-24.81
+Single alpha · A101_055,2024-04-16,-31.84
+Trees · broad,2024-04-16,-14.13
+Trees · broad + buffer,2024-04-16,-11.75
+Equal weight · core,2024-04-17,3.1
+IC-weighted · core,2024-04-17,-8.06
+Ridge · broad,2024-04-17,-32.1
+Ridge · core,2024-04-17,-25.78
+Single alpha · A101_055,2024-04-17,-31.26
+Trees · broad,2024-04-17,-16.75
+Trees · broad + buffer,2024-04-17,-13.58
+Equal weight · core,2024-04-18,3.96
+IC-weighted · core,2024-04-18,-8.07
+Ridge · broad,2024-04-18,-33.62
+Ridge · core,2024-04-18,-25.69
+Single alpha · A101_055,2024-04-18,-31.51
+Trees · broad,2024-04-18,-19.18
+Trees · broad + buffer,2024-04-18,-16.66
+Equal weight · core,2024-04-19,12.44
+IC-weighted · core,2024-04-19,-0.48
+Ridge · broad,2024-04-19,-34.36
+Ridge · core,2024-04-19,-18.02
+Single alpha · A101_055,2024-04-19,-30.87
+Trees · broad,2024-04-19,-18.93
+Trees · broad + buffer,2024-04-19,-15.67
+Equal weight · core,2024-04-20,11.85
+IC-weighted · core,2024-04-20,-1.63
+Ridge · broad,2024-04-20,-36.07
+Ridge · core,2024-04-20,-18.95
+Single alpha · A101_055,2024-04-20,-30.99
+Trees · broad,2024-04-20,-20.85
+Trees · broad + buffer,2024-04-20,-17.16
+Equal weight · core,2024-04-21,12.98
+IC-weighted · core,2024-04-21,-1.57
+Ridge · broad,2024-04-21,-36.4
+Ridge · core,2024-04-21,-19.06
+Single alpha · A101_055,2024-04-21,-30.05
+Trees · broad,2024-04-21,-22.1
+Trees · broad + buffer,2024-04-21,-17.96
+Equal weight · core,2024-04-22,14.35
+IC-weighted · core,2024-04-22,-2.11
+Ridge · broad,2024-04-22,-37.81
+Ridge · core,2024-04-22,-19.54
+Single alpha · A101_055,2024-04-22,-33.05
+Trees · broad,2024-04-22,-24.23
+Trees · broad + buffer,2024-04-22,-17.83
+Equal weight · core,2024-04-23,12.44
+IC-weighted · core,2024-04-23,-3.85
+Ridge · broad,2024-04-23,-38.89
+Ridge · core,2024-04-23,-21.54
+Single alpha · A101_055,2024-04-23,-32.65
+Trees · broad,2024-04-23,-25.22
+Trees · broad + buffer,2024-04-23,-18.5
+Equal weight · core,2024-04-24,11.29
+IC-weighted · core,2024-04-24,-3.16
+Ridge · broad,2024-04-24,-38.72
+Ridge · core,2024-04-24,-20.83
+Single alpha · A101_055,2024-04-24,-33.97
+Trees · broad,2024-04-24,-24.94
+Trees · broad + buffer,2024-04-24,-18.53
+Equal weight · core,2024-04-25,11.42
+IC-weighted · core,2024-04-25,-4.33
+Ridge · broad,2024-04-25,-36.89
+Ridge · core,2024-04-25,-22.1
+Single alpha · A101_055,2024-04-25,-34.67
+Trees · broad,2024-04-25,-22.91
+Trees · broad + buffer,2024-04-25,-15.21
+Equal weight · core,2024-04-26,12.87
+IC-weighted · core,2024-04-26,-2.47
+Ridge · broad,2024-04-26,-34.77
+Ridge · core,2024-04-26,-20.64
+Single alpha · A101_055,2024-04-26,-34.82
+Trees · broad,2024-04-26,-21.03
+Trees · broad + buffer,2024-04-26,-13.58
+Equal weight · core,2024-04-27,13.28
+IC-weighted · core,2024-04-27,-2.79
+Ridge · broad,2024-04-27,-35.22
+Ridge · core,2024-04-27,-20.97
+Single alpha · A101_055,2024-04-27,-36.62
+Trees · broad,2024-04-27,-21.76
+Trees · broad + buffer,2024-04-27,-14.65
+Equal weight · core,2024-04-28,13.07
+IC-weighted · core,2024-04-28,-3.09
+Ridge · broad,2024-04-28,-35.81
+Ridge · core,2024-04-28,-21.61
+Single alpha · A101_055,2024-04-28,-37.44
+Trees · broad,2024-04-28,-22.05
+Trees · broad + buffer,2024-04-28,-13.97
+Equal weight · core,2024-04-29,14.44
+IC-weighted · core,2024-04-29,-1.31
+Ridge · broad,2024-04-29,-32.14
+Ridge · core,2024-04-29,-20.69
+Single alpha · A101_055,2024-04-29,-36.81
+Trees · broad,2024-04-29,-17.14
+Trees · broad + buffer,2024-04-29,-9.91
+Equal weight · core,2024-04-30,13.55
+IC-weighted · core,2024-04-30,-0.99
+Ridge · broad,2024-04-30,-32.49
+Ridge · core,2024-04-30,-20.36
+Single alpha · A101_055,2024-04-30,-37.17
+Trees · broad,2024-04-30,-17.39
+Trees · broad + buffer,2024-04-30,-10.57
+Equal weight · core,2024-05-01,11.16
+IC-weighted · core,2024-05-01,-2.09
+Ridge · broad,2024-05-01,-35.23
+Ridge · core,2024-05-01,-21.57
+Single alpha · A101_055,2024-05-01,-36.37
+Trees · broad,2024-05-01,-18.28
+Trees · broad + buffer,2024-05-01,-12.33
+Equal weight · core,2024-05-02,13.86
+IC-weighted · core,2024-05-02,-0.57
+Ridge · broad,2024-05-02,-33.77
+Ridge · core,2024-05-02,-20.15
+Single alpha · A101_055,2024-05-02,-32.43
+Trees · broad,2024-05-02,-17.58
+Trees · broad + buffer,2024-05-02,-11.72
+Equal weight · core,2024-05-03,13.18
+IC-weighted · core,2024-05-03,-2.96
+Ridge · broad,2024-05-03,-35.96
+Ridge · core,2024-05-03,-21.87
+Single alpha · A101_055,2024-05-03,-34.26
+Trees · broad,2024-05-03,-20.76
+Trees · broad + buffer,2024-05-03,-14.51
+Equal weight · core,2024-05-04,10.43
+IC-weighted · core,2024-05-04,-5.37
+Ridge · broad,2024-05-04,-36.66
+Ridge · core,2024-05-04,-25.15
+Single alpha · A101_055,2024-05-04,-35.62
+Trees · broad,2024-05-04,-20.54
+Trees · broad + buffer,2024-05-04,-14.87
+Equal weight · core,2024-05-05,11.05
+IC-weighted · core,2024-05-05,-5.16
+Ridge · broad,2024-05-05,-35.31
+Ridge · core,2024-05-05,-24.17
+Single alpha · A101_055,2024-05-05,-34.86
+Trees · broad,2024-05-05,-20.99
+Trees · broad + buffer,2024-05-05,-14.68
+Equal weight · core,2024-05-06,8.59
+IC-weighted · core,2024-05-06,-7.13
+Ridge · broad,2024-05-06,-35.94
+Ridge · core,2024-05-06,-25.72
+Single alpha · A101_055,2024-05-06,-34.21
+Trees · broad,2024-05-06,-22.92
+Trees · broad + buffer,2024-05-06,-16.15
+Equal weight · core,2024-05-07,7.62
+IC-weighted · core,2024-05-07,-8.49
+Ridge · broad,2024-05-07,-37.36
+Ridge · core,2024-05-07,-27.45
+Single alpha · A101_055,2024-05-07,-32.35
+Trees · broad,2024-05-07,-23.23
+Trees · broad + buffer,2024-05-07,-16.47
+Equal weight · core,2024-05-08,7.99
+IC-weighted · core,2024-05-08,-8.88
+Ridge · broad,2024-05-08,-39.13
+Ridge · core,2024-05-08,-27.08
+Single alpha · A101_055,2024-05-08,-33.21
+Trees · broad,2024-05-08,-24.14
+Trees · broad + buffer,2024-05-08,-16.79
+Equal weight · core,2024-05-09,4.73
+IC-weighted · core,2024-05-09,-12.76
+Ridge · broad,2024-05-09,-42.2
+Ridge · core,2024-05-09,-31.03
+Single alpha · A101_055,2024-05-09,-33.59
+Trees · broad,2024-05-09,-26.36
+Trees · broad + buffer,2024-05-09,-19.89
+Equal weight · core,2024-05-10,5.42
+IC-weighted · core,2024-05-10,-11.92
+Ridge · broad,2024-05-10,-42.12
+Ridge · core,2024-05-10,-29.9
+Single alpha · A101_055,2024-05-10,-33.97
+Trees · broad,2024-05-10,-26.48
+Trees · broad + buffer,2024-05-10,-19.83
+Equal weight · core,2024-05-11,4.34
+IC-weighted · core,2024-05-11,-13.15
+Ridge · broad,2024-05-11,-43.97
+Ridge · core,2024-05-11,-31.42
+Single alpha · A101_055,2024-05-11,-34.75
+Trees · broad,2024-05-11,-27.21
+Trees · broad + buffer,2024-05-11,-21.21
+Equal weight · core,2024-05-12,5.77
+IC-weighted · core,2024-05-12,-12.32
+Ridge · broad,2024-05-12,-42.82
+Ridge · core,2024-05-12,-29.6
+Single alpha · A101_055,2024-05-12,-34.42
+Trees · broad,2024-05-12,-27.02
+Trees · broad + buffer,2024-05-12,-19.74
+Equal weight · core,2024-05-13,5.5
+IC-weighted · core,2024-05-13,-12.05
+Ridge · broad,2024-05-13,-40.78
+Ridge · core,2024-05-13,-29.91
+Single alpha · A101_055,2024-05-13,-35.14
+Trees · broad,2024-05-13,-25.95
+Trees · broad + buffer,2024-05-13,-18.46
+Equal weight · core,2024-05-14,3.09
+IC-weighted · core,2024-05-14,-13.97
+Ridge · broad,2024-05-14,-43.31
+Ridge · core,2024-05-14,-30.42
+Single alpha · A101_055,2024-05-14,-37.06
+Trees · broad,2024-05-14,-27.7
+Trees · broad + buffer,2024-05-14,-20.85
+Equal weight · core,2024-05-15,3.49
+IC-weighted · core,2024-05-15,-12.63
+Ridge · broad,2024-05-15,-42.32
+Ridge · core,2024-05-15,-29.33
+Single alpha · A101_055,2024-05-15,-37.19
+Trees · broad,2024-05-15,-26.33
+Trees · broad + buffer,2024-05-15,-18.11
+Equal weight · core,2024-05-16,3.11
+IC-weighted · core,2024-05-16,-11.78
+Ridge · broad,2024-05-16,-42.18
+Ridge · core,2024-05-16,-28.07
+Single alpha · A101_055,2024-05-16,-37.12
+Trees · broad,2024-05-16,-25.14
+Trees · broad + buffer,2024-05-16,-16.67
+Equal weight · core,2024-05-17,-0.29
+IC-weighted · core,2024-05-17,-14.01
+Ridge · broad,2024-05-17,-42.01
+Ridge · core,2024-05-17,-29.24
+Single alpha · A101_055,2024-05-17,-39.85
+Trees · broad,2024-05-17,-26.53
+Trees · broad + buffer,2024-05-17,-17.25
+Equal weight · core,2024-05-18,-0.78
+IC-weighted · core,2024-05-18,-15.58
+Ridge · broad,2024-05-18,-42.08
+Ridge · core,2024-05-18,-30.18
+Single alpha · A101_055,2024-05-18,-40.49
+Trees · broad,2024-05-18,-26.6
+Trees · broad + buffer,2024-05-18,-17.57
+Equal weight · core,2024-05-19,-1.2
+IC-weighted · core,2024-05-19,-16.05
+Ridge · broad,2024-05-19,-42.0
+Ridge · core,2024-05-19,-31.09
+Single alpha · A101_055,2024-05-19,-38.22
+Trees · broad,2024-05-19,-24.02
+Trees · broad + buffer,2024-05-19,-16.33
+Equal weight · core,2024-05-20,-3.87
+IC-weighted · core,2024-05-20,-18.68
+Ridge · broad,2024-05-20,-47.42
+Ridge · core,2024-05-20,-35.98
+Single alpha · A101_055,2024-05-20,-40.82
+Trees · broad,2024-05-20,-27.2
+Trees · broad + buffer,2024-05-20,-20.42
+Equal weight · core,2024-05-21,-3.0
+IC-weighted · core,2024-05-21,-18.47
+Ridge · broad,2024-05-21,-49.65
+Ridge · core,2024-05-21,-36.11
+Single alpha · A101_055,2024-05-21,-40.5
+Trees · broad,2024-05-21,-31.73
+Trees · broad + buffer,2024-05-21,-23.82
+Equal weight · core,2024-05-22,-6.42
+IC-weighted · core,2024-05-22,-20.75
+Ridge · broad,2024-05-22,-56.83
+Ridge · core,2024-05-22,-40.67
+Single alpha · A101_055,2024-05-22,-44.68
+Trees · broad,2024-05-22,-37.6
+Trees · broad + buffer,2024-05-22,-30.3
+Equal weight · core,2024-05-23,-7.61
+IC-weighted · core,2024-05-23,-21.55
+Ridge · broad,2024-05-23,-57.58
+Ridge · core,2024-05-23,-41.74
+Single alpha · A101_055,2024-05-23,-45.05
+Trees · broad,2024-05-23,-38.18
+Trees · broad + buffer,2024-05-23,-31.74
+Equal weight · core,2024-05-24,-6.99
+IC-weighted · core,2024-05-24,-20.37
+Ridge · broad,2024-05-24,-57.94
+Ridge · core,2024-05-24,-40.47
+Single alpha · A101_055,2024-05-24,-44.15
+Trees · broad,2024-05-24,-37.81
+Trees · broad + buffer,2024-05-24,-30.91
+Equal weight · core,2024-05-25,-9.39
+IC-weighted · core,2024-05-25,-22.88
+Ridge · broad,2024-05-25,-59.77
+Ridge · core,2024-05-25,-42.91
+Single alpha · A101_055,2024-05-25,-44.53
+Trees · broad,2024-05-25,-39.6
+Trees · broad + buffer,2024-05-25,-32.06
+Equal weight · core,2024-05-26,-10.08
+IC-weighted · core,2024-05-26,-23.26
+Ridge · broad,2024-05-26,-58.39
+Ridge · core,2024-05-26,-43.21
+Single alpha · A101_055,2024-05-26,-43.66
+Trees · broad,2024-05-26,-39.59
+Trees · broad + buffer,2024-05-26,-33.07
+Equal weight · core,2024-05-27,-11.7
+IC-weighted · core,2024-05-27,-25.13
+Ridge · broad,2024-05-27,-60.83
+Ridge · core,2024-05-27,-44.57
+Single alpha · A101_055,2024-05-27,-42.86
+Trees · broad,2024-05-27,-41.5
+Trees · broad + buffer,2024-05-27,-36.38
+Equal weight · core,2024-05-28,-10.55
+IC-weighted · core,2024-05-28,-23.84
+Ridge · broad,2024-05-28,-56.91
+Ridge · core,2024-05-28,-43.11
+Single alpha · A101_055,2024-05-28,-40.35
+Trees · broad,2024-05-28,-38.62
+Trees · broad + buffer,2024-05-28,-32.62
+Equal weight · core,2024-05-29,-8.68
+IC-weighted · core,2024-05-29,-24.19
+Ridge · broad,2024-05-29,-56.59
+Ridge · core,2024-05-29,-43.52
+Single alpha · A101_055,2024-05-29,-39.65
+Trees · broad,2024-05-29,-37.5
+Trees · broad + buffer,2024-05-29,-32.23
+Equal weight · core,2024-05-30,-9.9
+IC-weighted · core,2024-05-30,-26.21
+Ridge · broad,2024-05-30,-59.06
+Ridge · core,2024-05-30,-45.2
+Single alpha · A101_055,2024-05-30,-39.53
+Trees · broad,2024-05-30,-40.42
+Trees · broad + buffer,2024-05-30,-34.92
+Equal weight · core,2024-05-31,-13.53
+IC-weighted · core,2024-05-31,-27.48
+Ridge · broad,2024-05-31,-62.79
+Ridge · core,2024-05-31,-48.57
+Single alpha · A101_055,2024-05-31,-40.32
+Trees · broad,2024-05-31,-43.29
+Trees · broad + buffer,2024-05-31,-39.28
+Equal weight · core,2024-06-01,-12.36
+IC-weighted · core,2024-06-01,-25.59
+Ridge · broad,2024-06-01,-61.02
+Ridge · core,2024-06-01,-46.33
+Single alpha · A101_055,2024-06-01,-39.4
+Trees · broad,2024-06-01,-41.87
+Trees · broad + buffer,2024-06-01,-38.42
+Equal weight · core,2024-06-02,-10.57
+IC-weighted · core,2024-06-02,-22.29
+Ridge · broad,2024-06-02,-57.83
+Ridge · core,2024-06-02,-42.53
+Single alpha · A101_055,2024-06-02,-41.16
+Trees · broad,2024-06-02,-39.09
+Trees · broad + buffer,2024-06-02,-33.74
+Equal weight · core,2024-06-03,-9.98
+IC-weighted · core,2024-06-03,-22.02
+Ridge · broad,2024-06-03,-57.68
+Ridge · core,2024-06-03,-41.11
+Single alpha · A101_055,2024-06-03,-43.04
+Trees · broad,2024-06-03,-36.06
+Trees · broad + buffer,2024-06-03,-32.08
+Equal weight · core,2024-06-04,-10.0
+IC-weighted · core,2024-06-04,-21.39
+Ridge · broad,2024-06-04,-57.84
+Ridge · core,2024-06-04,-41.16
+Single alpha · A101_055,2024-06-04,-43.92
+Trees · broad,2024-06-04,-36.38
+Trees · broad + buffer,2024-06-04,-32.21
+Equal weight · core,2024-06-05,-9.53
+IC-weighted · core,2024-06-05,-21.33
+Ridge · broad,2024-06-05,-59.35
+Ridge · core,2024-06-05,-41.69
+Single alpha · A101_055,2024-06-05,-44.66
+Trees · broad,2024-06-05,-37.12
+Trees · broad + buffer,2024-06-05,-34.21
+Equal weight · core,2024-06-06,-9.71
+IC-weighted · core,2024-06-06,-22.18
+Ridge · broad,2024-06-06,-59.56
+Ridge · core,2024-06-06,-41.52
+Single alpha · A101_055,2024-06-06,-45.19
+Trees · broad,2024-06-06,-36.06
+Trees · broad + buffer,2024-06-06,-33.36
+Equal weight · core,2024-06-07,-7.37
+IC-weighted · core,2024-06-07,-22.53
+Ridge · broad,2024-06-07,-59.38
+Ridge · core,2024-06-07,-40.83
+Single alpha · A101_055,2024-06-07,-42.15
+Trees · broad,2024-06-07,-36.45
+Trees · broad + buffer,2024-06-07,-33.88
+Equal weight · core,2024-06-08,-7.4
+IC-weighted · core,2024-06-08,-22.77
+Ridge · broad,2024-06-08,-58.09
+Ridge · core,2024-06-08,-40.84
+Single alpha · A101_055,2024-06-08,-42.95
+Trees · broad,2024-06-08,-35.52
+Trees · broad + buffer,2024-06-08,-32.98
+Equal weight · core,2024-06-09,-5.99
+IC-weighted · core,2024-06-09,-22.13
+Ridge · broad,2024-06-09,-55.01
+Ridge · core,2024-06-09,-39.52
+Single alpha · A101_055,2024-06-09,-41.37
+Trees · broad,2024-06-09,-33.08
+Trees · broad + buffer,2024-06-09,-30.88
+Equal weight · core,2024-06-10,-4.82
+IC-weighted · core,2024-06-10,-19.69
+Ridge · broad,2024-06-10,-50.86
+Ridge · core,2024-06-10,-36.55
+Single alpha · A101_055,2024-06-10,-37.54
+Trees · broad,2024-06-10,-29.91
+Trees · broad + buffer,2024-06-10,-27.66
+Equal weight · core,2024-06-11,-3.62
+IC-weighted · core,2024-06-11,-16.88
+Ridge · broad,2024-06-11,-48.83
+Ridge · core,2024-06-11,-34.27
+Single alpha · A101_055,2024-06-11,-35.25
+Trees · broad,2024-06-11,-30.22
+Trees · broad + buffer,2024-06-11,-29.31
+Equal weight · core,2024-06-12,-4.17
+IC-weighted · core,2024-06-12,-18.2
+Ridge · broad,2024-06-12,-47.52
+Ridge · core,2024-06-12,-33.98
+Single alpha · A101_055,2024-06-12,-33.0
+Trees · broad,2024-06-12,-29.21
+Trees · broad + buffer,2024-06-12,-27.64
+Equal weight · core,2024-06-13,-4.73
+IC-weighted · core,2024-06-13,-19.78
+Ridge · broad,2024-06-13,-48.03
+Ridge · core,2024-06-13,-35.66
+Single alpha · A101_055,2024-06-13,-33.74
+Trees · broad,2024-06-13,-29.61
+Trees · broad + buffer,2024-06-13,-27.26
+Equal weight · core,2024-06-14,-7.51
+IC-weighted · core,2024-06-14,-22.14
+Ridge · broad,2024-06-14,-49.16
+Ridge · core,2024-06-14,-37.42
+Single alpha · A101_055,2024-06-14,-35.1
+Trees · broad,2024-06-14,-31.06
+Trees · broad + buffer,2024-06-14,-28.79
+Equal weight · core,2024-06-15,-8.31
+IC-weighted · core,2024-06-15,-21.87
+Ridge · broad,2024-06-15,-50.27
+Ridge · core,2024-06-15,-37.4
+Single alpha · A101_055,2024-06-15,-36.55
+Trees · broad,2024-06-15,-31.65
+Trees · broad + buffer,2024-06-15,-29.0
+Equal weight · core,2024-06-16,-8.1
+IC-weighted · core,2024-06-16,-21.27
+Ridge · broad,2024-06-16,-46.3
+Ridge · core,2024-06-16,-35.49
+Single alpha · A101_055,2024-06-16,-36.71
+Trees · broad,2024-06-16,-29.09
+Trees · broad + buffer,2024-06-16,-25.84
+Equal weight · core,2024-06-17,-11.77
+IC-weighted · core,2024-06-17,-26.41
+Ridge · broad,2024-06-17,-48.85
+Ridge · core,2024-06-17,-39.01
+Single alpha · A101_055,2024-06-17,-41.16
+Trees · broad,2024-06-17,-33.02
+Trees · broad + buffer,2024-06-17,-29.22
+Equal weight · core,2024-06-18,-10.28
+IC-weighted · core,2024-06-18,-25.11
+Ridge · broad,2024-06-18,-48.07
+Ridge · core,2024-06-18,-38.51
+Single alpha · A101_055,2024-06-18,-42.59
+Trees · broad,2024-06-18,-32.86
+Trees · broad + buffer,2024-06-18,-27.3
+Equal weight · core,2024-06-19,-12.06
+IC-weighted · core,2024-06-19,-26.84
+Ridge · broad,2024-06-19,-48.81
+Ridge · core,2024-06-19,-40.23
+Single alpha · A101_055,2024-06-19,-44.24
+Trees · broad,2024-06-19,-32.45
+Trees · broad + buffer,2024-06-19,-27.75
+Equal weight · core,2024-06-20,-12.97
+IC-weighted · core,2024-06-20,-28.06
+Ridge · broad,2024-06-20,-50.98
+Ridge · core,2024-06-20,-42.27
+Single alpha · A101_055,2024-06-20,-43.83
+Trees · broad,2024-06-20,-34.28
+Trees · broad + buffer,2024-06-20,-28.75
+Equal weight · core,2024-06-21,-16.44
+IC-weighted · core,2024-06-21,-26.24
+Ridge · broad,2024-06-21,-52.29
+Ridge · core,2024-06-21,-41.55
+Single alpha · A101_055,2024-06-21,-38.41
+Trees · broad,2024-06-21,-36.25
+Trees · broad + buffer,2024-06-21,-31.15
+Equal weight · core,2024-06-22,-15.11
+IC-weighted · core,2024-06-22,-25.32
+Ridge · broad,2024-06-22,-49.04
+Ridge · core,2024-06-22,-39.92
+Single alpha · A101_055,2024-06-22,-37.34
+Trees · broad,2024-06-22,-33.2
+Trees · broad + buffer,2024-06-22,-28.76
+Equal weight · core,2024-06-23,-17.72
+IC-weighted · core,2024-06-23,-25.43
+Ridge · broad,2024-06-23,-53.02
+Ridge · core,2024-06-23,-40.47
+Single alpha · A101_055,2024-06-23,-40.71
+Trees · broad,2024-06-23,-36.84
+Trees · broad + buffer,2024-06-23,-31.53
+Equal weight · core,2024-06-24,-16.96
+IC-weighted · core,2024-06-24,-24.57
+Ridge · broad,2024-06-24,-52.11
+Ridge · core,2024-06-24,-38.75
+Single alpha · A101_055,2024-06-24,-41.17
+Trees · broad,2024-06-24,-37.0
+Trees · broad + buffer,2024-06-24,-30.96
+Equal weight · core,2024-06-25,-18.73
+IC-weighted · core,2024-06-25,-26.63
+Ridge · broad,2024-06-25,-53.33
+Ridge · core,2024-06-25,-41.33
+Single alpha · A101_055,2024-06-25,-41.64
+Trees · broad,2024-06-25,-37.33
+Trees · broad + buffer,2024-06-25,-32.37
+Equal weight · core,2024-06-26,-16.58
+IC-weighted · core,2024-06-26,-24.93
+Ridge · broad,2024-06-26,-50.71
+Ridge · core,2024-06-26,-38.61
+Single alpha · A101_055,2024-06-26,-39.9
+Trees · broad,2024-06-26,-34.52
+Trees · broad + buffer,2024-06-26,-29.32
+Equal weight · core,2024-06-27,-18.37
+IC-weighted · core,2024-06-27,-26.74
+Ridge · broad,2024-06-27,-47.57
+Ridge · core,2024-06-27,-38.88
+Single alpha · A101_055,2024-06-27,-38.67
+Trees · broad,2024-06-27,-32.99
+Trees · broad + buffer,2024-06-27,-27.09
+Equal weight · core,2024-06-28,-20.48
+IC-weighted · core,2024-06-28,-28.1
+Ridge · broad,2024-06-28,-48.87
+Ridge · core,2024-06-28,-40.16
+Single alpha · A101_055,2024-06-28,-38.78
+Trees · broad,2024-06-28,-34.04
+Trees · broad + buffer,2024-06-28,-28.0
+Equal weight · core,2024-06-29,-21.09
+IC-weighted · core,2024-06-29,-28.47
+Ridge · broad,2024-06-29,-50.7
+Ridge · core,2024-06-29,-40.34
+Single alpha · A101_055,2024-06-29,-41.25
+Trees · broad,2024-06-29,-35.16
+Trees · broad + buffer,2024-06-29,-30.4
+Equal weight · core,2024-06-30,-21.58
+IC-weighted · core,2024-06-30,-28.54
+Ridge · broad,2024-06-30,-49.55
+Ridge · core,2024-06-30,-40.26
+Single alpha · A101_055,2024-06-30,-42.64
+Trees · broad,2024-06-30,-34.0
+Trees · broad + buffer,2024-06-30,-30.61
+Equal weight · core,2024-07-01,-23.66
+IC-weighted · core,2024-07-01,-30.34
+Ridge · broad,2024-07-01,-48.96
+Ridge · core,2024-07-01,-41.96
+Single alpha · A101_055,2024-07-01,-44.6
+Trees · broad,2024-07-01,-35.01
+Trees · broad + buffer,2024-07-01,-31.11
+Equal weight · core,2024-07-02,-24.65
+IC-weighted · core,2024-07-02,-33.03
+Ridge · broad,2024-07-02,-46.34
+Ridge · core,2024-07-02,-42.19
+Single alpha · A101_055,2024-07-02,-46.54
+Trees · broad,2024-07-02,-32.12
+Trees · broad + buffer,2024-07-02,-30.13
+Equal weight · core,2024-07-03,-26.8
+IC-weighted · core,2024-07-03,-35.23
+Ridge · broad,2024-07-03,-40.76
+Ridge · core,2024-07-03,-44.94
+Single alpha · A101_055,2024-07-03,-45.48
+Trees · broad,2024-07-03,-31.32
+Trees · broad + buffer,2024-07-03,-27.14
+Equal weight · core,2024-07-04,-29.68
+IC-weighted · core,2024-07-04,-37.08
+Ridge · broad,2024-07-04,-40.02
+Ridge · core,2024-07-04,-47.19
+Single alpha · A101_055,2024-07-04,-47.03
+Trees · broad,2024-07-04,-32.41
+Trees · broad + buffer,2024-07-04,-26.26
+Equal weight · core,2024-07-05,-28.76
+IC-weighted · core,2024-07-05,-34.71
+Ridge · broad,2024-07-05,-43.12
+Ridge · core,2024-07-05,-43.14
+Single alpha · A101_055,2024-07-05,-46.76
+Trees · broad,2024-07-05,-35.96
+Trees · broad + buffer,2024-07-05,-30.13
+Equal weight · core,2024-07-06,-30.66
+IC-weighted · core,2024-07-06,-35.61
+Ridge · broad,2024-07-06,-42.05
+Ridge · core,2024-07-06,-45.07
+Single alpha · A101_055,2024-07-06,-45.14
+Trees · broad,2024-07-06,-37.78
+Trees · broad + buffer,2024-07-06,-30.57
+Equal weight · core,2024-07-07,-30.39
+IC-weighted · core,2024-07-07,-35.87
+Ridge · broad,2024-07-07,-41.53
+Ridge · core,2024-07-07,-43.52
+Single alpha · A101_055,2024-07-07,-42.15
+Trees · broad,2024-07-07,-36.12
+Trees · broad + buffer,2024-07-07,-28.95
+Equal weight · core,2024-07-08,-31.93
+IC-weighted · core,2024-07-08,-37.48
+Ridge · broad,2024-07-08,-44.29
+Ridge · core,2024-07-08,-45.19
+Single alpha · A101_055,2024-07-08,-42.98
+Trees · broad,2024-07-08,-38.79
+Trees · broad + buffer,2024-07-08,-31.16
+Equal weight · core,2024-07-09,-31.51
+IC-weighted · core,2024-07-09,-37.12
+Ridge · broad,2024-07-09,-45.05
+Ridge · core,2024-07-09,-45.12
+Single alpha · A101_055,2024-07-09,-44.89
+Trees · broad,2024-07-09,-38.31
+Trees · broad + buffer,2024-07-09,-31.48
+Equal weight · core,2024-07-10,-32.42
+IC-weighted · core,2024-07-10,-38.28
+Ridge · broad,2024-07-10,-40.09
+Ridge · core,2024-07-10,-45.04
+Single alpha · A101_055,2024-07-10,-45.75
+Trees · broad,2024-07-10,-33.75
+Trees · broad + buffer,2024-07-10,-26.08
+Equal weight · core,2024-07-11,-33.93
+IC-weighted · core,2024-07-11,-39.47
+Ridge · broad,2024-07-11,-37.72
+Ridge · core,2024-07-11,-45.22
+Single alpha · A101_055,2024-07-11,-46.85
+Trees · broad,2024-07-11,-33.55
+Trees · broad + buffer,2024-07-11,-25.6
+Equal weight · core,2024-07-12,-36.68
+IC-weighted · core,2024-07-12,-41.49
+Ridge · broad,2024-07-12,-36.55
+Ridge · core,2024-07-12,-45.62
+Single alpha · A101_055,2024-07-12,-44.2
+Trees · broad,2024-07-12,-34.79
+Trees · broad + buffer,2024-07-12,-26.64
+Equal weight · core,2024-07-13,-34.92
+IC-weighted · core,2024-07-13,-38.77
+Ridge · broad,2024-07-13,-36.57
+Ridge · core,2024-07-13,-43.95
+Single alpha · A101_055,2024-07-13,-45.34
+Trees · broad,2024-07-13,-34.82
+Trees · broad + buffer,2024-07-13,-26.66
+Equal weight · core,2024-07-14,-31.4
+IC-weighted · core,2024-07-14,-37.62
+Ridge · broad,2024-07-14,-38.45
+Ridge · core,2024-07-14,-44.34
+Single alpha · A101_055,2024-07-14,-47.43
+Trees · broad,2024-07-14,-41.6
+Trees · broad + buffer,2024-07-14,-32.34
+Equal weight · core,2024-07-15,-31.03
+IC-weighted · core,2024-07-15,-37.37
+Ridge · broad,2024-07-15,-41.24
+Ridge · core,2024-07-15,-46.4
+Single alpha · A101_055,2024-07-15,-49.6
+Trees · broad,2024-07-15,-42.09
+Trees · broad + buffer,2024-07-15,-34.52
+Equal weight · core,2024-07-16,-31.27
+IC-weighted · core,2024-07-16,-37.85
+Ridge · broad,2024-07-16,-43.1
+Ridge · core,2024-07-16,-47.85
+Single alpha · A101_055,2024-07-16,-49.2
+Trees · broad,2024-07-16,-44.46
+Trees · broad + buffer,2024-07-16,-36.09
+Equal weight · core,2024-07-17,-31.36
+IC-weighted · core,2024-07-17,-36.99
+Ridge · broad,2024-07-17,-43.01
+Ridge · core,2024-07-17,-47.77
+Single alpha · A101_055,2024-07-17,-49.69
+Trees · broad,2024-07-17,-44.38
+Trees · broad + buffer,2024-07-17,-38.02
+Equal weight · core,2024-07-18,-27.65
+IC-weighted · core,2024-07-18,-34.39
+Ridge · broad,2024-07-18,-41.04
+Ridge · core,2024-07-18,-43.32
+Single alpha · A101_055,2024-07-18,-47.25
+Trees · broad,2024-07-18,-41.3
+Trees · broad + buffer,2024-07-18,-34.71
+Equal weight · core,2024-07-19,-27.58
+IC-weighted · core,2024-07-19,-34.34
+Ridge · broad,2024-07-19,-40.12
+Ridge · core,2024-07-19,-41.76
+Single alpha · A101_055,2024-07-19,-45.35
+Trees · broad,2024-07-19,-39.42
+Trees · broad + buffer,2024-07-19,-32.79
+Equal weight · core,2024-07-20,-30.29
+IC-weighted · core,2024-07-20,-36.26
+Ridge · broad,2024-07-20,-39.08
+Ridge · core,2024-07-20,-42.96
+Single alpha · A101_055,2024-07-20,-45.94
+Trees · broad,2024-07-20,-38.2
+Trees · broad + buffer,2024-07-20,-33.27
+Equal weight · core,2024-07-21,-32.35
+IC-weighted · core,2024-07-21,-37.36
+Ridge · broad,2024-07-21,-38.06
+Ridge · core,2024-07-21,-45.46
+Single alpha · A101_055,2024-07-21,-43.84
+Trees · broad,2024-07-21,-35.9
+Trees · broad + buffer,2024-07-21,-31.55
+Equal weight · core,2024-07-22,-33.1
+IC-weighted · core,2024-07-22,-37.84
+Ridge · broad,2024-07-22,-33.8
+Ridge · core,2024-07-22,-45.41
+Single alpha · A101_055,2024-07-22,-40.32
+Trees · broad,2024-07-22,-32.42
+Trees · broad + buffer,2024-07-22,-27.22
+Equal weight · core,2024-07-23,-31.3
+IC-weighted · core,2024-07-23,-34.8
+Ridge · broad,2024-07-23,-31.65
+Ridge · core,2024-07-23,-43.14
+Single alpha · A101_055,2024-07-23,-40.14
+Trees · broad,2024-07-23,-29.99
+Trees · broad + buffer,2024-07-23,-25.84
+Equal weight · core,2024-07-24,-30.85
+IC-weighted · core,2024-07-24,-34.04
+Ridge · broad,2024-07-24,-30.56
+Ridge · core,2024-07-24,-40.81
+Single alpha · A101_055,2024-07-24,-38.39
+Trees · broad,2024-07-24,-28.72
+Trees · broad + buffer,2024-07-24,-24.49
+Equal weight · core,2024-07-25,-34.69
+IC-weighted · core,2024-07-25,-37.58
+Ridge · broad,2024-07-25,-35.03
+Ridge · core,2024-07-25,-43.46
+Single alpha · A101_055,2024-07-25,-40.88
+Trees · broad,2024-07-25,-32.7
+Trees · broad + buffer,2024-07-25,-30.08
+Equal weight · core,2024-07-26,-34.51
+IC-weighted · core,2024-07-26,-37.64
+Ridge · broad,2024-07-26,-34.92
+Ridge · core,2024-07-26,-43.99
+Single alpha · A101_055,2024-07-26,-41.48
+Trees · broad,2024-07-26,-32.52
+Trees · broad + buffer,2024-07-26,-29.8
+Equal weight · core,2024-07-27,-36.15
+IC-weighted · core,2024-07-27,-39.36
+Ridge · broad,2024-07-27,-34.5
+Ridge · core,2024-07-27,-44.44
+Single alpha · A101_055,2024-07-27,-41.3
+Trees · broad,2024-07-27,-31.32
+Trees · broad + buffer,2024-07-27,-28.31
+Equal weight · core,2024-07-28,-37.19
+IC-weighted · core,2024-07-28,-39.29
+Ridge · broad,2024-07-28,-34.26
+Ridge · core,2024-07-28,-45.02
+Single alpha · A101_055,2024-07-28,-41.49
+Trees · broad,2024-07-28,-30.93
+Trees · broad + buffer,2024-07-28,-27.88
+Equal weight · core,2024-07-29,-38.05
+IC-weighted · core,2024-07-29,-39.2
+Ridge · broad,2024-07-29,-35.05
+Ridge · core,2024-07-29,-45.9
+Single alpha · A101_055,2024-07-29,-41.6
+Trees · broad,2024-07-29,-31.85
+Trees · broad + buffer,2024-07-29,-29.02
+Equal weight · core,2024-07-30,-39.03
+IC-weighted · core,2024-07-30,-38.85
+Ridge · broad,2024-07-30,-33.52
+Ridge · core,2024-07-30,-45.0
+Single alpha · A101_055,2024-07-30,-39.12
+Trees · broad,2024-07-30,-31.97
+Trees · broad + buffer,2024-07-30,-28.95
+Equal weight · core,2024-07-31,-37.86
+IC-weighted · core,2024-07-31,-37.31
+Ridge · broad,2024-07-31,-31.53
+Ridge · core,2024-07-31,-43.63
+Single alpha · A101_055,2024-07-31,-37.67
+Trees · broad,2024-07-31,-30.77
+Trees · broad + buffer,2024-07-31,-27.94
+Equal weight · core,2024-08-01,-40.95
+IC-weighted · core,2024-08-01,-40.22
+Ridge · broad,2024-08-01,-31.97
+Ridge · core,2024-08-01,-47.26
+Single alpha · A101_055,2024-08-01,-39.22
+Trees · broad,2024-08-01,-31.73
+Trees · broad + buffer,2024-08-01,-29.72
+Equal weight · core,2024-08-02,-41.91
+IC-weighted · core,2024-08-02,-40.12
+Ridge · broad,2024-08-02,-28.13
+Ridge · core,2024-08-02,-45.97
+Single alpha · A101_055,2024-08-02,-38.94
+Trees · broad,2024-08-02,-27.65
+Trees · broad + buffer,2024-08-02,-25.59
+Equal weight · core,2024-08-03,-42.32
+IC-weighted · core,2024-08-03,-40.88
+Ridge · broad,2024-08-03,-27.34
+Ridge · core,2024-08-03,-46.28
+Single alpha · A101_055,2024-08-03,-38.86
+Trees · broad,2024-08-03,-27.13
+Trees · broad + buffer,2024-08-03,-25.24
+Equal weight · core,2024-08-04,-41.97
+IC-weighted · core,2024-08-04,-42.09
+Ridge · broad,2024-08-04,-30.07
+Ridge · core,2024-08-04,-46.58
+Single alpha · A101_055,2024-08-04,-35.73
+Trees · broad,2024-08-04,-25.64
+Trees · broad + buffer,2024-08-04,-26.51
+Equal weight · core,2024-08-05,-42.75
+IC-weighted · core,2024-08-05,-40.72
+Ridge · broad,2024-08-05,-34.5
+Ridge · core,2024-08-05,-45.51
+Single alpha · A101_055,2024-08-05,-35.2
+Trees · broad,2024-08-05,-27.52
+Trees · broad + buffer,2024-08-05,-29.93
+Equal weight · core,2024-08-06,-43.53
+IC-weighted · core,2024-08-06,-42.57
+Ridge · broad,2024-08-06,-32.96
+Ridge · core,2024-08-06,-46.39
+Single alpha · A101_055,2024-08-06,-37.49
+Trees · broad,2024-08-06,-22.5
+Trees · broad + buffer,2024-08-06,-25.96
+Equal weight · core,2024-08-07,-41.27
+IC-weighted · core,2024-08-07,-40.74
+Ridge · broad,2024-08-07,-33.66
+Ridge · core,2024-08-07,-44.61
+Single alpha · A101_055,2024-08-07,-36.51
+Trees · broad,2024-08-07,-22.48
+Trees · broad + buffer,2024-08-07,-26.52
+Equal weight · core,2024-08-08,-42.76
+IC-weighted · core,2024-08-08,-42.05
+Ridge · broad,2024-08-08,-34.93
+Ridge · core,2024-08-08,-45.95
+Single alpha · A101_055,2024-08-08,-37.77
+Trees · broad,2024-08-08,-23.55
+Trees · broad + buffer,2024-08-08,-28.66
+Equal weight · core,2024-08-09,-44.39
+IC-weighted · core,2024-08-09,-43.38
+Ridge · broad,2024-08-09,-34.9
+Ridge · core,2024-08-09,-46.74
+Single alpha · A101_055,2024-08-09,-37.88
+Trees · broad,2024-08-09,-24.31
+Trees · broad + buffer,2024-08-09,-28.56
+Equal weight · core,2024-08-10,-46.04
+IC-weighted · core,2024-08-10,-44.33
+Ridge · broad,2024-08-10,-31.78
+Ridge · core,2024-08-10,-48.17
+Single alpha · A101_055,2024-08-10,-39.45
+Trees · broad,2024-08-10,-21.38
+Trees · broad + buffer,2024-08-10,-25.0
+Equal weight · core,2024-08-11,-47.19
+IC-weighted · core,2024-08-11,-44.09
+Ridge · broad,2024-08-11,-36.54
+Ridge · core,2024-08-11,-47.78
+Single alpha · A101_055,2024-08-11,-40.35
+Trees · broad,2024-08-11,-25.79
+Trees · broad + buffer,2024-08-11,-30.1
+Equal weight · core,2024-08-12,-47.1
+IC-weighted · core,2024-08-12,-44.28
+Ridge · broad,2024-08-12,-36.58
+Ridge · core,2024-08-12,-47.42
+Single alpha · A101_055,2024-08-12,-40.13
+Trees · broad,2024-08-12,-25.33
+Trees · broad + buffer,2024-08-12,-30.23
+Equal weight · core,2024-08-13,-47.07
+IC-weighted · core,2024-08-13,-44.86
+Ridge · broad,2024-08-13,-35.98
+Ridge · core,2024-08-13,-48.37
+Single alpha · A101_055,2024-08-13,-41.19
+Trees · broad,2024-08-13,-24.54
+Trees · broad + buffer,2024-08-13,-29.79
+Equal weight · core,2024-08-14,-48.07
+IC-weighted · core,2024-08-14,-45.02
+Ridge · broad,2024-08-14,-34.01
+Ridge · core,2024-08-14,-48.51
+Single alpha · A101_055,2024-08-14,-41.79
+Trees · broad,2024-08-14,-22.57
+Trees · broad + buffer,2024-08-14,-26.9
+Equal weight · core,2024-08-15,-48.5
+IC-weighted · core,2024-08-15,-45.13
+Ridge · broad,2024-08-15,-32.41
+Ridge · core,2024-08-15,-49.23
+Single alpha · A101_055,2024-08-15,-41.79
+Trees · broad,2024-08-15,-20.99
+Trees · broad + buffer,2024-08-15,-25.34
+Equal weight · core,2024-08-16,-49.08
+IC-weighted · core,2024-08-16,-44.87
+Ridge · broad,2024-08-16,-33.08
+Ridge · core,2024-08-16,-48.72
+Single alpha · A101_055,2024-08-16,-39.9
+Trees · broad,2024-08-16,-20.3
+Trees · broad + buffer,2024-08-16,-24.82
+Equal weight · core,2024-08-17,-48.57
+IC-weighted · core,2024-08-17,-44.3
+Ridge · broad,2024-08-17,-31.91
+Ridge · core,2024-08-17,-47.71
+Single alpha · A101_055,2024-08-17,-39.54
+Trees · broad,2024-08-17,-19.38
+Trees · broad + buffer,2024-08-17,-24.49
+Equal weight · core,2024-08-18,-49.44
+IC-weighted · core,2024-08-18,-45.72
+Ridge · broad,2024-08-18,-29.98
+Ridge · core,2024-08-18,-48.01
+Single alpha · A101_055,2024-08-18,-39.26
+Trees · broad,2024-08-18,-17.59
+Trees · broad + buffer,2024-08-18,-22.97
+Equal weight · core,2024-08-19,-49.93
+IC-weighted · core,2024-08-19,-46.78
+Ridge · broad,2024-08-19,-28.9
+Ridge · core,2024-08-19,-47.58
+Single alpha · A101_055,2024-08-19,-38.66
+Trees · broad,2024-08-19,-16.16
+Trees · broad + buffer,2024-08-19,-20.2
+Equal weight · core,2024-08-20,-49.89
+IC-weighted · core,2024-08-20,-46.06
+Ridge · broad,2024-08-20,-28.42
+Ridge · core,2024-08-20,-46.5
+Single alpha · A101_055,2024-08-20,-37.31
+Trees · broad,2024-08-20,-13.97
+Trees · broad + buffer,2024-08-20,-18.67
+Equal weight · core,2024-08-21,-48.9
+IC-weighted · core,2024-08-21,-44.84
+Ridge · broad,2024-08-21,-28.83
+Ridge · core,2024-08-21,-45.79
+Single alpha · A101_055,2024-08-21,-41.38
+Trees · broad,2024-08-21,-14.41
+Trees · broad + buffer,2024-08-21,-19.82
+Equal weight · core,2024-08-22,-45.94
+IC-weighted · core,2024-08-22,-42.89
+Ridge · broad,2024-08-22,-29.17
+Ridge · core,2024-08-22,-44.45
+Single alpha · A101_055,2024-08-22,-44.09
+Trees · broad,2024-08-22,-16.01
+Trees · broad + buffer,2024-08-22,-21.76
+Equal weight · core,2024-08-23,-47.36
+IC-weighted · core,2024-08-23,-44.82
+Ridge · broad,2024-08-23,-31.45
+Ridge · core,2024-08-23,-44.99
+Single alpha · A101_055,2024-08-23,-44.68
+Trees · broad,2024-08-23,-17.78
+Trees · broad + buffer,2024-08-23,-23.26
+Equal weight · core,2024-08-24,-50.09
+IC-weighted · core,2024-08-24,-46.05
+Ridge · broad,2024-08-24,-32.62
+Ridge · core,2024-08-24,-46.18
+Single alpha · A101_055,2024-08-24,-45.47
+Trees · broad,2024-08-24,-17.78
+Trees · broad + buffer,2024-08-24,-22.81
+Equal weight · core,2024-08-25,-50.94
+IC-weighted · core,2024-08-25,-45.86
+Ridge · broad,2024-08-25,-31.47
+Ridge · core,2024-08-25,-45.84
+Single alpha · A101_055,2024-08-25,-46.24
+Trees · broad,2024-08-25,-15.09
+Trees · broad + buffer,2024-08-25,-19.82
+Equal weight · core,2024-08-26,-53.78
+IC-weighted · core,2024-08-26,-47.99
+Ridge · broad,2024-08-26,-29.57
+Ridge · core,2024-08-26,-47.87
+Single alpha · A101_055,2024-08-26,-44.8
+Trees · broad,2024-08-26,-16.18
+Trees · broad + buffer,2024-08-26,-20.89
+Equal weight · core,2024-08-27,-53.45
+IC-weighted · core,2024-08-27,-47.5
+Ridge · broad,2024-08-27,-26.67
+Ridge · core,2024-08-27,-47.14
+Single alpha · A101_055,2024-08-27,-45.96
+Trees · broad,2024-08-27,-14.82
+Trees · broad + buffer,2024-08-27,-18.58
+Equal weight · core,2024-08-28,-51.76
+IC-weighted · core,2024-08-28,-45.34
+Ridge · broad,2024-08-28,-26.93
+Ridge · core,2024-08-28,-45.32
+Single alpha · A101_055,2024-08-28,-46.14
+Trees · broad,2024-08-28,-12.86
+Trees · broad + buffer,2024-08-28,-17.36
+Equal weight · core,2024-08-29,-52.62
+IC-weighted · core,2024-08-29,-45.78
+Ridge · broad,2024-08-29,-26.7
+Ridge · core,2024-08-29,-44.95
+Single alpha · A101_055,2024-08-29,-45.83
+Trees · broad,2024-08-29,-12.92
+Trees · broad + buffer,2024-08-29,-17.31
+Equal weight · core,2024-08-30,-52.92
+IC-weighted · core,2024-08-30,-45.52
+Ridge · broad,2024-08-30,-26.13
+Ridge · core,2024-08-30,-44.87
+Single alpha · A101_055,2024-08-30,-45.93
+Trees · broad,2024-08-30,-12.46
+Trees · broad + buffer,2024-08-30,-16.78
+Equal weight · core,2024-08-31,-53.14
+IC-weighted · core,2024-08-31,-46.48
+Ridge · broad,2024-08-31,-24.46
+Ridge · core,2024-08-31,-45.23
+Single alpha · A101_055,2024-08-31,-44.57
+Trees · broad,2024-08-31,-12.14
+Trees · broad + buffer,2024-08-31,-15.77
+Equal weight · core,2024-09-01,-52.33
+IC-weighted · core,2024-09-01,-44.13
+Ridge · broad,2024-09-01,-26.92
+Ridge · core,2024-09-01,-44.16
+Single alpha · A101_055,2024-09-01,-42.75
+Trees · broad,2024-09-01,-12.5
+Trees · broad + buffer,2024-09-01,-16.62
+Equal weight · core,2024-09-02,-53.08
+IC-weighted · core,2024-09-02,-45.24
+Ridge · broad,2024-09-02,-26.22
+Ridge · core,2024-09-02,-45.68
+Single alpha · A101_055,2024-09-02,-43.12
+Trees · broad,2024-09-02,-12.91
+Trees · broad + buffer,2024-09-02,-17.18
+Equal weight · core,2024-09-03,-53.7
+IC-weighted · core,2024-09-03,-45.2
+Ridge · broad,2024-09-03,-28.22
+Ridge · core,2024-09-03,-45.86
+Single alpha · A101_055,2024-09-03,-44.24
+Trees · broad,2024-09-03,-13.58
+Trees · broad + buffer,2024-09-03,-17.66
+Equal weight · core,2024-09-04,-54.81
+IC-weighted · core,2024-09-04,-46.3
+Ridge · broad,2024-09-04,-28.0
+Ridge · core,2024-09-04,-47.07
+Single alpha · A101_055,2024-09-04,-44.83
+Trees · broad,2024-09-04,-13.54
+Trees · broad + buffer,2024-09-04,-17.86
+Equal weight · core,2024-09-05,-56.15
+IC-weighted · core,2024-09-05,-46.84
+Ridge · broad,2024-09-05,-30.09
+Ridge · core,2024-09-05,-48.51
+Single alpha · A101_055,2024-09-05,-44.87
+Trees · broad,2024-09-05,-15.62
+Trees · broad + buffer,2024-09-05,-19.22
+Equal weight · core,2024-09-06,-57.1
+IC-weighted · core,2024-09-06,-47.97
+Ridge · broad,2024-09-06,-31.7
+Ridge · core,2024-09-06,-48.36
+Single alpha · A101_055,2024-09-06,-44.89
+Trees · broad,2024-09-06,-19.36
+Trees · broad + buffer,2024-09-06,-20.2
+Equal weight · core,2024-09-07,-56.23
+IC-weighted · core,2024-09-07,-47.38
+Ridge · broad,2024-09-07,-32.37
+Ridge · core,2024-09-07,-47.71
+Single alpha · A101_055,2024-09-07,-44.19
+Trees · broad,2024-09-07,-20.28
+Trees · broad + buffer,2024-09-07,-21.12
+Equal weight · core,2024-09-08,-55.84
+IC-weighted · core,2024-09-08,-47.01
+Ridge · broad,2024-09-08,-32.59
+Ridge · core,2024-09-08,-47.02
+Single alpha · A101_055,2024-09-08,-42.9
+Trees · broad,2024-09-08,-20.86
+Trees · broad + buffer,2024-09-08,-20.95
+Equal weight · core,2024-09-09,-57.41
+IC-weighted · core,2024-09-09,-50.12
+Ridge · broad,2024-09-09,-34.43
+Ridge · core,2024-09-09,-48.71
+Single alpha · A101_055,2024-09-09,-43.0
+Trees · broad,2024-09-09,-22.44
+Trees · broad + buffer,2024-09-09,-22.44
+Equal weight · core,2024-09-10,-57.88
+IC-weighted · core,2024-09-10,-49.83
+Ridge · broad,2024-09-10,-31.58
+Ridge · core,2024-09-10,-47.66
+Single alpha · A101_055,2024-09-10,-44.32
+Trees · broad,2024-09-10,-19.91
+Trees · broad + buffer,2024-09-10,-19.32
+Equal weight · core,2024-09-11,-54.88
+IC-weighted · core,2024-09-11,-49.8
+Ridge · broad,2024-09-11,-34.22
+Ridge · core,2024-09-11,-47.53
+Single alpha · A101_055,2024-09-11,-46.21
+Trees · broad,2024-09-11,-23.09
+Trees · broad + buffer,2024-09-11,-22.68
+Equal weight · core,2024-09-12,-51.64
+IC-weighted · core,2024-09-12,-47.17
+Ridge · broad,2024-09-12,-32.63
+Ridge · core,2024-09-12,-45.1
+Single alpha · A101_055,2024-09-12,-45.52
+Trees · broad,2024-09-12,-22.55
+Trees · broad + buffer,2024-09-12,-20.58
+Equal weight · core,2024-09-13,-53.68
+IC-weighted · core,2024-09-13,-51.15
+Ridge · broad,2024-09-13,-35.28
+Ridge · core,2024-09-13,-48.8
+Single alpha · A101_055,2024-09-13,-46.53
+Trees · broad,2024-09-13,-24.87
+Trees · broad + buffer,2024-09-13,-22.68
+Equal weight · core,2024-09-14,-53.67
+IC-weighted · core,2024-09-14,-55.31
+Ridge · broad,2024-09-14,-38.16
+Ridge · core,2024-09-14,-53.13
+Single alpha · A101_055,2024-09-14,-48.41
+Trees · broad,2024-09-14,-27.54
+Trees · broad + buffer,2024-09-14,-25.72
+Equal weight · core,2024-09-15,-51.61
+IC-weighted · core,2024-09-15,-53.11
+Ridge · broad,2024-09-15,-39.46
+Ridge · core,2024-09-15,-51.14
+Single alpha · A101_055,2024-09-15,-49.19
+Trees · broad,2024-09-15,-28.54
+Trees · broad + buffer,2024-09-15,-27.82
+Equal weight · core,2024-09-16,-56.24
+IC-weighted · core,2024-09-16,-57.67
+Ridge · broad,2024-09-16,-45.28
+Ridge · core,2024-09-16,-54.73
+Single alpha · A101_055,2024-09-16,-53.23
+Trees · broad,2024-09-16,-35.0
+Trees · broad + buffer,2024-09-16,-34.44
+Equal weight · core,2024-09-17,-57.88
+IC-weighted · core,2024-09-17,-60.39
+Ridge · broad,2024-09-17,-49.38
+Ridge · core,2024-09-17,-58.95
+Single alpha · A101_055,2024-09-17,-54.91
+Trees · broad,2024-09-17,-40.2
+Trees · broad + buffer,2024-09-17,-39.11
+Equal weight · core,2024-09-18,-57.77
+IC-weighted · core,2024-09-18,-59.97
+Ridge · broad,2024-09-18,-52.7
+Ridge · core,2024-09-18,-60.68
+Single alpha · A101_055,2024-09-18,-57.43
+Trees · broad,2024-09-18,-45.36
+Trees · broad + buffer,2024-09-18,-43.45
+Equal weight · core,2024-09-19,-59.62
+IC-weighted · core,2024-09-19,-60.31
+Ridge · broad,2024-09-19,-52.01
+Ridge · core,2024-09-19,-60.25
+Single alpha · A101_055,2024-09-19,-54.74
+Trees · broad,2024-09-19,-43.57
+Trees · broad + buffer,2024-09-19,-42.07
+Equal weight · core,2024-09-20,-60.97
+IC-weighted · core,2024-09-20,-60.65
+Ridge · broad,2024-09-20,-51.25
+Ridge · core,2024-09-20,-59.4
+Single alpha · A101_055,2024-09-20,-54.15
+Trees · broad,2024-09-20,-42.19
+Trees · broad + buffer,2024-09-20,-43.06
+Equal weight · core,2024-09-21,-60.25
+IC-weighted · core,2024-09-21,-59.22
+Ridge · broad,2024-09-21,-49.56
+Ridge · core,2024-09-21,-57.32
+Single alpha · A101_055,2024-09-21,-53.95
+Trees · broad,2024-09-21,-40.57
+Trees · broad + buffer,2024-09-21,-41.18
+Equal weight · core,2024-09-22,-60.69
+IC-weighted · core,2024-09-22,-58.58
+Ridge · broad,2024-09-22,-49.44
+Ridge · core,2024-09-22,-59.71
+Single alpha · A101_055,2024-09-22,-53.26
+Trees · broad,2024-09-22,-42.36
+Trees · broad + buffer,2024-09-22,-43.8
+Equal weight · core,2024-09-23,-59.14
+IC-weighted · core,2024-09-23,-57.5
+Ridge · broad,2024-09-23,-50.11
+Ridge · core,2024-09-23,-58.4
+Single alpha · A101_055,2024-09-23,-52.59
+Trees · broad,2024-09-23,-42.14
+Trees · broad + buffer,2024-09-23,-44.91
+Equal weight · core,2024-09-24,-58.49
+IC-weighted · core,2024-09-24,-56.47
+Ridge · broad,2024-09-24,-48.72
+Ridge · core,2024-09-24,-57.58
+Single alpha · A101_055,2024-09-24,-52.65
+Trees · broad,2024-09-24,-40.58
+Trees · broad + buffer,2024-09-24,-43.83
+Equal weight · core,2024-09-25,-56.27
+IC-weighted · core,2024-09-25,-53.9
+Ridge · broad,2024-09-25,-47.69
+Ridge · core,2024-09-25,-55.24
+Single alpha · A101_055,2024-09-25,-53.66
+Trees · broad,2024-09-25,-42.34
+Trees · broad + buffer,2024-09-25,-43.94
+Equal weight · core,2024-09-26,-55.41
+IC-weighted · core,2024-09-26,-53.22
+Ridge · broad,2024-09-26,-46.94
+Ridge · core,2024-09-26,-54.44
+Single alpha · A101_055,2024-09-26,-54.56
+Trees · broad,2024-09-26,-44.01
+Trees · broad + buffer,2024-09-26,-45.71
+Equal weight · core,2024-09-27,-56.75
+IC-weighted · core,2024-09-27,-55.35
+Ridge · broad,2024-09-27,-46.73
+Ridge · core,2024-09-27,-55.84
+Single alpha · A101_055,2024-09-27,-57.25
+Trees · broad,2024-09-27,-44.08
+Trees · broad + buffer,2024-09-27,-44.68
+Equal weight · core,2024-09-28,-56.15
+IC-weighted · core,2024-09-28,-54.09
+Ridge · broad,2024-09-28,-46.5
+Ridge · core,2024-09-28,-55.42
+Single alpha · A101_055,2024-09-28,-58.31
+Trees · broad,2024-09-28,-45.18
+Trees · broad + buffer,2024-09-28,-45.98
+Equal weight · core,2024-09-29,-57.42
+IC-weighted · core,2024-09-29,-55.12
+Ridge · broad,2024-09-29,-46.65
+Ridge · core,2024-09-29,-55.94
+Single alpha · A101_055,2024-09-29,-57.74
+Trees · broad,2024-09-29,-45.72
+Trees · broad + buffer,2024-09-29,-45.94
+Equal weight · core,2024-09-30,-57.96
+IC-weighted · core,2024-09-30,-55.57
+Ridge · broad,2024-09-30,-45.86
+Ridge · core,2024-09-30,-56.28
+Single alpha · A101_055,2024-09-30,-58.51
+Trees · broad,2024-09-30,-44.81
+Trees · broad + buffer,2024-09-30,-44.12
+Equal weight · core,2024-10-01,-57.84
+IC-weighted · core,2024-10-01,-53.33
+Ridge · broad,2024-10-01,-44.34
+Ridge · core,2024-10-01,-55.67
+Single alpha · A101_055,2024-10-01,-58.0
+Trees · broad,2024-10-01,-43.38
+Trees · broad + buffer,2024-10-01,-42.7
+Equal weight · core,2024-10-02,-54.13
+IC-weighted · core,2024-10-02,-48.14
+Ridge · broad,2024-10-02,-39.51
+Ridge · core,2024-10-02,-50.19
+Single alpha · A101_055,2024-10-02,-54.42
+Trees · broad,2024-10-02,-39.31
+Trees · broad + buffer,2024-10-02,-38.44
+Equal weight · core,2024-10-03,-54.75
+IC-weighted · core,2024-10-03,-50.21
+Ridge · broad,2024-10-03,-46.27
+Ridge · core,2024-10-03,-51.83
+Single alpha · A101_055,2024-10-03,-53.16
+Trees · broad,2024-10-03,-42.31
+Trees · broad + buffer,2024-10-03,-43.45
+Equal weight · core,2024-10-04,-54.67
+IC-weighted · core,2024-10-04,-49.45
+Ridge · broad,2024-10-04,-45.17
+Ridge · core,2024-10-04,-51.65
+Single alpha · A101_055,2024-10-04,-52.6
+Trees · broad,2024-10-04,-39.5
+Trees · broad + buffer,2024-10-04,-41.87
+Equal weight · core,2024-10-05,-58.09
+IC-weighted · core,2024-10-05,-51.53
+Ridge · broad,2024-10-05,-49.52
+Ridge · core,2024-10-05,-54.83
+Single alpha · A101_055,2024-10-05,-54.98
+Trees · broad,2024-10-05,-42.1
+Trees · broad + buffer,2024-10-05,-45.69
+Equal weight · core,2024-10-06,-58.47
+IC-weighted · core,2024-10-06,-52.69
+Ridge · broad,2024-10-06,-51.36
+Ridge · core,2024-10-06,-55.99
+Single alpha · A101_055,2024-10-06,-55.77
+Trees · broad,2024-10-06,-42.94
+Trees · broad + buffer,2024-10-06,-47.1
+Equal weight · core,2024-10-07,-59.18
+IC-weighted · core,2024-10-07,-53.27
+Ridge · broad,2024-10-07,-49.47
+Ridge · core,2024-10-07,-55.9
+Single alpha · A101_055,2024-10-07,-56.75
+Trees · broad,2024-10-07,-41.64
+Trees · broad + buffer,2024-10-07,-45.86
+Equal weight · core,2024-10-08,-58.93
+IC-weighted · core,2024-10-08,-51.95
+Ridge · broad,2024-10-08,-47.73
+Ridge · core,2024-10-08,-55.3
+Single alpha · A101_055,2024-10-08,-56.35
+Trees · broad,2024-10-08,-40.47
+Trees · broad + buffer,2024-10-08,-44.21
+Equal weight · core,2024-10-09,-57.32
+IC-weighted · core,2024-10-09,-50.06
+Ridge · broad,2024-10-09,-46.94
+Ridge · core,2024-10-09,-54.13
+Single alpha · A101_055,2024-10-09,-57.39
+Trees · broad,2024-10-09,-40.76
+Trees · broad + buffer,2024-10-09,-43.59
+Equal weight · core,2024-10-10,-58.35
+IC-weighted · core,2024-10-10,-50.52
+Ridge · broad,2024-10-10,-51.87
+Ridge · core,2024-10-10,-55.15
+Single alpha · A101_055,2024-10-10,-58.4
+Trees · broad,2024-10-10,-44.89
+Trees · broad + buffer,2024-10-10,-47.4
+Equal weight · core,2024-10-11,-61.36
+IC-weighted · core,2024-10-11,-54.54
+Ridge · broad,2024-10-11,-56.6
+Ridge · core,2024-10-11,-59.19
+Single alpha · A101_055,2024-10-11,-63.35
+Trees · broad,2024-10-11,-48.74
+Trees · broad + buffer,2024-10-11,-51.15
+Equal weight · core,2024-10-12,-60.61
+IC-weighted · core,2024-10-12,-55.5
+Ridge · broad,2024-10-12,-56.9
+Ridge · core,2024-10-12,-59.76
+Single alpha · A101_055,2024-10-12,-65.12
+Trees · broad,2024-10-12,-50.1
+Trees · broad + buffer,2024-10-12,-51.8
+Equal weight · core,2024-10-13,-62.16
+IC-weighted · core,2024-10-13,-58.25
+Ridge · broad,2024-10-13,-60.54
+Ridge · core,2024-10-13,-63.41
+Single alpha · A101_055,2024-10-13,-71.34
+Trees · broad,2024-10-13,-53.67
+Trees · broad + buffer,2024-10-13,-58.41
+Equal weight · core,2024-10-14,-59.31
+IC-weighted · core,2024-10-14,-56.7
+Ridge · broad,2024-10-14,-55.45
+Ridge · core,2024-10-14,-60.02
+Single alpha · A101_055,2024-10-14,-70.16
+Trees · broad,2024-10-14,-47.62
+Trees · broad + buffer,2024-10-14,-52.28
+Equal weight · core,2024-10-15,-57.48
+IC-weighted · core,2024-10-15,-54.19
+Ridge · broad,2024-10-15,-50.42
+Ridge · core,2024-10-15,-57.97
+Single alpha · A101_055,2024-10-15,-75.49
+Trees · broad,2024-10-15,-42.11
+Trees · broad + buffer,2024-10-15,-47.36
+Equal weight · core,2024-10-16,-58.5
+IC-weighted · core,2024-10-16,-55.11
+Ridge · broad,2024-10-16,-50.32
+Ridge · core,2024-10-16,-58.37
+Single alpha · A101_055,2024-10-16,-75.64
+Trees · broad,2024-10-16,-41.75
+Trees · broad + buffer,2024-10-16,-47.2
+Equal weight · core,2024-10-17,-58.48
+IC-weighted · core,2024-10-17,-54.82
+Ridge · broad,2024-10-17,-54.72
+Ridge · core,2024-10-17,-58.34
+Single alpha · A101_055,2024-10-17,-74.52
+Trees · broad,2024-10-17,-42.38
+Trees · broad + buffer,2024-10-17,-48.59
+Equal weight · core,2024-10-18,-59.12
+IC-weighted · core,2024-10-18,-54.82
+Ridge · broad,2024-10-18,-54.04
+Ridge · core,2024-10-18,-58.15
+Single alpha · A101_055,2024-10-18,-74.79
+Trees · broad,2024-10-18,-41.63
+Trees · broad + buffer,2024-10-18,-47.37
+Equal weight · core,2024-10-19,-54.21
+IC-weighted · core,2024-10-19,-51.12
+Ridge · broad,2024-10-19,-50.59
+Ridge · core,2024-10-19,-53.72
+Single alpha · A101_055,2024-10-19,-74.49
+Trees · broad,2024-10-19,-38.06
+Trees · broad + buffer,2024-10-19,-44.12
+Equal weight · core,2024-10-20,-55.29
+IC-weighted · core,2024-10-20,-52.08
+Ridge · broad,2024-10-20,-49.59
+Ridge · core,2024-10-20,-54.24
+Single alpha · A101_055,2024-10-20,-74.5
+Trees · broad,2024-10-20,-36.69
+Trees · broad + buffer,2024-10-20,-42.61
+Equal weight · core,2024-10-21,-54.02
+IC-weighted · core,2024-10-21,-50.89
+Ridge · broad,2024-10-21,-51.64
+Ridge · core,2024-10-21,-55.31
+Single alpha · A101_055,2024-10-21,-76.12
+Trees · broad,2024-10-21,-39.27
+Trees · broad + buffer,2024-10-21,-45.27
+Equal weight · core,2024-10-22,-53.14
+IC-weighted · core,2024-10-22,-50.58
+Ridge · broad,2024-10-22,-50.29
+Ridge · core,2024-10-22,-54.55
+Single alpha · A101_055,2024-10-22,-74.79
+Trees · broad,2024-10-22,-36.4
+Trees · broad + buffer,2024-10-22,-40.97
+Equal weight · core,2024-10-23,-54.29
+IC-weighted · core,2024-10-23,-52.18
+Ridge · broad,2024-10-23,-52.95
+Ridge · core,2024-10-23,-56.39
+Single alpha · A101_055,2024-10-23,-74.61
+Trees · broad,2024-10-23,-38.08
+Trees · broad + buffer,2024-10-23,-43.0
+Equal weight · core,2024-10-24,-54.99
+IC-weighted · core,2024-10-24,-52.12
+Ridge · broad,2024-10-24,-49.85
+Ridge · core,2024-10-24,-56.0
+Single alpha · A101_055,2024-10-24,-74.54
+Trees · broad,2024-10-24,-34.2
+Trees · broad + buffer,2024-10-24,-38.65
+Equal weight · core,2024-10-25,-53.91
+IC-weighted · core,2024-10-25,-51.01
+Ridge · broad,2024-10-25,-50.58
+Ridge · core,2024-10-25,-54.65
+Single alpha · A101_055,2024-10-25,-74.7
+Trees · broad,2024-10-25,-32.61
+Trees · broad + buffer,2024-10-25,-38.2
+Equal weight · core,2024-10-26,-54.49
+IC-weighted · core,2024-10-26,-51.39
+Ridge · broad,2024-10-26,-52.42
+Ridge · core,2024-10-26,-54.81
+Single alpha · A101_055,2024-10-26,-75.88
+Trees · broad,2024-10-26,-32.63
+Trees · broad + buffer,2024-10-26,-39.22
+Equal weight · core,2024-10-27,-52.92
+IC-weighted · core,2024-10-27,-49.24
+Ridge · broad,2024-10-27,-49.79
+Ridge · core,2024-10-27,-52.61
+Single alpha · A101_055,2024-10-27,-74.88
+Trees · broad,2024-10-27,-29.66
+Trees · broad + buffer,2024-10-27,-33.97
+Equal weight · core,2024-10-28,-51.94
+IC-weighted · core,2024-10-28,-47.38
+Ridge · broad,2024-10-28,-50.02
+Ridge · core,2024-10-28,-51.32
+Single alpha · A101_055,2024-10-28,-73.48
+Trees · broad,2024-10-28,-30.6
+Trees · broad + buffer,2024-10-28,-34.35
+Equal weight · core,2024-10-29,-51.14
+IC-weighted · core,2024-10-29,-46.92
+Ridge · broad,2024-10-29,-47.97
+Ridge · core,2024-10-29,-50.89
+Single alpha · A101_055,2024-10-29,-72.7
+Trees · broad,2024-10-29,-28.57
+Trees · broad + buffer,2024-10-29,-32.78
+Equal weight · core,2024-10-30,-50.24
+IC-weighted · core,2024-10-30,-46.57
+Ridge · broad,2024-10-30,-47.4
+Ridge · core,2024-10-30,-50.75
+Single alpha · A101_055,2024-10-30,-72.8
+Trees · broad,2024-10-30,-27.54
+Trees · broad + buffer,2024-10-30,-32.07
+Equal weight · core,2024-10-31,-49.55
+IC-weighted · core,2024-10-31,-46.44
+Ridge · broad,2024-10-31,-47.3
+Ridge · core,2024-10-31,-50.35
+Single alpha · A101_055,2024-10-31,-73.66
+Trees · broad,2024-10-31,-25.88
+Trees · broad + buffer,2024-10-31,-30.51
+Equal weight · core,2024-11-01,-49.42
+IC-weighted · core,2024-11-01,-46.75
+Ridge · broad,2024-11-01,-45.61
+Ridge · core,2024-11-01,-49.62
+Single alpha · A101_055,2024-11-01,-72.53
+Trees · broad,2024-11-01,-24.02
+Trees · broad + buffer,2024-11-01,-29.32
+Equal weight · core,2024-11-02,-49.4
+IC-weighted · core,2024-11-02,-46.63
+Ridge · broad,2024-11-02,-43.72
+Ridge · core,2024-11-02,-49.48
+Single alpha · A101_055,2024-11-02,-71.55
+Trees · broad,2024-11-02,-24.35
+Trees · broad + buffer,2024-11-02,-27.84
+Equal weight · core,2024-11-03,-49.86
+IC-weighted · core,2024-11-03,-47.25
+Ridge · broad,2024-11-03,-42.89
+Ridge · core,2024-11-03,-50.23
+Single alpha · A101_055,2024-11-03,-71.25
+Trees · broad,2024-11-03,-22.29
+Trees · broad + buffer,2024-11-03,-26.62
+Equal weight · core,2024-11-04,-51.5
+IC-weighted · core,2024-11-04,-47.73
+Ridge · broad,2024-11-04,-47.49
+Ridge · core,2024-11-04,-51.29
+Single alpha · A101_055,2024-11-04,-70.32
+Trees · broad,2024-11-04,-25.54
+Trees · broad + buffer,2024-11-04,-30.74
+Equal weight · core,2024-11-05,-49.18
+IC-weighted · core,2024-11-05,-43.96
+Ridge · broad,2024-11-05,-53.85
+Ridge · core,2024-11-05,-49.0
+Single alpha · A101_055,2024-11-05,-70.34
+Trees · broad,2024-11-05,-29.22
+Trees · broad + buffer,2024-11-05,-34.25
+Equal weight · core,2024-11-06,-50.85
+IC-weighted · core,2024-11-06,-45.27
+Ridge · broad,2024-11-06,-53.84
+Ridge · core,2024-11-06,-50.29
+Single alpha · A101_055,2024-11-06,-70.52
+Trees · broad,2024-11-06,-28.37
+Trees · broad + buffer,2024-11-06,-32.95
+Equal weight · core,2024-11-07,-53.98
+IC-weighted · core,2024-11-07,-47.27
+Ridge · broad,2024-11-07,-51.81
+Ridge · core,2024-11-07,-50.62
+Single alpha · A101_055,2024-11-07,-70.83
+Trees · broad,2024-11-07,-23.67
+Trees · broad + buffer,2024-11-07,-29.03
+Equal weight · core,2024-11-08,-50.95
+IC-weighted · core,2024-11-08,-45.01
+Ridge · broad,2024-11-08,-47.88
+Ridge · core,2024-11-08,-47.66
+Single alpha · A101_055,2024-11-08,-71.21
+Trees · broad,2024-11-08,-24.82
+Trees · broad + buffer,2024-11-08,-29.36
+Equal weight · core,2024-11-09,-51.15
+IC-weighted · core,2024-11-09,-47.72
+Ridge · broad,2024-11-09,-46.47
+Ridge · core,2024-11-09,-49.76
+Single alpha · A101_055,2024-11-09,-70.77
+Trees · broad,2024-11-09,-23.68
+Trees · broad + buffer,2024-11-09,-28.81
+Equal weight · core,2024-11-10,-51.75
+IC-weighted · core,2024-11-10,-47.77
+Ridge · broad,2024-11-10,-45.4
+Ridge · core,2024-11-10,-48.9
+Single alpha · A101_055,2024-11-10,-70.75
+Trees · broad,2024-11-10,-21.11
+Trees · broad + buffer,2024-11-10,-26.4
+Equal weight · core,2024-11-11,-52.9
+IC-weighted · core,2024-11-11,-49.92
+Ridge · broad,2024-11-11,-46.39
+Ridge · core,2024-11-11,-52.93
+Single alpha · A101_055,2024-11-11,-71.3
+Trees · broad,2024-11-11,-19.86
+Trees · broad + buffer,2024-11-11,-24.69
+Equal weight · core,2024-11-12,-50.84
+IC-weighted · core,2024-11-12,-50.03
+Ridge · broad,2024-11-12,-50.91
+Ridge · core,2024-11-12,-50.73
+Single alpha · A101_055,2024-11-12,-68.14
+Trees · broad,2024-11-12,-24.16
+Trees · broad + buffer,2024-11-12,-27.39
+Equal weight · core,2024-11-13,-49.0
+IC-weighted · core,2024-11-13,-48.56
+Ridge · broad,2024-11-13,-46.08
+Ridge · core,2024-11-13,-50.91
+Single alpha · A101_055,2024-11-13,-68.72
+Trees · broad,2024-11-13,-18.47
+Trees · broad + buffer,2024-11-13,-22.22
+Equal weight · core,2024-11-14,-52.39
+IC-weighted · core,2024-11-14,-52.82
+Ridge · broad,2024-11-14,-51.72
+Ridge · core,2024-11-14,-55.99
+Single alpha · A101_055,2024-11-14,-71.02
+Trees · broad,2024-11-14,-22.41
+Trees · broad + buffer,2024-11-14,-26.47
+Equal weight · core,2024-11-15,-51.21
+IC-weighted · core,2024-11-15,-51.61
+Ridge · broad,2024-11-15,-46.93
+Ridge · core,2024-11-15,-53.17
+Single alpha · A101_055,2024-11-15,-73.65
+Trees · broad,2024-11-15,-13.99
+Trees · broad + buffer,2024-11-15,-18.79
+Equal weight · core,2024-11-16,-52.55
+IC-weighted · core,2024-11-16,-55.19
+Ridge · broad,2024-11-16,-49.19
+Ridge · core,2024-11-16,-56.71
+Single alpha · A101_055,2024-11-16,-74.31
+Trees · broad,2024-11-16,-16.73
+Trees · broad + buffer,2024-11-16,-22.26
+Equal weight · core,2024-11-17,-50.82
+IC-weighted · core,2024-11-17,-57.99
+Ridge · broad,2024-11-17,-48.91
+Ridge · core,2024-11-17,-60.82
+Single alpha · A101_055,2024-11-17,-71.9
+Trees · broad,2024-11-17,-16.13
+Trees · broad + buffer,2024-11-17,-23.08
+Equal weight · core,2024-11-18,-51.14
+IC-weighted · core,2024-11-18,-60.01
+Ridge · broad,2024-11-18,-51.42
+Ridge · core,2024-11-18,-62.43
+Single alpha · A101_055,2024-11-18,-71.94
+Trees · broad,2024-11-18,-17.04
+Trees · broad + buffer,2024-11-18,-23.76
+Equal weight · core,2024-11-19,-52.61
+IC-weighted · core,2024-11-19,-59.75
+Ridge · broad,2024-11-19,-52.14
+Ridge · core,2024-11-19,-63.94
+Single alpha · A101_055,2024-11-19,-69.77
+Trees · broad,2024-11-19,-16.88
+Trees · broad + buffer,2024-11-19,-22.79
+Equal weight · core,2024-11-20,-51.07
+IC-weighted · core,2024-11-20,-57.13
+Ridge · broad,2024-11-20,-49.9
+Ridge · core,2024-11-20,-62.32
+Single alpha · A101_055,2024-11-20,-69.65
+Trees · broad,2024-11-20,-14.46
+Trees · broad + buffer,2024-11-20,-21.51
+Equal weight · core,2024-11-21,-51.91
+IC-weighted · core,2024-11-21,-62.17
+Ridge · broad,2024-11-21,-54.54
+Ridge · core,2024-11-21,-66.53
+Single alpha · A101_055,2024-11-21,-63.4
+Trees · broad,2024-11-21,-15.02
+Trees · broad + buffer,2024-11-21,-23.11
+Equal weight · core,2024-11-22,-52.25
+IC-weighted · core,2024-11-22,-61.87
+Ridge · broad,2024-11-22,-55.02
+Ridge · core,2024-11-22,-66.19
+Single alpha · A101_055,2024-11-22,-54.37
+Trees · broad,2024-11-22,-18.05
+Trees · broad + buffer,2024-11-22,-24.52
+Equal weight · core,2024-11-23,-52.86
+IC-weighted · core,2024-11-23,-63.18
+Ridge · broad,2024-11-23,-55.99
+Ridge · core,2024-11-23,-66.67
+Single alpha · A101_055,2024-11-23,-53.79
+Trees · broad,2024-11-23,-20.23
+Trees · broad + buffer,2024-11-23,-26.16
+Equal weight · core,2024-11-24,-52.34
+IC-weighted · core,2024-11-24,-64.04
+Ridge · broad,2024-11-24,-53.59
+Ridge · core,2024-11-24,-67.31
+Single alpha · A101_055,2024-11-24,-52.96
+Trees · broad,2024-11-24,-18.28
+Trees · broad + buffer,2024-11-24,-23.83
+Equal weight · core,2024-11-25,-52.13
+IC-weighted · core,2024-11-25,-63.47
+Ridge · broad,2024-11-25,-51.91
+Ridge · core,2024-11-25,-65.96
+Single alpha · A101_055,2024-11-25,-57.82
+Trees · broad,2024-11-25,-13.49
+Trees · broad + buffer,2024-11-25,-21.23
+Equal weight · core,2024-11-26,-52.58
+IC-weighted · core,2024-11-26,-66.15
+Ridge · broad,2024-11-26,-52.52
+Ridge · core,2024-11-26,-68.8
+Single alpha · A101_055,2024-11-26,-54.56
+Trees · broad,2024-11-26,-12.59
+Trees · broad + buffer,2024-11-26,-21.41
+Equal weight · core,2024-11-27,-50.2
+IC-weighted · core,2024-11-27,-62.63
+Ridge · broad,2024-11-27,-49.98
+Ridge · core,2024-11-27,-66.6
+Single alpha · A101_055,2024-11-27,-53.28
+Trees · broad,2024-11-27,-9.88
+Trees · broad + buffer,2024-11-27,-19.27
+Equal weight · core,2024-11-28,-45.99
+IC-weighted · core,2024-11-28,-59.46
+Ridge · broad,2024-11-28,-52.09
+Ridge · core,2024-11-28,-63.15
+Single alpha · A101_055,2024-11-28,-54.19
+Trees · broad,2024-11-28,-10.42
+Trees · broad + buffer,2024-11-28,-21.22
+Equal weight · core,2024-11-29,-45.49
+IC-weighted · core,2024-11-29,-60.0
+Ridge · broad,2024-11-29,-51.75
+Ridge · core,2024-11-29,-63.38
+Single alpha · A101_055,2024-11-29,-54.47
+Trees · broad,2024-11-29,-11.32
+Trees · broad + buffer,2024-11-29,-23.43
+Equal weight · core,2024-11-30,-45.21
+IC-weighted · core,2024-11-30,-60.92
+Ridge · broad,2024-11-30,-51.98
+Ridge · core,2024-11-30,-65.58
+Single alpha · A101_055,2024-11-30,-54.05
+Trees · broad,2024-11-30,-11.51
+Trees · broad + buffer,2024-11-30,-24.89
+Equal weight · core,2024-12-01,-50.95
+IC-weighted · core,2024-12-01,-62.82
+Ridge · broad,2024-12-01,-53.67
+Ridge · core,2024-12-01,-71.32
+Single alpha · A101_055,2024-12-01,-52.67
+Trees · broad,2024-12-01,-12.81
+Trees · broad + buffer,2024-12-01,-27.26
+Equal weight · core,2024-12-02,-45.72
+IC-weighted · core,2024-12-02,-63.11
+Ridge · broad,2024-12-02,-49.41
+Ridge · core,2024-12-02,-72.98
+Single alpha · A101_055,2024-12-02,-57.3
+Trees · broad,2024-12-02,-3.68
+Trees · broad + buffer,2024-12-02,-18.45
+Equal weight · core,2024-12-03,-42.76
+IC-weighted · core,2024-12-03,-59.34
+Ridge · broad,2024-12-03,-49.97
+Ridge · core,2024-12-03,-71.78
+Single alpha · A101_055,2024-12-03,-55.44
+Trees · broad,2024-12-03,-3.28
+Trees · broad + buffer,2024-12-03,-17.99
+Equal weight · core,2024-12-04,-37.52
+IC-weighted · core,2024-12-04,-53.07
+Ridge · broad,2024-12-04,-44.4
+Ridge · core,2024-12-04,-65.59
+Single alpha · A101_055,2024-12-04,-58.63
+Trees · broad,2024-12-04,1.39
+Trees · broad + buffer,2024-12-04,-14.17
+Equal weight · core,2024-12-05,-33.93
+IC-weighted · core,2024-12-05,-50.02
+Ridge · broad,2024-12-05,-44.88
+Ridge · core,2024-12-05,-63.83
+Single alpha · A101_055,2024-12-05,-57.6
+Trees · broad,2024-12-05,1.36
+Trees · broad + buffer,2024-12-05,-15.85
+Equal weight · core,2024-12-06,-26.83
+IC-weighted · core,2024-12-06,-42.35
+Ridge · broad,2024-12-06,-39.15
+Ridge · core,2024-12-06,-54.48
+Single alpha · A101_055,2024-12-06,-59.6
+Trees · broad,2024-12-06,7.57
+Trees · broad + buffer,2024-12-06,-10.84
+Equal weight · core,2024-12-07,-27.5
+IC-weighted · core,2024-12-07,-43.2
+Ridge · broad,2024-12-07,-39.46
+Ridge · core,2024-12-07,-55.35
+Single alpha · A101_055,2024-12-07,-59.19
+Trees · broad,2024-12-07,7.39
+Trees · broad + buffer,2024-12-07,-11.19
+Equal weight · core,2024-12-08,-34.37
+IC-weighted · core,2024-12-08,-52.09
+Ridge · broad,2024-12-08,-42.69
+Ridge · core,2024-12-08,-64.29
+Single alpha · A101_055,2024-12-08,-58.27
+Trees · broad,2024-12-08,3.2
+Trees · broad + buffer,2024-12-08,-14.87
+Equal weight · core,2024-12-09,-29.89
+IC-weighted · core,2024-12-09,-48.23
+Ridge · broad,2024-12-09,-40.77
+Ridge · core,2024-12-09,-61.76
+Single alpha · A101_055,2024-12-09,-57.93
+Trees · broad,2024-12-09,5.92
+Trees · broad + buffer,2024-12-09,-13.55
+Equal weight · core,2024-12-10,-29.73
+IC-weighted · core,2024-12-10,-50.3
+Ridge · broad,2024-12-10,-42.94
+Ridge · core,2024-12-10,-64.17
+Single alpha · A101_055,2024-12-10,-58.97
+Trees · broad,2024-12-10,6.83
+Trees · broad + buffer,2024-12-10,-15.35
+Equal weight · core,2024-12-11,-34.23
+IC-weighted · core,2024-12-11,-51.62
+Ridge · broad,2024-12-11,-41.01
+Ridge · core,2024-12-11,-64.57
+Single alpha · A101_055,2024-12-11,-57.36
+Trees · broad,2024-12-11,8.5
+Trees · broad + buffer,2024-12-11,-13.44
+Equal weight · core,2024-12-12,-33.52
+IC-weighted · core,2024-12-12,-51.86
+Ridge · broad,2024-12-12,-41.12
+Ridge · core,2024-12-12,-65.09
+Single alpha · A101_055,2024-12-12,-57.03
+Trees · broad,2024-12-12,9.21
+Trees · broad + buffer,2024-12-12,-13.46
+Equal weight · core,2024-12-13,-31.86
+IC-weighted · core,2024-12-13,-50.42
+Ridge · broad,2024-12-13,-39.85
+Ridge · core,2024-12-13,-63.24
+Single alpha · A101_055,2024-12-13,-58.16
+Trees · broad,2024-12-13,10.72
+Trees · broad + buffer,2024-12-13,-12.61
+Equal weight · core,2024-12-14,-30.99
+IC-weighted · core,2024-12-14,-50.71
+Ridge · broad,2024-12-14,-40.49
+Ridge · core,2024-12-14,-63.51
+Single alpha · A101_055,2024-12-14,-59.25
+Trees · broad,2024-12-14,11.22
+Trees · broad + buffer,2024-12-14,-12.45
+Equal weight · core,2024-12-15,-31.79
+IC-weighted · core,2024-12-15,-51.05
+Ridge · broad,2024-12-15,-39.29
+Ridge · core,2024-12-15,-62.85
+Single alpha · A101_055,2024-12-15,-59.81
+Trees · broad,2024-12-15,12.46
+Trees · broad + buffer,2024-12-15,-10.63
+Equal weight · core,2024-12-16,-32.64
+IC-weighted · core,2024-12-16,-51.7
+Ridge · broad,2024-12-16,-37.98
+Ridge · core,2024-12-16,-62.18
+Single alpha · A101_055,2024-12-16,-59.01
+Trees · broad,2024-12-16,13.06
+Trees · broad + buffer,2024-12-16,-9.56
+Equal weight · core,2024-12-17,-37.29
+IC-weighted · core,2024-12-17,-55.17
+Ridge · broad,2024-12-17,-41.21
+Ridge · core,2024-12-17,-65.08
+Single alpha · A101_055,2024-12-17,-60.81
+Trees · broad,2024-12-17,10.03
+Trees · broad + buffer,2024-12-17,-12.38
+Equal weight · core,2024-12-18,-41.33
+IC-weighted · core,2024-12-18,-61.0
+Ridge · broad,2024-12-18,-45.74
+Ridge · core,2024-12-18,-70.45
+Single alpha · A101_055,2024-12-18,-60.6
+Trees · broad,2024-12-18,6.03
+Trees · broad + buffer,2024-12-18,-16.26
+Equal weight · core,2024-12-19,-42.75
+IC-weighted · core,2024-12-19,-60.18
+Ridge · broad,2024-12-19,-46.56
+Ridge · core,2024-12-19,-69.36
+Single alpha · A101_055,2024-12-19,-58.84
+Trees · broad,2024-12-19,4.85
+Trees · broad + buffer,2024-12-19,-17.02
+Equal weight · core,2024-12-20,-43.01
+IC-weighted · core,2024-12-20,-63.26
+Ridge · broad,2024-12-20,-46.77
+Ridge · core,2024-12-20,-70.42
+Single alpha · A101_055,2024-12-20,-56.94
+Trees · broad,2024-12-20,5.28
+Trees · broad + buffer,2024-12-20,-16.61
+Equal weight · core,2024-12-21,-42.09
+IC-weighted · core,2024-12-21,-62.31
+Ridge · broad,2024-12-21,-49.25
+Ridge · core,2024-12-21,-70.04
+Single alpha · A101_055,2024-12-21,-58.88
+Trees · broad,2024-12-21,5.79
+Trees · broad + buffer,2024-12-21,-17.25
+Equal weight · core,2024-12-22,-43.38
+IC-weighted · core,2024-12-22,-63.34
+Ridge · broad,2024-12-22,-51.39
+Ridge · core,2024-12-22,-71.76
+Single alpha · A101_055,2024-12-22,-59.36
+Trees · broad,2024-12-22,3.25
+Trees · broad + buffer,2024-12-22,-18.61
+Equal weight · core,2024-12-23,-42.78
+IC-weighted · core,2024-12-23,-66.69
+Ridge · broad,2024-12-23,-56.41
+Ridge · core,2024-12-23,-74.4
+Single alpha · A101_055,2024-12-23,-58.57
+Trees · broad,2024-12-23,-0.75
+Trees · broad + buffer,2024-12-23,-24.43
+Equal weight · core,2024-12-24,-44.21
+IC-weighted · core,2024-12-24,-68.11
+Ridge · broad,2024-12-24,-54.6
+Ridge · core,2024-12-24,-74.59
+Single alpha · A101_055,2024-12-24,-58.85
+Trees · broad,2024-12-24,1.0
+Trees · broad + buffer,2024-12-24,-22.69
+Equal weight · core,2024-12-25,-46.96
+IC-weighted · core,2024-12-25,-70.65
+Ridge · broad,2024-12-25,-55.07
+Ridge · core,2024-12-25,-76.46
+Single alpha · A101_055,2024-12-25,-55.98
+Trees · broad,2024-12-25,0.45
+Trees · broad + buffer,2024-12-25,-22.74
+Equal weight · core,2024-12-26,-44.04
+IC-weighted · core,2024-12-26,-66.83
+Ridge · broad,2024-12-26,-50.98
+Ridge · core,2024-12-26,-72.67
+Single alpha · A101_055,2024-12-26,-56.32
+Trees · broad,2024-12-26,3.82
+Trees · broad + buffer,2024-12-26,-18.87
+Equal weight · core,2024-12-27,-41.18
+IC-weighted · core,2024-12-27,-64.52
+Ridge · broad,2024-12-27,-50.06
+Ridge · core,2024-12-27,-72.45
+Single alpha · A101_055,2024-12-27,-56.71
+Trees · broad,2024-12-27,5.1
+Trees · broad + buffer,2024-12-27,-19.94
+Equal weight · core,2024-12-28,-43.49
+IC-weighted · core,2024-12-28,-67.12
+Ridge · broad,2024-12-28,-50.46
+Ridge · core,2024-12-28,-75.15
+Single alpha · A101_055,2024-12-28,-56.46
+Trees · broad,2024-12-28,4.28
+Trees · broad + buffer,2024-12-28,-20.28
+Equal weight · core,2024-12-29,-42.72
+IC-weighted · core,2024-12-29,-65.76
+Ridge · broad,2024-12-29,-50.33
+Ridge · core,2024-12-29,-73.45
+Single alpha · A101_055,2024-12-29,-56.73
+Trees · broad,2024-12-29,3.16
+Trees · broad + buffer,2024-12-29,-20.83
+Equal weight · core,2024-12-30,-42.73
+IC-weighted · core,2024-12-30,-66.14
+Ridge · broad,2024-12-30,-49.47
+Ridge · core,2024-12-30,-72.41
+Single alpha · A101_055,2024-12-30,-54.37
+Trees · broad,2024-12-30,4.48
+Trees · broad + buffer,2024-12-30,-19.49

@@ -1,0 +1,1192 @@
+<style>
+/* Layout: summary first (title, takeaway, six tiles), then the lesson (scatter + example), families,
+   the full table, and one alpha's detail. Everything from the dashboard's own tokens. */
+.sc-page { display: grid; gap: var(--cds-gap-xl); max-width: 78rem; margin-inline: auto; font-family: var(--font-anthropic-sans); color: var(--color-fg); }
+.sc-page h1, .sc-page h2, .sc-page h3 { margin: 0; text-wrap: balance; }
+.sc-head { display: grid; gap: var(--cds-gap-xs); }
+.sc-head h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); }
+.sc-meta { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); margin: 0; }
+.sc-takeaway { margin: 0; font-size: var(--cds-font-size-body); max-width: 70ch; line-height: 1.5; }
+.sc-section { display: grid; gap: var(--cds-gap-md); }
+.sc-section > h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); }
+.sc-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 9.5rem), 1fr)); gap: var(--cds-gap-md); }
+.sc-tile { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md); display: grid; gap: var(--cds-gap-xs); align-content: start; }
+.sc-tile-label { display: flex; align-items: center; gap: var(--cds-gap-xs); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.sc-num { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); font-variant-numeric: tabular-nums; line-height: 1.1; }
+.sc-tile-note { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.sc-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: grid; gap: var(--cds-gap-sm); align-content: start; min-width: 0; }
+.sc-card h3 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); }
+.sc-note { margin: 0; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); max-width: 75ch; line-height: 1.45; }
+.sc-lesson { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: var(--cds-gap-md); }
+.sc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: var(--cds-gap-md); }
+@media (max-width: 60rem) { .sc-lesson { grid-template-columns: minmax(0, 1fr); } }
+.sc-chart { position: relative; min-height: 12rem; }
+.sc-chart svg { display: block; overflow: visible; }
+.sc-scatter { min-height: 22rem; }
+.sc-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm) var(--cds-gap-md); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.sc-legend span { display: inline-flex; align-items: center; gap: var(--cds-gap-xs); }
+.sc-sw { width: .625rem; height: .625rem; border-radius: 2px; display: inline-block; flex: none; }
+.sc-axis text, .sc-lbl { fill: var(--color-fg-muted); font-size: var(--cds-font-size-caption); font-family: var(--font-anthropic-sans); }
+.sc-lbl-strong { fill: var(--color-fg); font-size: var(--cds-font-size-caption); font-family: var(--font-anthropic-sans); }
+.sc-axis line { stroke: var(--cds-chart-grid); }
+.sc-tip { position: absolute; z-index: 2; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); display: grid; gap: 2px; max-width: 18rem; }
+.sc-tip .sc-tip-head { color: var(--cds-text-secondary); }
+.sc-controls { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm); align-items: center; }
+.sc-controls input, .sc-controls select { font: inherit; font-size: var(--cds-font-size-caption); color: var(--color-fg); background: var(--color-bg); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-xs) var(--cds-pad-sm); min-width: 0; }
+.sc-controls input { flex: 1 1 12rem; }
+.sc-count { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.sc-tablewrap { max-height: 30rem; overflow: auto; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); }
+.sc-table { border-collapse: collapse; width: 100%; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+.sc-table th { position: sticky; top: 0; background: var(--color-panel); text-align: left; font-weight: var(--cds-font-weight-medium); border-bottom: 1px solid var(--color-border-line); padding: var(--cds-pad-xs) var(--cds-pad-sm); white-space: nowrap; }
+.sc-table th button { all: unset; cursor: pointer; display: block; }
+.sc-table th button:focus-visible { outline: 2px solid var(--color-fg); outline-offset: -2px; }
+.sc-table td { padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
+.sc-table td.num, .sc-table th.num { text-align: right; }
+.sc-table td.wrap { white-space: normal; min-width: 14rem; max-width: 26rem; }
+.sc-heat { min-height: 16rem; overflow-x: auto; }
+.sc-table tbody tr { cursor: pointer; }
+.sc-table tbody tr:hover td { background: var(--color-bg); }
+.sc-table tbody tr[aria-selected="true"] td { background: var(--color-bg); font-weight: var(--cds-font-weight-medium); }
+.sc-pill { display: inline-flex; align-items: center; gap: var(--cds-gap-xs); }
+.sc-detail-head { display: grid; gap: var(--cds-gap-xs); }
+.sc-detail-head h2 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); overflow-wrap: anywhere; }
+.sc-detail-sub { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs) var(--cds-gap-md); color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+.sc-plain { margin: 0; max-width: 75ch; line-height: 1.5; }
+.sc-formula { margin: 0; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: var(--cds-font-size-caption); white-space: pre-wrap; overflow-wrap: anywhere; background: var(--color-bg); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-sm); }
+.sc-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr)); gap: var(--cds-gap-sm) var(--cds-gap-md); margin: 0; }
+.sc-facts div { display: grid; gap: 2px; }
+.sc-facts dt { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.sc-facts dd { margin: 0; font-variant-numeric: tabular-nums; }
+.sc-unit { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); margin-left: .25em; }
+.sc-failed { display: flex; align-items: center; justify-content: center; gap: var(--cds-gap-xs); min-height: inherit; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+.sc-failed::before { content: ""; width: .375rem; height: .375rem; border-radius: 50%; background: var(--color-bad); }
+.cb-num { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); font-variant-numeric: tabular-nums; line-height: 1.1; }
+.cb-cum { min-height: 16rem; }
+[data-dash-source-state=empty] { color: transparent; }
+[data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+</style>
+
+<div class="sc-page">
+  <header class="sc-head" id="summary">
+    <h1>Crypto alpha scorecard</h1>
+    <p class="sc-meta">Alphas scored and picked on 2021–2023 · combinations tested on 2024 · Binance USDT perpetuals · each day's top 80 coins by trading value</p>
+    <p class="sc-takeaway">Of <b data-source="verdict_counts" data-field="n" data-where="verdict=all">—</b> published alphas, <b data-source="verdict_counts" data-field="n" data-where="verdict=strong">—</b> pass both the rank check and the money check, and <b data-source="verdict_counts" data-field="n" data-where="verdict=after_costs">—</b> stay profitable after fees and funding. Most alphas rank coins well but don't make money.</p>
+  </header>
+
+  <section class="sc-tiles" id="tiles" aria-label="Verdict counts">
+    <div class="sc-tile"><span class="sc-tile-label">Alphas scored</span><span class="sc-num dash-skeleton" data-source="verdict_counts" data-field="n" data-where="verdict=all">—</span><span class="sc-tile-note">All computable formulas</span></div>
+    <div class="sc-tile"><span class="sc-tile-label"><i class="sc-sw" data-v="strong"></i>Strong</span><span class="sc-num dash-skeleton" data-source="verdict_counts" data-field="n" data-where="verdict=strong">—</span><span class="sc-tile-note">Rank score and money both pass</span></div>
+    <div class="sc-tile"><span class="sc-tile-label"><i class="sc-sw" data-v="maybe"></i>Maybe</span><span class="sc-num dash-skeleton" data-source="verdict_counts" data-field="n" data-where="verdict=maybe">—</span><span class="sc-tile-note">Weaker, same direction</span></div>
+    <div class="sc-tile"><span class="sc-tile-label"><i class="sc-sw" data-v="rank only"></i>Rank only</span><span class="sc-num dash-skeleton" data-source="verdict_counts" data-field="n" data-where="verdict=rank%20only">—</span><span class="sc-tile-note">Ranks well, earns nothing reliable</span></div>
+    <div class="sc-tile"><span class="sc-tile-label"><i class="sc-sw" data-v="no"></i>No</span><span class="sc-num dash-skeleton" data-source="verdict_counts" data-field="n" data-where="verdict=no">—</span><span class="sc-tile-note">Neither check passes</span></div>
+    <div class="sc-tile"><span class="sc-tile-label">Profitable after costs</span><span class="sc-num dash-skeleton" data-source="verdict_counts" data-field="n" data-where="verdict=after_costs">—</span><span class="sc-tile-note">0.05% fees and funding included</span></div>
+  </section>
+
+  <section class="sc-section" id="lesson">
+    <h2>Rank score vs money</h2>
+    <div class="sc-lesson">
+      <article class="sc-card" id="scatter-card">
+        <h3>Each dot is one alpha</h3>
+        <p class="sc-note">Right: the alpha ranks tomorrow's winners more reliably. Up: its long-short portfolio (best 16 coins minus worst 16) earns money more reliably, before costs. Strong alphas sit past both dashed lines (t = 3). Click a dot to open it below.</p>
+        <div class="sc-legend" data-source="scorecard" id="scatter-legend"></div>
+        <div class="sc-chart sc-scatter dash-skeleton" id="scatter" data-source="scorecard"></div>
+      </article>
+      <article class="sc-card" id="klen-card">
+        <h3>Why a rank score can mislead</h3>
+        <p class="sc-note">Example: the day-range alpha (Q158_KLEN) splits coins into 5 groups from calmest to wildest. Next-day return, basis points. Wild coins usually fall, so they rank badly, but rare huge jumps lift their average back up.</p>
+        <div class="sc-legend" id="klen-legend" data-source="klen_groups"></div>
+        <div class="sc-chart dash-skeleton" id="klen" data-source="klen_groups"></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="sc-section" id="families">
+    <h2>Which families work</h2>
+    <article class="sc-card" id="families-card">
+      <h3>Verdicts by category</h3>
+      <p class="sc-note">Number of alphas per verdict in each category, largest category first.</p>
+      <div class="sc-legend" id="families-legend" data-source="by_category"></div>
+      <div class="sc-chart dash-skeleton" id="families-chart" data-source="by_category"></div>
+    </article>
+  </section>
+
+  <section class="sc-section" id="dedupe">
+    <h2>After removing duplicates</h2>
+    <p class="sc-takeaway">The <b data-source="dedupe_counts" data-field="n" data-where="list=strong_maybe">—</b> strong and maybe alphas boil down to <b data-source="dedupe_counts" data-field="n" data-where="list=core">—</b> distinct ones in <b data-source="dedupe_counts" data-field="n" data-where="list=families">—</b> families. Across all <b data-source="dedupe_counts" data-field="n" data-where="list=some_signal">—</b> alphas with some signal, <b data-source="dedupe_counts" data-field="n" data-where="list=broad_list">—</b> are distinct. Two alphas count as duplicates when they rank coins alike or make money on the same days (similarity 0.7 or more).</p>
+    <div class="sc-lesson">
+      <article class="sc-card" id="families-table-card">
+        <h3>Core list by family</h3>
+        <p class="sc-note">The alphas kept for simple combinations. Twins removed: how many near-copies each one stands for. Click a row for detail.</p>
+        <div class="sc-tablewrap">
+          <table class="sc-table" id="fam-table" data-source="families" data-row-key="id">
+            <thead><tr>
+              <th data-field="family">Family</th>
+              <th data-field="family_note">What it bets on</th>
+              <th data-field="id">Alpha</th>
+              <th data-field="verdict">Verdict</th>
+              <th class="num" data-field="ls_t">Money t</th>
+              <th class="num" data-field="net_bp">After costs bp/day</th>
+              <th class="num" data-field="turnover">Turnover</th>
+              <th class="num" data-field="n_twins">Twins removed</th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </article>
+      <article class="sc-card" id="heat-card">
+        <h3>Do they make money on the same days?</h3>
+        <p class="sc-note">Correlation of daily long-short profit between the core alphas, grouped by family. Pale means independent, which is what makes combining them useful.</p>
+        <div class="sc-legend" id="heat-legend" data-source="core_similarity"></div>
+        <div class="sc-chart sc-heat dash-skeleton" id="heat" data-source="core_similarity families"></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="sc-section" id="combine">
+    <h2>Combining alphas: the 2024 test</h2>
+    <p class="sc-takeaway">Each blend re-learned its weights at the start of every month of 2024, using only earlier days, and traded the top and bottom 20% of coins daily. The best blend, <b class="cb-fill" data-source="combine_best" data-field="method" data-where="role=best">—</b>, earned a Sharpe of <b class="cb-fill" data-source="combine_best" data-field="net_sharpe" data-where="role=best">—</b> after fees and funding. A plain average of the core alphas earned <b class="cb-fill" data-source="combine_best" data-field="net_sharpe" data-where="role=equal">—</b>, and the best single alpha <b class="cb-fill" data-source="combine_best" data-field="net_sharpe" data-where="role=single">—</b>. <span id="cb-verdict"></span></p>
+
+    <section class="sc-tiles" aria-label="2024 Sharpe ratios">
+      <div class="sc-tile"><span class="sc-tile-label">Best blend · Sharpe 2024</span><span class="cb-num cb-fill dash-skeleton" data-source="combine_best" data-field="net_sharpe" data-where="role=best">—</span><span class="sc-tile-note cb-fill" data-source="combine_best" data-field="method" data-where="role=best">—</span></div>
+      <div class="sc-tile"><span class="sc-tile-label">Equal weight · Sharpe 2024</span><span class="cb-num cb-fill dash-skeleton" data-source="combine_best" data-field="net_sharpe" data-where="role=equal">—</span><span class="sc-tile-note">Plain average of the core alphas</span></div>
+      <div class="sc-tile"><span class="sc-tile-label">Best single alpha · Sharpe 2024</span><span class="cb-num cb-fill dash-skeleton" data-source="combine_best" data-field="net_sharpe" data-where="role=single">—</span><span class="sc-tile-note">Chosen on 2021–2023 money t</span></div>
+      <div class="sc-tile"><span class="sc-tile-label">Shuffled answers · Sharpe 2024</span><span class="cb-num cb-fill dash-skeleton" data-source="combine_checks" data-field="net_sharpe" data-where="what=Shuffled%20answers">—</span><span class="sc-tile-note">Honesty check: should be near 0</span></div>
+    </section>
+
+    <div class="sc-lesson">
+      <article class="sc-card" id="cum-card">
+        <h3>Money after costs through 2024</h3>
+        <p class="sc-note">Running total of daily long-short return after fees and funding, % of capital. Dashed lines are the two benchmarks. Hover to compare on any day.</p>
+        <div class="sc-legend" id="cum-legend" data-source="combine_results"></div>
+        <div class="sc-chart cb-cum dash-skeleton" id="cum-chart" data-source="combine_daily"></div>
+      </article>
+      <article class="sc-card" id="singles-card">
+        <h3>Core alphas alone: 2021–2023 vs 2024</h3>
+        <p class="sc-note">Sharpe after costs. The years an alpha was picked on flatter it; 2024 is the honest number. A long line to the left means the alpha faded.</p>
+        <div class="sc-legend" id="singles-legend" data-source="combine_singles"></div>
+        <div class="sc-chart dash-skeleton" id="singles-chart" data-source="combine_singles"></div>
+      </article>
+    </div>
+
+    <article class="sc-card" id="methods-card">
+      <h3>Every method, 2024</h3>
+      <p class="sc-note">Equal weight: plain average of the core alphas. IC-weighted: alphas that predicted better over the past 12 months get more weight. Ridge: regression weights with a penalty against wild weights, on the core list or the broad list. Trees: boosted decision trees on the broad list. Buffer: the best blend, but a coin stays held until it leaves the top or bottom 30%, which trades less. To pass, a method needs a higher Sharpe than both benchmarks. "vs equal t" says how sure we can be that it beat the plain average day by day (2 or more is fairly sure).</p>
+      <div class="sc-tablewrap">
+        <table class="sc-table" id="cb-table" data-source="combine_results" data-row-key="method">
+          <thead><tr>
+            <th data-field="method">Method</th>
+            <th class="num" data-field="net_sharpe">Sharpe after costs</th>
+            <th class="num" data-field="annual_pct">Per year %</th>
+            <th class="num" data-field="net_bp">After costs bp/day</th>
+            <th class="num" data-field="max_drawdown_pct">Worst drop %</th>
+            <th class="num" data-field="turnover">Turnover</th>
+            <th class="num" data-field="cost_bp">Fees bp/day</th>
+            <th class="num" data-field="funding_bp">Funding bp/day</th>
+            <th class="num" data-field="ic">Rank IC</th>
+            <th class="num" data-field="months_up">Months up (of 12)</th>
+            <th class="num" data-field="vs_equal_t">vs equal t</th>
+            <th class="num" data-field="vs_single_t">vs single t</th>
+            <th data-field="passes_bar">Passes</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </article>
+
+    <div class="sc-grid">
+      <article class="sc-card" id="quarters-card">
+        <h3>Quarter by quarter</h3>
+        <p class="sc-note">Return after costs in each quarter of 2024, % of capital. A method that only wins in one quarter may just be lucky.</p>
+        <div class="sc-tablewrap">
+          <table class="sc-table" id="cb-quarters" data-source="combine_quarter_table" data-row-key="method">
+            <thead><tr>
+              <th data-field="method">Method</th>
+              <th class="num" data-field="Q1">Q1</th>
+              <th class="num" data-field="Q2">Q2</th>
+              <th class="num" data-field="Q3">Q3</th>
+              <th class="num" data-field="Q4">Q4</th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </article>
+      <article class="sc-card" id="weights-card">
+        <h3>What the blends leaned on</h3>
+        <p class="sc-note">Average weight of each core alpha across the 12 monthly refits, % of the blend. Equal weight would give each one the same share.</p>
+        <div class="sc-legend" id="weights-legend" data-source="combine_results"></div>
+        <div class="sc-chart dash-skeleton" id="weights-chart" data-source="weight_avg"></div>
+      </article>
+    </div>
+
+    <article class="sc-card" id="cb-checks-card">
+      <h3>Checks</h3>
+      <p class="sc-note">Shuffled answers: the ridge blend trained on next-day returns shuffled within each day. If it made money in 2024, the walk-forward would be leaking the future. The 2021–2023 row shows how flattering in-sample numbers are: the core alphas were picked on those years.</p>
+      <div class="sc-tablewrap">
+        <table class="sc-table" id="cb-checks" data-source="combine_checks" data-row-key="what">
+          <thead><tr>
+            <th data-field="what">Check</th>
+            <th class="num" data-field="ic">Rank IC</th>
+            <th class="num" data-field="ic_t">Rank t</th>
+            <th class="num" data-field="net_bp">After costs bp/day</th>
+            <th class="num" data-field="net_sharpe">Sharpe after costs</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </article>
+  </section>
+
+  <section class="sc-section" id="explorer">
+    <h2>Every alpha</h2>
+    <article class="sc-card" id="table-card">
+      <div class="sc-controls">
+        <input id="sc-search" type="search" placeholder="Search by id, category or description" aria-label="Search alphas">
+        <select id="sc-verdict" aria-label="Verdict">
+          <option value="">All verdicts</option><option value="strong">Strong</option><option value="maybe">Maybe</option><option value="rank only">Rank only</option><option value="no">No</option>
+        </select>
+        <select id="sc-library" aria-label="Library"><option value="">All libraries</option></select>
+        <select id="sc-kept" aria-label="Duplicate check"><option value="">Any list</option><option value="core">Core list</option><option value="broad">Broad list</option><option value="twin">Twin (removed)</option><option value="weak">Too weak for either list</option></select>
+        <span class="sc-count" id="sc-count"></span>
+      </div>
+      <p class="sc-note">Rank IC: average daily rank correlation with next-day return. Money: long-short return per day before costs, in the alpha's own direction. After costs: minus 0.05% fees and funding. t ≥ 3 is the bar. Click a row for detail.</p>
+      <div class="sc-tablewrap">
+        <table class="sc-table" id="sc-table" data-source="scorecard" data-row-key="id">
+          <thead><tr>
+            <th data-field="id"><button type="button" data-sort="id">Alpha</button></th>
+            <th data-field="category"><button type="button" data-sort="category">Category</button></th>
+            <th data-field="verdict"><button type="button" data-sort="verdict">Verdict</button></th>
+            <th class="num" data-field="ic"><button type="button" data-sort="ic">Rank IC</button></th>
+            <th class="num" data-field="ic_t"><button type="button" data-sort="ic_t">Rank t</button></th>
+            <th class="num" data-field="ls_bp"><button type="button" data-sort="ls_bp">Money bp/day</button></th>
+            <th class="num" data-field="ls_t"><button type="button" data-sort="ls_t">Money t</button></th>
+            <th class="num" data-field="net_bp"><button type="button" data-sort="net_bp">After costs bp/day</button></th>
+            <th class="num" data-field="turnover"><button type="button" data-sort="turnover">Turnover</button></th>
+            <th data-field="kept"><button type="button" data-sort="kept">Kept</button></th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </article>
+  </section>
+
+  <section class="sc-section" id="detail">
+    <div class="sc-detail-head">
+      <h2 id="detail-title"><span class="sc-dv" data-source="scorecard" data-field="id">—</span></h2>
+      <div class="sc-detail-sub">
+        <span class="sc-dv" data-source="scorecard" data-field="name">—</span>
+        <span class="sc-dv" data-source="scorecard" data-field="category">—</span>
+        <span class="sc-dv" data-source="scorecard" data-field="library">—</span>
+        <span class="sc-pill"><i class="sc-sw" id="detail-sw"></i><span class="sc-dv" data-source="scorecard" data-field="verdict">—</span></span>
+        <span id="detail-dir"></span>
+      </div>
+    </div>
+    <p class="sc-plain sc-dv" data-source="scorecard" data-field="plain_english">—</p>
+    <details>
+      <summary class="sc-note">Formula and source</summary>
+      <pre class="sc-formula sc-dv" data-source="scorecard" data-field="formula">—</pre>
+      <p class="sc-note"><span class="sc-dv" data-source="scorecard" data-field="source">—</span> · <span class="sc-dv" data-source="scorecard" data-field="year">—</span></p>
+    </details>
+    <article class="sc-card" id="detail-facts">
+      <h3>Key numbers</h3>
+      <dl class="sc-facts">
+        <div><dt>Rank IC</dt><dd><span class="sc-dv" data-source="scorecard" data-field="ic">—</span></dd></div>
+        <div><dt>Rank score t</dt><dd><span class="sc-dv" data-source="scorecard" data-field="ic_t">—</span></dd></div>
+        <div><dt>Money before costs</dt><dd><span class="sc-dv" data-source="scorecard" data-field="ls_bp">—</span><span class="sc-unit">bp/day</span></dd></div>
+        <div><dt>Money t</dt><dd><span class="sc-dv" data-source="scorecard" data-field="ls_t">—</span></dd></div>
+        <div><dt>After fees + funding</dt><dd><span class="sc-dv" data-source="scorecard" data-field="net_bp">—</span><span class="sc-unit">bp/day</span></dd></div>
+        <div><dt>After-costs t</dt><dd><span class="sc-dv" data-source="scorecard" data-field="net_t">—</span></dd></div>
+        <div><dt>After costs, per year</dt><dd><span class="sc-dv" data-source="scorecard" data-field="net_annual_pct">—</span><span class="sc-unit">%</span></dd></div>
+        <div><dt>Turnover</dt><dd><span class="sc-dv" data-source="scorecard" data-field="turnover">—</span><span class="sc-unit">× capital/day</span></dd></div>
+        <div><dt>Fees</dt><dd><span class="sc-dv" data-source="scorecard" data-field="cost_bp">—</span><span class="sc-unit">bp/day</span></dd></div>
+        <div><dt>Funding earned</dt><dd><span class="sc-dv" data-source="scorecard" data-field="funding_bp">—</span><span class="sc-unit">bp/day</span></dd></div>
+        <div><dt>Rank IC if traded a day late</dt><dd><span class="sc-dv" data-source="scorecard" data-field="ic_late">—</span></dd></div>
+        <div><dt>Coverage</dt><dd><span class="sc-dv" data-source="scorecard" data-field="coverage">—</span><span class="sc-unit">of coin-days</span></dd></div>
+        <div><dt>Duplicate check</dt><dd><span class="sc-dv" data-source="scorecard" data-field="kept">—</span></dd></div>
+        <div><dt>Closest kept alpha</dt><dd><span class="sc-dv" data-source="scorecard" data-field="twin_of">—</span> <span class="sc-unit"><span class="sc-dv" data-source="scorecard" data-field="twin_check"></span> <span class="sc-dv" data-source="scorecard" data-field="twin_similarity"></span></span></dd></div>
+      </dl>
+    </article>
+    <div class="sc-grid">
+      <article class="sc-card" id="groups-card">
+        <h3>Five groups</h3>
+        <p class="sc-note">Next-day return per group, bp/day, relative to the 80-coin average. Group 1 has the lowest scores, group 5 the highest. A clean staircase is what you want.</p>
+        <div class="sc-chart dash-skeleton" id="groups-chart" data-source="scorecard"></div>
+      </article>
+      <article class="sc-card" id="years-card">
+        <h3>Rank IC by year</h3>
+        <p class="sc-note">Does it hold in the 2021 bull run, the 2022 crash and the 2023 recovery?</p>
+        <div class="sc-chart dash-skeleton" id="years-chart" data-source="scorecard"></div>
+      </article>
+      <article class="sc-card" id="decay-card">
+        <h3>How far ahead it predicts</h3>
+        <p class="sc-note">Rank IC against the return over the next 1, 3, 7 and 14 days.</p>
+        <div class="sc-chart dash-skeleton" id="decay-chart" data-source="scorecard"></div>
+      </article>
+    </div>
+    <div class="sc-grid">
+      <article class="sc-card" id="cumic-card">
+        <h3>Rank score, running total</h3>
+        <p class="sc-note">Sum of daily rank IC in the alpha's own direction. A steady climb means it works most of the time.</p>
+        <div class="sc-chart dash-skeleton" id="cumic-chart" data-source="weekly"></div>
+      </article>
+      <article class="sc-card" id="cumnet-card">
+        <h3>Money after costs, running total</h3>
+        <p class="sc-note">Sum of daily long-short return after fees and funding, % of capital. Compare with the rank score on the left.</p>
+        <div class="sc-chart dash-skeleton" id="cumnet-chart" data-source="weekly"></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="sc-section" id="checks">
+    <h2>Honesty checks</h2>
+    <article class="sc-card" id="honesty-card">
+      <p class="sc-note">Two fake alphas are scored with the same code on every run. If the random one scored well, or the one that cheats did not, the scoring would be broken.</p>
+      <div class="sc-tablewrap">
+        <table class="sc-table" id="honesty-table" data-source="honesty" data-row-key="id">
+          <thead><tr>
+            <th data-field="id">Fake alpha</th>
+            <th data-field="what">What it is</th>
+            <th class="num" data-field="ic">Rank IC</th>
+            <th class="num" data-field="ic_t">Rank t</th>
+            <th data-field="verdict">Verdict</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="sc-note">Method: alphas are scored on 2021–2023 only. 2024 is used only to test combinations, and 2025 onward stays locked for the final exam. Rank IC among each day's top 80 coins. Five equal-weight groups of 16 coins, rebalanced daily. Strong means rank-score t ≥ 3 with the same sign in at least 2 of 3 years, and long-short t ≥ 3 in the same direction. These results are in-sample: some winners out of 492 tries can still be luck.</p>
+    </article>
+  </section>
+</div>
+
+<script>
+(() => {
+  const VERDICTS = ["strong", "maybe", "rank only", "no"];
+  const LABEL = { strong: "Strong", maybe: "Maybe", "rank only": "Rank only", no: "No" };
+  const vColor = (v) => ({ strong: dash.colors[0], maybe: dash.colors[1], "rank only": dash.colors[2] }[v] || "var(--cds-chart-muted)");
+  window.scVerdictColor = vColor;
+  window.scVerdictLabel = LABEL;
+
+  dash.calc("verdict_counts", {
+    inputs: ["scorecard"],
+    title: "Alphas per verdict",
+    description: "Counts scorecard rows: all, each verdict, and those still profitable after fees and funding.",
+    fn: (scorecard) => {
+      const n = (test) => scorecard.filter(test).length;
+      return [
+        { verdict: "all", n: scorecard.length },
+        { verdict: "strong", n: n((r) => r.verdict === "strong") },
+        { verdict: "maybe", n: n((r) => r.verdict === "maybe") },
+        { verdict: "rank only", n: n((r) => r.verdict === "rank only") },
+        { verdict: "no", n: n((r) => r.verdict === "no") },
+        { verdict: "after_costs", n: n((r) => r.survives_costs === "True") },
+      ];
+    },
+  });
+
+  dash.calc("by_category", {
+    inputs: ["scorecard"],
+    title: "Verdicts per category",
+    description: "Counts scorecard rows per category and verdict, largest category first.",
+    fn: (scorecard) => {
+      const cats = Array.from(new Set(scorecard.map((r) => r.category)));
+      return cats.map((category) => {
+        const rows = scorecard.filter((r) => r.category === category);
+        const n = (v) => rows.filter((r) => r.verdict === v).length;
+        return { category, strong: n("strong"), maybe: n("maybe"), rank_only: n("rank only"), no: n("no"), total: rows.length };
+      }).sort((a, b) => b.total - a.total || a.category.localeCompare(b.category));
+    },
+  });
+
+  dash.calc("dedupe_counts", {
+    inputs: ["scorecard", "families"],
+    title: "Duplicate check counts",
+    description: "Counts alphas per duplicate-check list, and the families in the core list.",
+    fn: (scorecard, families) => {
+      const n = (k) => scorecard.filter((r) => r.kept === k).length;
+      return [
+        { list: "strong_maybe", n: scorecard.filter((r) => r.verdict === "strong" || r.verdict === "maybe").length },
+        { list: "core", n: n("core") },
+        { list: "families", n: new Set(families.map((r) => r.family)).size },
+        { list: "some_signal", n: n("core") + n("broad") + n("twin") },
+        { list: "broad_list", n: n("core") + n("broad") },
+      ];
+    },
+  });
+
+  document.querySelectorAll(".sc-sw[data-v]").forEach((el) => { el.style.background = vColor(el.dataset.v); });
+})();
+</script>
+
+<script>
+(() => {
+  const NUM = ["direction", "ic", "ic_t", "ic_dir_t", "icir", "ic_2021", "ic_2022", "ic_2023", "years_same_sign", "ic_h3", "ic_h7", "ic_h14",
+    "ic_late", "coverage", "g1_bp", "g2_bp", "g3_bp", "g4_bp", "g5_bp", "ls_bp", "ls_t", "net_bp", "net_t", "turnover"];
+  const vColor = window.scVerdictColor;
+  const LABEL = window.scVerdictLabel;
+  const cache = new WeakMap();
+  const parsed = (rows) => {
+    if (!cache.has(rows)) {
+      cache.set(rows, rows.map((r) => {
+        const o = { raw: r };
+        for (const k of Object.keys(r)) o[k] = r[k];
+        for (const k of NUM) o[k] = r[k] === "" || r[k] == null ? NaN : Number(r[k]);
+        return o;
+      }));
+    }
+    return cache.get(rows);
+  };
+  const weeklyCache = new WeakMap();
+  const weeklyById = (rows) => {
+    if (!weeklyCache.has(rows)) {
+      const m = new Map();
+      for (const r of rows) {
+        if (!m.has(r.id)) m.set(r.id, []);
+        m.get(r.id).push({ date: new Date(r.week + "T00:00:00Z"), ic: Number(r.cum_ic), net: Number(r.cum_net_pct) });
+      }
+      weeklyCache.set(rows, m);
+    }
+    return weeklyCache.get(rows);
+  };
+
+  // ---------- shared chart helpers
+  const tipOf = (box) => {
+    let t = box.querySelector(".sc-tip");
+    if (!t) { t = document.createElement("div"); t.className = "sc-tip"; t.hidden = true; box.appendChild(t); }
+    return t;
+  };
+  const showTip = (box, head, lines, x, y) => {
+    const t = tipOf(box);
+    t.replaceChildren();
+    const h = document.createElement("div"); h.className = "sc-tip-head"; h.textContent = head; t.appendChild(h);
+    for (const [sw, text] of lines) {
+      const row = document.createElement("div"); row.style.display = "flex"; row.style.alignItems = "center"; row.style.gap = "6px";
+      if (sw) { const s = document.createElement("i"); s.className = "sc-sw"; s.style.background = sw; row.appendChild(s); }
+      const span = document.createElement("span"); span.textContent = text; row.appendChild(span);
+      t.appendChild(row);
+    }
+    t.hidden = false;
+    const bw = box.clientWidth, tw = t.offsetWidth, th = t.offsetHeight;
+    let left = x + 12; if (left + tw > bw) left = Math.max(0, x - tw - 12);
+    let top = y - th - 8; if (top < 0) top = y + 12;
+    t.style.left = left + "px"; t.style.top = top + "px";
+  };
+  const hideTip = (box) => { const t = box.querySelector(".sc-tip"); if (t) t.hidden = true; };
+  const textWidth = (svg, text, cls = "sc-lbl") => {
+    const t = svg.append("text").attr("class", cls).text(text);
+    const w = t.node().getComputedTextLength(); t.remove(); return w;
+  };
+  const baseSvg = (box, W, H) => {
+    const svg = d3.select(box).selectAll("svg.sc-svg").data([0]).join("svg").attr("class", "sc-svg")
+      .attr("width", "100%").attr("height", H).attr("viewBox", `0 0 ${W} ${H}`);
+    svg.selectAll("*").remove();
+    return svg;
+  };
+  const failed = (box, status) => {
+    d3.select(box).selectAll("svg.sc-svg").remove();
+    let f = box.querySelector(".sc-failed");
+    if (status === "error" || status === "missing") {
+      box.classList.remove("dash-skeleton");
+      if (!f) { f = document.createElement("div"); f.className = "sc-failed"; f.textContent = "Failed to load"; box.appendChild(f); }
+    } else if (f) f.remove();
+  };
+  const fmt = (v, d = 1) => (Number.isFinite(v) ? d3.format(`,.${d}f`)(v) : "–");
+  const fmtSigned = (v, d = 1) => (Number.isFinite(v) ? (v > 0 ? "+" : "") + d3.format(`,.${d}f`)(v) : "–");
+
+  // Vertical bars around zero (detail cards).
+  function bars(box, items, { digits = 1, unit = "", color = dash.colors[0] } = {}) {
+    const W = box.clientWidth; if (!W) return;
+    const H = 190, m = { t: 22, r: 8, b: 26, l: 8 };
+    const svg = baseSvg(box, W, H);
+    const vals = items.map((d) => d.value).filter(Number.isFinite);
+    const lo = Math.min(0, d3.min(vals) ?? 0), hi = Math.max(0, d3.max(vals) ?? 0);
+    const pad = (hi - lo || 1) * 0.15;
+    const y = d3.scaleLinear([lo - (lo < 0 ? pad : 0), hi + (hi > 0 ? pad : 0)], [H - m.b, m.t]);
+    const x = d3.scaleBand(items.map((d) => d.label), [m.l, W - m.r]).padding(0.35);
+    svg.append("line").attr("x1", m.l).attr("x2", W - m.r).attr("y1", y(0)).attr("y2", y(0)).style("stroke", "var(--cds-chart-axis)");
+    const g = svg.append("g").selectAll("g").data(items).join("g");
+    g.append("rect")
+      .attr("x", (d) => x(d.label)).attr("width", Math.min(32, x.bandwidth()))
+      .attr("y", (d) => (Number.isFinite(d.value) ? Math.min(y(d.value), y(0)) : y(0)))
+      .attr("height", (d) => (Number.isFinite(d.value) ? Math.max(1, Math.abs(y(d.value) - y(0))) : 0))
+      .attr("rx", 4).style("fill", (d) => d.color || color)
+      .attr("transform", (d) => `translate(${(x.bandwidth() - Math.min(32, x.bandwidth())) / 2},0)`);
+    g.append("text").attr("class", "sc-lbl-strong").attr("text-anchor", "middle")
+      .attr("x", (d) => x(d.label) + x.bandwidth() / 2)
+      .attr("y", (d) => (!Number.isFinite(d.value) ? y(0) - 6 : d.value >= 0 ? y(d.value) - 6 : y(d.value) + 14))
+      .text((d) => fmtSigned(d.value, digits) + unit);
+    g.append("text").attr("class", "sc-lbl").attr("text-anchor", "middle")
+      .attr("x", (d) => x(d.label) + x.bandwidth() / 2).attr("y", H - 6).text((d) => d.label);
+  }
+
+  // Running total over time (detail cards).
+  function line(box, pts, { digits = 2, unit = "", color = dash.colors[0], name = "" } = {}) {
+    const W = box.clientWidth; if (!W) return;
+    const H = 210, m = { t: 16, r: 12, b: 26, l: 12 };
+    const svg = baseSvg(box, W, H);
+    if (!pts.length) return;
+    const ext = d3.extent(pts, (p) => p.v);
+    const y = d3.scaleLinear([Math.min(0, ext[0]), Math.max(0, ext[1])], [H - m.b, m.t]).nice(4);
+    const ticks = y.ticks(4);
+    const tw = Math.max(...ticks.map((t) => textWidth(svg, fmt(t, Math.abs(t) < 10 && t % 1 ? 1 : 0))));
+    m.l = tw + 10;
+    const endLbl = fmtSigned(pts[pts.length - 1].v, digits) + unit;
+    m.r = textWidth(svg, endLbl, "sc-lbl-strong") + 12;
+    const x = d3.scaleUtc(d3.extent(pts, (p) => p.date), [m.l, W - m.r]);
+    const ga = svg.append("g").attr("class", "sc-axis");
+    for (const t of ticks) {
+      ga.append("line").attr("x1", m.l).attr("x2", W - m.r).attr("y1", y(t)).attr("y2", y(t))
+        .style("stroke", t === 0 ? "var(--cds-chart-axis)" : "var(--cds-chart-grid)");
+      ga.append("text").attr("x", m.l - 6).attr("y", y(t)).attr("dy", "0.32em").attr("text-anchor", "end")
+        .text(fmt(t, Math.abs(t) < 10 && t % 1 ? 1 : 0));
+    }
+    const [d0, d1] = x.domain();
+    for (let yr = d0.getUTCFullYear(); yr <= d1.getUTCFullYear(); yr++) {
+      const mid = new Date(Date.UTC(yr, 6, 1));
+      if (mid < d0 || mid > d1) continue;
+      ga.append("text").attr("x", x(mid)).attr("y", H - 6).attr("text-anchor", "middle").text(String(yr));
+      const jan = new Date(Date.UTC(yr, 0, 1));
+      if (jan > d0) ga.append("line").attr("x1", x(jan)).attr("x2", x(jan)).attr("y1", m.t).attr("y2", H - m.b).style("stroke", "var(--cds-chart-grid)");
+    }
+    svg.append("path").datum(pts).attr("fill", "none").style("stroke", color).attr("stroke-width", 2)
+      .attr("stroke-linejoin", "round").attr("stroke-linecap", "round")
+      .attr("d", d3.line().x((p) => x(p.date)).y((p) => y(p.v)));
+    const last = pts[pts.length - 1];
+    svg.append("circle").attr("cx", x(last.date)).attr("cy", y(last.v)).attr("r", 4).style("fill", color)
+      .style("stroke", "var(--color-panel)").attr("stroke-width", 2);
+    svg.append("text").attr("class", "sc-lbl-strong").attr("x", x(last.date) + 8).attr("y", y(last.v)).attr("dy", "0.32em").text(endLbl);
+    const dot = svg.append("circle").attr("r", 4).style("fill", color).style("stroke", "var(--color-panel)").attr("stroke-width", 2).attr("visibility", "hidden");
+    const rule = svg.append("line").style("stroke", "var(--cds-chart-reference)").attr("y1", m.t).attr("y2", H - m.b).attr("visibility", "hidden");
+    const bis = d3.bisector((p) => p.date).center;
+    svg.append("rect").attr("x", m.l).attr("y", m.t).attr("width", Math.max(0, W - m.l - m.r)).attr("height", H - m.t - m.b)
+      .style("fill", "transparent")
+      .on("pointermove", (ev) => {
+        const [px] = d3.pointer(ev);
+        const p = pts[bis(pts, x.invert(px))];
+        dot.attr("cx", x(p.date)).attr("cy", y(p.v)).attr("visibility", "visible");
+        rule.attr("x1", x(p.date)).attr("x2", x(p.date)).attr("visibility", "visible");
+        showTip(box, "Week of " + d3.utcFormat("%b %-d, %Y")(p.date), [[null, name + ": " + fmtSigned(p.v, digits) + unit]], x(p.date), y(p.v));
+      })
+      .on("pointerleave", () => { dot.attr("visibility", "hidden"); rule.attr("visibility", "hidden"); hideTip(box); });
+  }
+
+  // ---------- scatter: rank score vs money
+  function scatter(rows, selected) {
+    const box = document.getElementById("scatter");
+    const W = box.clientWidth; if (!W) return;
+    const H = Math.round(Math.max(300, Math.min(440, W * 0.62)));
+    const svg = baseSvg(box, W, H);
+    const m = { t: 14, r: 14, b: 42, l: 48 };
+    const pts = rows.filter((r) => Number.isFinite(r.ic_dir_t) && Number.isFinite(r.ls_t));
+    const x = d3.scaleLinear([0, Math.max(4, d3.max(pts, (r) => r.ic_dir_t))], [m.l, W - m.r]).nice();
+    const y = d3.scaleLinear([Math.min(-1, d3.min(pts, (r) => r.ls_t)), Math.max(4, d3.max(pts, (r) => r.ls_t))], [H - m.b, m.t]).nice();
+    const ga = svg.append("g").attr("class", "sc-axis");
+    for (const t of y.ticks(6)) {
+      ga.append("line").attr("x1", m.l).attr("x2", W - m.r).attr("y1", y(t)).attr("y2", y(t)).style("stroke", t === 0 ? "var(--cds-chart-axis)" : "var(--cds-chart-grid)");
+      ga.append("text").attr("x", m.l - 8).attr("y", y(t)).attr("dy", "0.32em").attr("text-anchor", "end").text(t);
+    }
+    for (const t of x.ticks(Math.max(3, Math.floor(W / 90)))) {
+      ga.append("text").attr("x", x(t)).attr("y", H - m.b + 16).attr("text-anchor", "middle").text(t);
+    }
+    svg.append("text").attr("class", "sc-lbl").attr("x", (m.l + W - m.r) / 2).attr("y", H - 6).attr("text-anchor", "middle").text("Rank score t (in the alpha's own direction) →");
+    svg.append("text").attr("class", "sc-lbl").attr("transform", `translate(12,${(m.t + H - m.b) / 2}) rotate(-90)`).attr("text-anchor", "middle").text("Money t (long-short, before costs) →");
+    const ref = (x1, y1, x2, y2) => svg.append("line").attr("x1", x1).attr("y1", y1).attr("x2", x2).attr("y2", y2)
+      .style("stroke", "var(--cds-chart-reference)").attr("stroke-dasharray", "4 4");
+    ref(x(3), m.t, x(3), H - m.b);
+    ref(m.l, y(3), W - m.r, y(3));
+    svg.append("text").attr("class", "sc-lbl").attr("x", W - m.r - 4).attr("y", y(3) - 6).attr("text-anchor", "end").text("Strong zone");
+    svg.append("text").attr("class", "sc-lbl").attr("x", W - m.r - 4).attr("y", y(0) + 16).attr("text-anchor", "end").text("Below: ranks well, no reliable money");
+    const order = { no: 0, "rank only": 1, maybe: 2, strong: 3 };
+    const sorted = pts.slice().sort((a, b) => order[a.verdict] - order[b.verdict]);
+    svg.append("g").selectAll("circle").data(sorted).join("circle")
+      .attr("cx", (r) => x(r.ic_dir_t)).attr("cy", (r) => y(r.ls_t)).attr("r", (r) => (r.id === selected ? 7 : 4))
+      .style("fill", (r) => vColor(r.verdict)).style("stroke", (r) => (r.id === selected ? "var(--color-fg)" : "var(--color-panel)"))
+      .attr("stroke-width", 2);
+    const hl = svg.append("circle").attr("r", 7).style("fill", "none").style("stroke", "var(--color-fg)").attr("stroke-width", 2).attr("visibility", "hidden");
+    const delaunay = d3.Delaunay.from(sorted, (r) => x(r.ic_dir_t), (r) => y(r.ls_t));
+    const near = (ev) => {
+      const [px, py] = d3.pointer(ev);
+      const i = delaunay.find(px, py);
+      const r = sorted[i];
+      return r && Math.hypot(x(r.ic_dir_t) - px, y(r.ls_t) - py) < 28 ? r : null;
+    };
+    svg.append("rect").attr("x", 0).attr("y", 0).attr("width", W).attr("height", H).style("fill", "transparent").style("cursor", "pointer")
+      .on("pointermove", (ev) => {
+        const r = near(ev);
+        if (!r) { hl.attr("visibility", "hidden"); hideTip(box); return; }
+        hl.attr("cx", x(r.ic_dir_t)).attr("cy", y(r.ls_t)).attr("visibility", "visible");
+        showTip(box, r.id + " · " + r.category, [[vColor(r.verdict), LABEL[r.verdict]], [null, "Rank t " + fmt(r.ic_dir_t, 2) + " · money t " + fmt(r.ls_t, 2)], [null, "After costs " + fmtSigned(r.net_bp, 1) + " bp/day"]], x(r.ic_dir_t), y(r.ls_t));
+      })
+      .on("pointerleave", () => { hl.attr("visibility", "hidden"); hideTip(box); })
+      .on("click", (ev) => { const r = near(ev); if (r) window.scSelect(r.id, true); });
+  }
+
+  function legend(el, items) {
+    el.replaceChildren();
+    for (const [color, text] of items) {
+      const s = document.createElement("span");
+      const sw = document.createElement("i"); sw.className = "sc-sw"; sw.style.background = color;
+      const t = document.createElement("span"); t.textContent = text;
+      s.append(sw, t); el.appendChild(s);
+    }
+  }
+
+  // ---------- example: average vs typical return per group
+  function klen(rows) {
+    const box = document.getElementById("klen");
+    const W = box.clientWidth; if (!W) return;
+    const data = rows.map((r) => ({ label: r.label, mean: Number(r.mean_bp), median: Number(r.median_bp) }));
+    const rowH = 36, m = { t: 6, r: 44, b: 8, l: 0 };
+    const H = m.t + m.b + data.length * rowH;
+    const svg = baseSvg(box, W, H);
+    m.l = Math.max(...data.map((d) => textWidth(svg, d.label))) + 12;
+    const vals = data.flatMap((d) => [d.mean, d.median]);
+    const lo = Math.min(0, d3.min(vals)), hi = Math.max(0, d3.max(vals));
+    m.r = Math.max(textWidth(svg, fmtSigned(hi, 1), "sc-lbl-strong"), 28) + 10;
+    const lw = textWidth(svg, fmtSigned(lo, 1), "sc-lbl-strong") + 8;
+    const x = d3.scaleLinear([lo, hi], [m.l + lw, W - m.r]);
+    svg.append("line").attr("x1", x(0)).attr("x2", x(0)).attr("y1", m.t).attr("y2", H - m.b).style("stroke", "var(--cds-chart-axis)");
+    const series = [["mean", "Average", dash.colors[0]], ["median", "Typical day (median)", dash.colors[3]]];
+    data.forEach((d, i) => {
+      const y0 = m.t + i * rowH;
+      svg.append("text").attr("class", "sc-lbl").attr("x", m.l - 12).attr("y", y0 + rowH / 2).attr("dy", "0.32em").attr("text-anchor", "end").text(d.label);
+      series.forEach(([k, name, color], j) => {
+        const v = d[k], yb = y0 + 6 + j * 12;
+        svg.append("rect").attr("x", Math.min(x(v), x(0))).attr("width", Math.max(1, Math.abs(x(v) - x(0)))).attr("y", yb).attr("height", 10)
+          .attr("rx", 3).style("fill", color)
+          .on("pointermove", (ev) => { const [px, py] = d3.pointer(ev, box); showTip(box, "Group " + d.label, [[color, name + ": " + fmtSigned(v, 1) + " bp"]], px, py); })
+          .on("pointerleave", () => hideTip(box));
+        svg.append("text").attr("class", "sc-lbl-strong").attr("x", v >= 0 ? x(v) + 4 : x(v) - 4).attr("y", yb + 5).attr("dy", "0.32em")
+          .attr("text-anchor", v >= 0 ? "start" : "end").text(fmtSigned(v, 1));
+      });
+    });
+    legend(document.getElementById("klen-legend"), series.map(([, n, c]) => [c, n]));
+  }
+
+  // ---------- families: stacked bars per category
+  function families(cats) {
+    const box = document.getElementById("families-chart");
+    const W = box.clientWidth; if (!W) return;
+    const rowH = 26, m = { t: 4, r: 40, b: 4, l: 0 };
+    const H = m.t + m.b + cats.length * rowH;
+    const svg = baseSvg(box, W, H);
+    m.l = Math.max(...cats.map((c) => textWidth(svg, c.category))) + 12;
+    const keys = [["strong", "strong"], ["maybe", "maybe"], ["rank_only", "rank only"], ["no", "no"]];
+    const x = d3.scaleLinear([0, d3.max(cats, (c) => Number(c.total))], [m.l, W - m.r]);
+    cats.forEach((c, i) => {
+      const y0 = m.t + i * rowH + 5, h = rowH - 10;
+      svg.append("text").attr("class", "sc-lbl").attr("x", m.l - 10).attr("y", y0 + h / 2).attr("dy", "0.32em").attr("text-anchor", "end").text(c.category);
+      let acc = 0;
+      for (const [k, v] of keys) {
+        const n = Number(c[k]); if (!n) continue;
+        const x0 = x(acc), x1 = x(acc + n);
+        svg.append("rect").attr("x", x0).attr("y", y0).attr("width", Math.max(1, x1 - x0 - 2)).attr("height", h).attr("rx", 2)
+          .style("fill", vColor(v))
+          .on("pointermove", (ev) => { const [px, py] = d3.pointer(ev, box); showTip(box, c.category, [[vColor(v), LABEL[v] + ": " + n + " of " + c.total]], px, py); })
+          .on("pointerleave", () => hideTip(box));
+        acc += n;
+      }
+      svg.append("text").attr("class", "sc-lbl-strong").attr("x", x(acc) + 4).attr("y", y0 + h / 2).attr("dy", "0.32em").text(c.total);
+    });
+  }
+
+  // ---------- table
+  const state = { sort: "ls_t", dir: -1, q: "", verdict: "", library: "", kept: "" };
+  const searchEl = document.getElementById("sc-search");
+  const verdictEl = document.getElementById("sc-verdict");
+  const libraryEl = document.getElementById("sc-library");
+  const keptEl = document.getElementById("sc-kept");
+  const tbody = document.querySelector("#sc-table tbody");
+  searchEl.addEventListener("input", () => { state.q = searchEl.value.trim().toLowerCase(); redraw(); });
+  verdictEl.addEventListener("change", () => { state.verdict = verdictEl.value; redraw(); });
+  libraryEl.addEventListener("change", () => { state.library = libraryEl.value; redraw(); });
+  keptEl.addEventListener("change", () => { state.kept = keptEl.value; redraw(); });
+  document.querySelectorAll("#sc-table th button[data-sort]").forEach((b) => b.addEventListener("click", () => {
+    const k = b.dataset.sort;
+    if (state.sort === k) state.dir *= -1; else { state.sort = k; state.dir = NUM.includes(k) ? -1 : 1; }
+    redraw();
+  }));
+  tbody.addEventListener("click", (ev) => { const tr = ev.target.closest("tr[data-key]"); if (tr) window.scSelect(tr.dataset.key, true); });
+  tbody.addEventListener("keydown", (ev) => {
+    if (ev.key !== "Enter" && ev.key !== " ") return;
+    const tr = ev.target.closest("tr[data-key]"); if (tr) { ev.preventDefault(); window.scSelect(tr.dataset.key, true); }
+  });
+
+  function table(rows, selected) {
+    const libs = Array.from(new Set(rows.map((r) => r.library))).sort();
+    if (libraryEl.options.length !== libs.length + 1) {
+      libraryEl.replaceChildren(new Option("All libraries", ""), ...libs.map((l) => new Option(l, l)));
+      libraryEl.value = state.library;
+    }
+    let shown = rows.filter((r) => (!state.verdict || r.verdict === state.verdict) && (!state.library || r.library === state.library) && (!state.kept || r.kept === state.kept)
+      && (!state.q || (r.id + " " + r.category + " " + r.plain_english).toLowerCase().includes(state.q)));
+    const k = state.sort, isNum = NUM.includes(k);
+    shown = shown.slice().sort((a, b) => {
+      const va = a[k], vb = b[k];
+      if (isNum) return ((Number.isFinite(va) ? va : -Infinity) - (Number.isFinite(vb) ? vb : -Infinity)) * state.dir;
+      return String(va).localeCompare(String(vb)) * state.dir;
+    });
+    document.getElementById("sc-count").textContent = shown.length + " of " + rows.length + " alphas";
+    document.querySelectorAll("#sc-table th").forEach((th) => {
+      const b = th.querySelector("button");
+      th.setAttribute("aria-sort", b && b.dataset.sort === state.sort ? (state.dir > 0 ? "ascending" : "descending") : "none");
+    });
+    const cols = ["id", "category", "verdict", "ic", "ic_t", "ls_bp", "ls_t", "net_bp", "turnover", "kept"];
+    d3.select(tbody).selectAll("tr").data(shown, (r) => r.id).join("tr")
+      .attr("data-key", (r) => r.id).attr("tabindex", 0).attr("aria-selected", (r) => (r.id === selected ? "true" : "false"))
+      .each(function (r) {
+        const tr = d3.select(this);
+        tr.selectAll("td").data(cols).join("td")
+          .attr("class", (c) => (NUM.includes(c) ? "num" : null))
+          .each(function (c) {
+            const td = d3.select(this);
+            td.selectAll("*").remove();
+            if (c === "verdict") {
+              const s = td.text(null).append("span").attr("class", "sc-pill");
+              s.append("i").attr("class", "sc-sw").style("background", vColor(r.verdict));
+              s.append("span").text(r.raw.verdict);
+            } else {
+              td.text(r.raw[c]);
+            }
+          });
+      });
+  }
+
+  // ---------- detail
+  function detail(rows, selected, weekly) {
+    const r = rows.find((d) => d.id === selected);
+    document.querySelectorAll(".sc-dv").forEach((el) => {
+      if (!r) { el.textContent = "—"; return; }
+      el.setAttribute("data-where", "id=" + encodeURIComponent(r.id));
+      el.textContent = r.raw[el.dataset.field];
+    });
+    if (!r) return;
+    document.getElementById("detail-sw").style.background = vColor(r.verdict);
+    document.getElementById("detail-dir").textContent = r.direction > 0
+      ? "Buys high scores, shorts low scores" : "Buys low scores, shorts high scores";
+    const gColor = (k) => ((r.direction > 0 && k === 5) || (r.direction < 0 && k === 1) ? dash.colors[0]
+      : (r.direction > 0 && k === 1) || (r.direction < 0 && k === 5) ? dash.colors[3] : "var(--cds-chart-muted)");
+    bars(document.getElementById("groups-chart"), [1, 2, 3, 4, 5].map((k) => ({ label: "Group " + k, value: r["g" + k + "_bp"], color: gColor(k) })), { digits: 1 });
+    bars(document.getElementById("years-chart"), [2021, 2022, 2023].map((yr) => ({ label: String(yr), value: r["ic_" + yr] })), { digits: 3 });
+    bars(document.getElementById("decay-chart"), [["1 day", r.ic], ["3 days", r.ic_h3], ["7 days", r.ic_h7], ["14 days", r.ic_h14]].map(([label, value]) => ({ label, value })), { digits: 3 });
+    const pts = (weekly && weekly.get(r.id)) || [];
+    line(document.getElementById("cumic-chart"), pts.map((p) => ({ date: p.date, v: p.ic })), { digits: 1, name: "Running rank IC" });
+    line(document.getElementById("cumnet-chart"), pts.map((p) => ({ date: p.date, v: p.net })), { digits: 0, unit: "%", name: "Running money after costs", color: dash.colors[1] });
+  }
+
+  // ---------- family map
+  const shortName = (id) => id.replace("CRYPTO_HMRW_PREMIUM", "Premium").replace("A101_0", "A101 #").replace("A101_", "A101 #")
+    .replace("GTJA_0", "GTJA #").replace("GTJA_", "GTJA #").replace("Q158_", "Q158 ");
+  const familyOrder = (rows) => {
+    const first = new Map();
+    rows.forEach((r, i) => { if (!first.has(r.family)) first.set(r.family, i); });
+    return rows.slice().sort((a, b) => first.get(a.family) - first.get(b.family) || Number(b.ls_t) - Number(a.ls_t));
+  };
+  const famBody = document.querySelector("#fam-table tbody");
+  famBody.addEventListener("click", (ev) => { const tr = ev.target.closest("tr[data-key]"); if (tr) window.scSelect(tr.dataset.key, true); });
+  famBody.addEventListener("keydown", (ev) => {
+    if (ev.key !== "Enter" && ev.key !== " ") return;
+    const tr = ev.target.closest("tr[data-key]"); if (tr) { ev.preventDefault(); window.scSelect(tr.dataset.key, true); }
+  });
+  function familyTable(rows, selected) {
+    const cols = ["family", "family_note", "id", "verdict", "ls_t", "net_bp", "turnover", "n_twins"];
+    d3.select(famBody).selectAll("tr").data(familyOrder(rows), (r) => r.id).join("tr")
+      .attr("data-key", (r) => r.id).attr("tabindex", 0).attr("aria-selected", (r) => (r.id === selected ? "true" : "false"))
+      .each(function (r) {
+        d3.select(this).selectAll("td").data(cols).join("td")
+          .attr("class", (c) => (["ls_t", "net_bp", "turnover", "n_twins"].includes(c) ? "num" : c === "family_note" ? "wrap" : null))
+          .each(function (c) {
+            const td = d3.select(this);
+            td.selectAll("*").remove();
+            if (c === "verdict") {
+              const sp = td.text(null).append("span").attr("class", "sc-pill");
+              sp.append("i").attr("class", "sc-sw").style("background", vColor(r.verdict));
+              sp.append("span").text(r.verdict);
+            } else td.text(r[c]);
+          });
+      });
+  }
+
+  function heat(pairs, fams) {
+    const box = document.getElementById("heat");
+    const W = box.clientWidth; if (!W) return;
+    const ids = familyOrder(fams).map((r) => r.id);
+    const famOf = new Map(fams.map((r) => [r.id, r.family]));
+    const val = new Map(pairs.map((p) => [p.a + "|" + p.b, { money: Number(p.money), signal: Number(p.signal) }]));
+    const probe = baseSvg(box, W, 10);
+    const lw = Math.max(...ids.map((id) => textWidth(probe, shortName(id)))) + 10;
+    const cell = Math.max(14, Math.min(34, Math.floor((W - lw - 4) / ids.length)));
+    const size = cell * ids.length;
+    const Wd = Math.max(W, lw + size + 4), H = lw + size + 4;
+    const svg = baseSvg(box, Wd, H);
+    svg.attr("width", Wd);
+    const x0 = lw, y0 = lw;
+    ids.forEach((id, i) => {
+      svg.append("text").attr("class", "sc-lbl").attr("x", x0 - 6).attr("y", y0 + i * cell + cell / 2).attr("dy", "0.32em").attr("text-anchor", "end").text(shortName(id));
+      svg.append("text").attr("class", "sc-lbl").attr("transform", `translate(${x0 + i * cell + cell / 2},${y0 - 6}) rotate(-90)`).text(shortName(id));
+    });
+    const pos = dash.colors[0], neg = dash.colors[3];
+    ids.forEach((a, i) => ids.forEach((b, j) => {
+      const v = val.get(a + "|" + b) || { money: NaN, signal: NaN };
+      const same = a === b;
+      const rect = svg.append("rect").attr("x", x0 + j * cell + 1).attr("y", y0 + i * cell + 1).attr("width", cell - 2).attr("height", cell - 2).attr("rx", 2)
+        .style("fill", same ? "var(--cds-chart-muted)" : v.money >= 0 ? pos : neg)
+        .style("fill-opacity", same ? 0.25 : Math.max(0.06, Math.min(1, Math.abs(v.money))));
+      if (!same) {
+        rect.on("pointermove", (ev) => {
+          const [px, py] = d3.pointer(ev, box);
+          showTip(box, shortName(a) + " × " + shortName(b), [[null, "Money similarity " + fmt(v.money, 2)], [null, "Signal similarity " + fmt(v.signal, 2)],
+            [null, famOf.get(a) === famOf.get(b) ? "Same family: " + famOf.get(a) : famOf.get(a) + " vs " + famOf.get(b)]], px, py);
+        }).on("pointerleave", () => hideTip(box));
+        if (cell >= 30) svg.append("text").attr("class", "sc-lbl").attr("x", x0 + j * cell + cell / 2).attr("y", y0 + i * cell + cell / 2).attr("dy", "0.32em")
+          .attr("text-anchor", "middle").style("pointer-events", "none").text(d3.format(".1f")(v.money).replace("0.", "."));
+      }
+    }));
+    // family blocks
+    let start = 0;
+    ids.forEach((id, i) => {
+      if (i === ids.length - 1 || famOf.get(ids[i + 1]) !== famOf.get(id)) {
+        const len = i - start + 1;
+        svg.append("rect").attr("x", x0 + start * cell).attr("y", y0 + start * cell).attr("width", len * cell).attr("height", len * cell)
+          .style("fill", "none").style("stroke", "var(--color-fg)").attr("stroke-width", 1.5).style("pointer-events", "none");
+        start = i + 1;
+      }
+    });
+    legend(document.getElementById("heat-legend"), [[pos, "Profits move together"], [neg, "Move apart"], ["var(--cds-chart-muted)", "Same alpha"]]);
+  }
+
+  function honesty(rows) {
+    const body = document.querySelector("#honesty-table tbody");
+    d3.select(body).selectAll("tr").data(rows, (r) => r.id).join("tr").attr("data-key", (r) => r.id)
+      .each(function (r) {
+        d3.select(this).selectAll("td").data(["id", "what", "ic", "ic_t", "verdict"]).join("td")
+          .attr("class", (c) => (c === "ic" || c === "ic_t" ? "num" : null)).text((c) => r[c]);
+      });
+  }
+
+  window.scSelect = (id, scroll) => {
+    dash.setParams({ alpha: id });
+    if (scroll) {
+      const calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      document.getElementById("detail").scrollIntoView({ behavior: calm ? "auto" : "smooth", block: "start" });
+      dash.setLink("detail");
+    }
+  };
+
+  function redraw() { draw(); }
+  function draw() {
+    const sc = dash.data("scorecard");
+    const wk = dash.data("weekly");
+    const cnt = dash.data("verdict_counts");
+    const cat = dash.data("by_category");
+    const kl = dash.data("klen_groups");
+    const hn = dash.data("honesty");
+
+    document.querySelectorAll(".sc-num").forEach((el) => {
+      if (cnt.status === "ok") {
+        el.classList.remove("dash-skeleton");
+        const v = el.getAttribute("data-where").split("=")[1];
+        const row = cnt.data.find((d) => d.verdict === decodeURIComponent(v));
+        el.textContent = row ? d3.format(",")(row.n) : "—";
+      } else if (cnt.status === "error") { el.classList.remove("dash-skeleton"); el.textContent = "—"; }
+    });
+    document.querySelectorAll("#summary .sc-takeaway b").forEach((el) => {
+      const v = decodeURIComponent(el.getAttribute("data-where").split("=")[1]);
+      const row = cnt.status === "ok" ? cnt.data.find((d) => d.verdict === v) : null;
+      el.textContent = row ? d3.format(",")(row.n) : "—";
+    });
+
+    const scBoxes = ["scatter", "groups-chart", "years-chart", "decay-chart"].map((id) => document.getElementById(id));
+    if (sc.status !== "ok") {
+      scBoxes.forEach((b) => failed(b, sc.status));
+      tbody.replaceChildren();
+      return;
+    }
+    scBoxes.forEach((b) => { failed(b, "ok"); b.classList.remove("dash-skeleton"); });
+    const rows = parsed(sc.data);
+    const strongest = rows.filter((r) => r.verdict === "strong").sort((a, b) => b.ls_t - a.ls_t)[0] || rows[0];
+    const p = dash.params().alpha;
+    const selected = p && rows.some((r) => r.id === p) ? p : strongest.id;
+
+    legend(document.getElementById("scatter-legend"), ["strong", "maybe", "rank only", "no"].map((v) => [vColor(v), LABEL[v]]));
+    scatter(rows, selected);
+    table(rows, selected);
+
+    const wkBoxes = ["cumic-chart", "cumnet-chart"].map((id) => document.getElementById(id));
+    let weekly = null;
+    if (wk.status === "ok") { wkBoxes.forEach((b) => { failed(b, "ok"); b.classList.remove("dash-skeleton"); }); weekly = weeklyById(wk.data); }
+    else wkBoxes.forEach((b) => failed(b, wk.status));
+    detail(rows, selected, weekly);
+
+    const fb = document.getElementById("families-chart");
+    if (cat.status === "ok") { failed(fb, "ok"); fb.classList.remove("dash-skeleton"); families(cat.data);
+      legend(document.getElementById("families-legend"), ["strong", "maybe", "rank only", "no"].map((v) => [vColor(v), LABEL[v]])); }
+    else failed(fb, cat.status);
+
+    const kb = document.getElementById("klen");
+    if (kl.status === "ok") { failed(kb, "ok"); kb.classList.remove("dash-skeleton"); klen(kl.data); } else failed(kb, kl.status);
+
+    if (hn.status === "ok") honesty(hn.data);
+
+    const fm = dash.data("families"), cs = dash.data("core_similarity"), dc = dash.data("dedupe_counts");
+    document.querySelectorAll('#dedupe .sc-takeaway b').forEach((el) => {
+      const k = decodeURIComponent(el.getAttribute("data-where").split("=")[1]);
+      const row = dc.status === "ok" ? dc.data.find((d) => d.list === k) : null;
+      el.textContent = row ? d3.format(",")(row.n) : "—";
+    });
+    if (fm.status === "ok") familyTable(fm.data, selected); else document.querySelector("#fam-table tbody").replaceChildren();
+    const hb = document.getElementById("heat");
+    if (fm.status === "ok" && cs.status === "ok") { failed(hb, "ok"); hb.classList.remove("dash-skeleton"); heat(cs.data, fm.data); }
+    else failed(hb, fm.status === "ok" ? cs.status : fm.status);
+  }
+  window.scHelpers = { showTip, hideTip, baseSvg, textWidth, failed, fmt, fmtSigned, legend, shortName };
+  dash.onData(draw);
+
+  const named = document.getElementById(location.hash.slice(1));
+  if (named) setTimeout(() => named.scrollIntoView(), 0);
+})();
+</script>
+
+<script>
+(() => {
+  // Step 6: combining alphas, judged on 2024.
+  dash.calc("combine_best", {
+    inputs: ["combine_results"],
+    title: "Best blend vs benchmarks",
+    description: "Picks the blend with the highest 2024 Sharpe after costs, next to the equal-weight and single-alpha benchmarks.",
+    fn: (combine_results) => {
+      const sharpe = (r) => Number(r.net_sharpe);
+      const blends = combine_results.filter((r) => r.kind !== "benchmark");
+      const best = blends.slice().sort((a, b) => sharpe(b) - sharpe(a))[0];
+      const equal = combine_results.find((r) => r.method.startsWith("Equal"));
+      const single = combine_results.find((r) => r.method.startsWith("Single"));
+      const row = (role, r) => ({ role, method: r.method, net_sharpe: sharpe(r), net_t: Number(r.net_t), passes: r.passes_bar });
+      return [best && row("best", best), equal && row("equal", equal), single && row("single", single)].filter(Boolean);
+    },
+  });
+
+  dash.calc("combine_quarter_table", {
+    inputs: ["combine_quarters"],
+    title: "2024 return per quarter",
+    description: "One row per method: return after costs in each quarter of 2024, % of capital.",
+    fn: (combine_quarters) => {
+      const by = new Map();
+      for (const r of combine_quarters) {
+        if (!by.has(r.method)) by.set(r.method, { method: r.method });
+        by.get(r.method)[r.quarter] = Number(r.net_pct);
+      }
+      return Array.from(by.values());
+    },
+  });
+
+  dash.calc("weight_avg", {
+    inputs: ["combine_weights"],
+    title: "Average blend weight per alpha",
+    description: "Average of the 12 monthly weights of each core alpha in 2024, % of the blend, for the IC-weighted and ridge blends.",
+    fn: (combine_weights) => {
+      const m = new Map();
+      for (const r of combine_weights) {
+        if (!m.has(r.alpha)) m.set(r.alpha, { alpha: r.alpha, family: r.family, ic: [], ridge: [] });
+        (r.method.startsWith("IC") ? m.get(r.alpha).ic : m.get(r.alpha).ridge).push(Number(r.weight));
+      }
+      const avg = (a) => (a.length ? (100 * a.reduce((s, x) => s + x, 0)) / a.length : null);
+      return Array.from(m.values()).map((d) => ({ alpha: d.alpha, family: d.family, ic_weighted_pct: avg(d.ic), ridge_core_pct: avg(d.ridge) }));
+    },
+  });
+
+  const { showTip, hideTip, baseSvg, textWidth, failed, fmt, fmtSigned, legend, shortName } = window.scHelpers;
+  const isBench = (m) => m.startsWith("Equal") || m.startsWith("Single");
+  let colorOf = new Map();
+  const col = (m) => colorOf.get(m) || "var(--cds-chart-muted)";
+  const ready = (box, status) => {
+    if (status === "ok") { failed(box, "ok"); box.classList.remove("dash-skeleton"); return true; }
+    failed(box, status); return false;
+  };
+  const rowsOf = (id) => { const d = dash.data(id); return d.status === "ok" ? d.data : null; };
+
+  // Fill single values marked with data-source / data-field / data-where.
+  function fillMarks() {
+    document.querySelectorAll("#combine .cb-fill").forEach((el) => {
+      const rows = rowsOf(el.dataset.source);
+      const [k, v] = el.getAttribute("data-where").split("=").map(decodeURIComponent);
+      const row = rows && rows.find((r) => String(r[k]) === v);
+      el.textContent = row ? String(row[el.dataset.field]) : "—";
+      if (row) el.classList.remove("dash-skeleton");
+    });
+    const best = rowsOf("combine_best");
+    const b = best && best.find((r) => r.role === "best");
+    const el = document.getElementById("cb-verdict");
+    if (!b) el.textContent = "";
+    else if (b.passes !== "yes") el.textContent = "No method clears the bar: beat both benchmarks and make money after costs.";
+    else if (Math.abs(b.net_t) >= 2) el.textContent = "It clears the bar: it beats both benchmarks and makes money after costs.";
+    else el.textContent = "It clears the bar on paper, but its edge is too small to tell apart from zero (t below 2).";
+  }
+
+  // Running total of money after costs, one line per method.
+  function cumChart(rows, order) {
+    const box = document.getElementById("cum-chart");
+    const W = box.clientWidth; if (!W) return;
+    const H = Math.round(Math.max(260, Math.min(380, W * 0.55)));
+    const svg = baseSvg(box, W, H);
+    const series = order.map((method) => ({ method, pts: [] }));
+    const idx = new Map(series.map((s) => [s.method, s]));
+    for (const r of rows) { const s = idx.get(r.method); if (s) s.pts.push({ date: new Date(r.date + "T00:00:00Z"), v: Number(r.cum_net_pct) }); }
+    series.forEach((s) => s.pts.sort((a, b) => a.date - b.date));
+    const all = series.flatMap((s) => s.pts);
+    if (!all.length) return;
+    const m = { t: 12, r: 12, b: 26, l: 40 };
+    const y = d3.scaleLinear([Math.min(0, d3.min(all, (p) => p.v)), Math.max(0, d3.max(all, (p) => p.v))], [H - m.b, m.t]).nice(5);
+    const ticks = y.ticks(5);
+    m.l = Math.max(...ticks.map((t) => textWidth(svg, t + "%"))) + 10;
+    const x = d3.scaleUtc(d3.extent(all, (p) => p.date), [m.l, W - m.r]);
+    const ga = svg.append("g").attr("class", "sc-axis");
+    for (const t of ticks) {
+      ga.append("line").attr("x1", m.l).attr("x2", W - m.r).attr("y1", y(t)).attr("y2", y(t)).style("stroke", t === 0 ? "var(--cds-chart-axis)" : "var(--cds-chart-grid)");
+      ga.append("text").attr("x", m.l - 6).attr("y", y(t)).attr("dy", "0.32em").attr("text-anchor", "end").text(t + "%");
+    }
+    for (const t of x.ticks(d3.utcMonth.every(W < 560 ? 3 : 2))) {
+      ga.append("text").attr("x", x(t)).attr("y", H - 6).attr("text-anchor", "middle").text(d3.utcFormat("%b")(t));
+    }
+    const lineGen = d3.line().x((p) => x(p.date)).y((p) => y(p.v));
+    // benchmarks first so the blends draw on top
+    series.slice().sort((a, b) => isBench(b.method) - isBench(a.method)).forEach((s) => {
+      svg.append("path").datum(s.pts).attr("fill", "none").style("stroke", col(s.method)).attr("stroke-width", 2)
+        .attr("stroke-linejoin", "round").attr("stroke-linecap", "round")
+        .attr("stroke-dasharray", isBench(s.method) ? "5 4" : null).attr("d", lineGen);
+    });
+    const rule = svg.append("line").style("stroke", "var(--cds-chart-reference)").attr("y1", m.t).attr("y2", H - m.b).attr("visibility", "hidden");
+    const dots = svg.append("g").selectAll("circle").data(series).join("circle").attr("r", 4)
+      .style("fill", (s) => col(s.method)).style("stroke", "var(--color-panel)").attr("stroke-width", 2).attr("visibility", "hidden");
+    const bis = d3.bisector((p) => p.date).center;
+    svg.append("rect").attr("x", m.l).attr("y", m.t).attr("width", Math.max(0, W - m.l - m.r)).attr("height", H - m.t - m.b).style("fill", "transparent")
+      .on("pointermove", (ev) => {
+        const [px] = d3.pointer(ev);
+        const date = x.invert(px);
+        const at = series.map((s) => ({ s, p: s.pts[bis(s.pts, date)] })).filter((d) => d.p);
+        if (!at.length) return;
+        const d0 = at[0].p.date;
+        rule.attr("x1", x(d0)).attr("x2", x(d0)).attr("visibility", "visible");
+        dots.attr("cx", (s) => { const d = at.find((a) => a.s === s); return d ? x(d.p.date) : -99; })
+          .attr("cy", (s) => { const d = at.find((a) => a.s === s); return d ? y(d.p.v) : -99; }).attr("visibility", "visible");
+        const lines = at.slice().sort((a, b) => b.p.v - a.p.v).map((d) => [col(d.s.method), d.s.method + ": " + fmtSigned(d.p.v, 1) + "%"]);
+        showTip(box, d3.utcFormat("%b %-d, %Y")(d0), lines, x(d0), y(d3.max(at, (d) => d.p.v)));
+      })
+      .on("pointerleave", () => { rule.attr("visibility", "hidden"); dots.attr("visibility", "hidden"); hideTip(box); });
+  }
+
+  // Each core alpha: Sharpe in 2021-2023 (picked on these years) and in 2024.
+  function singlesChart(rows) {
+    const box = document.getElementById("singles-chart");
+    const W = box.clientWidth; if (!W) return;
+    const data = rows.map((r) => ({ id: r.id, family: r.family, tr: Number(r.train_sharpe), va: Number(r.y2024_sharpe), plain: r.plain_english }))
+      .sort((a, b) => b.tr - a.tr);
+    const rowH = 24, m = { t: 24, r: 12, b: 6, l: 0 };
+    const H = m.t + m.b + data.length * rowH;
+    const svg = baseSvg(box, W, H);
+    m.l = Math.max(...data.map((d) => textWidth(svg, shortName(d.id)))) + 12;
+    m.r = textWidth(svg, "+0.00", "sc-lbl-strong") + 14;
+    const vals = data.flatMap((d) => [d.tr, d.va]).filter(Number.isFinite);
+    const x = d3.scaleLinear([Math.min(0, d3.min(vals)), Math.max(0, d3.max(vals))], [m.l, W - m.r]).nice();
+    const ga = svg.append("g").attr("class", "sc-axis");
+    for (const t of x.ticks(Math.max(3, Math.floor((W - m.l - m.r) / 70)))) {
+      ga.append("line").attr("x1", x(t)).attr("x2", x(t)).attr("y1", m.t - 4).attr("y2", H - m.b).style("stroke", t === 0 ? "var(--cds-chart-axis)" : "var(--cds-chart-grid)");
+      ga.append("text").attr("x", x(t)).attr("y", m.t - 10).attr("text-anchor", "middle").text(t);
+    }
+    svg.append("text").attr("class", "sc-lbl").attr("x", W - 4).attr("y", m.t - 10).attr("text-anchor", "end").text("2024");
+    const before = "var(--cds-chart-muted)", after = dash.colors[0];
+    data.forEach((d, i) => {
+      const yc = m.t + i * rowH + rowH / 2;
+      svg.append("text").attr("class", "sc-lbl").attr("x", m.l - 10).attr("y", yc).attr("dy", "0.32em").attr("text-anchor", "end").text(shortName(d.id));
+      svg.append("line").attr("x1", x(d.tr)).attr("x2", x(d.va)).attr("y1", yc).attr("y2", yc).style("stroke", "var(--cds-chart-grid)").attr("stroke-width", 2);
+      svg.append("circle").attr("cx", x(d.tr)).attr("cy", yc).attr("r", 4).style("fill", before).style("stroke", "var(--color-panel)").attr("stroke-width", 2);
+      svg.append("circle").attr("cx", x(d.va)).attr("cy", yc).attr("r", 5).style("fill", after).style("stroke", "var(--color-panel)").attr("stroke-width", 2);
+      svg.append("text").attr("class", "sc-lbl-strong").attr("x", W - 4).attr("y", yc).attr("dy", "0.32em").attr("text-anchor", "end").text(fmtSigned(d.va, 2));
+      svg.append("rect").attr("x", 0).attr("y", yc - rowH / 2).attr("width", W).attr("height", rowH).style("fill", "transparent")
+        .on("pointermove", (ev) => {
+          const [px, py] = d3.pointer(ev, box);
+          showTip(box, d.id + " · " + d.family, [[before, "2021–2023: " + fmtSigned(d.tr, 2)], [after, "2024: " + fmtSigned(d.va, 2)], [null, d.plain]], px, py);
+        })
+        .on("pointerleave", () => hideTip(box));
+    });
+    legend(document.getElementById("singles-legend"), [[before, "2021–2023 (the years it was picked on)"], [after, "2024 (unseen)"]]);
+  }
+
+  // Average weight per core alpha in the IC-weighted and ridge blends.
+  function weightsChart(rows) {
+    const box = document.getElementById("weights-chart");
+    const W = box.clientWidth; if (!W) return;
+    const famFirst = new Map();
+    rows.forEach((r, i) => { if (!famFirst.has(r.family)) famFirst.set(r.family, i); });
+    const data = rows.slice().sort((a, b) => famFirst.get(a.family) - famFirst.get(b.family));
+    const series = [["ic_weighted_pct", "IC-weighted · core"], ["ridge_core_pct", "Ridge · core"]];
+    const rowH = 30, m = { t: 4, r: 44, b: 4, l: 0 };
+    const H = m.t + m.b + data.length * rowH;
+    const svg = baseSvg(box, W, H);
+    m.l = Math.max(...data.map((d) => textWidth(svg, shortName(d.alpha)))) + 12;
+    const vals = data.flatMap((d) => series.map(([k]) => d[k])).filter(Number.isFinite);
+    const lo = Math.min(0, d3.min(vals)), hi = Math.max(0, d3.max(vals));
+    const lw = lo < 0 ? textWidth(svg, fmtSigned(lo, 0) + "%", "sc-lbl-strong") + 8 : 0;
+    m.r = textWidth(svg, fmt(hi, 0) + "%", "sc-lbl-strong") + 10;
+    const x = d3.scaleLinear([lo, hi], [m.l + lw, W - m.r]);
+    svg.append("line").attr("x1", x(0)).attr("x2", x(0)).attr("y1", m.t).attr("y2", H - m.b).style("stroke", "var(--cds-chart-axis)");
+    data.forEach((d, i) => {
+      const y0 = m.t + i * rowH;
+      svg.append("text").attr("class", "sc-lbl").attr("x", m.l - 10).attr("y", y0 + rowH / 2).attr("dy", "0.32em").attr("text-anchor", "end").text(shortName(d.alpha));
+      series.forEach(([k, method], j) => {
+        const v = d[k]; if (!Number.isFinite(v)) return;
+        const yb = y0 + 5 + j * 11;
+        svg.append("rect").attr("x", Math.min(x(v), x(0))).attr("width", Math.max(1, Math.abs(x(v) - x(0)))).attr("y", yb).attr("height", 9).attr("rx", 3)
+          .style("fill", col(method))
+          .on("pointermove", (ev) => { const [px, py] = d3.pointer(ev, box); showTip(box, d.alpha + " · " + d.family, [[col(method), method + ": " + fmtSigned(v, 1) + "% of the blend"]], px, py); })
+          .on("pointerleave", () => hideTip(box));
+        svg.append("text").attr("class", "sc-lbl").attr("x", v >= 0 ? x(v) + 4 : x(v) - 4).attr("y", yb + 4.5).attr("dy", "0.32em")
+          .attr("text-anchor", v >= 0 ? "start" : "end").text(fmt(v, 0) + "%");
+      });
+    });
+    legend(document.getElementById("weights-legend"), series.map(([, method]) => [col(method), method]));
+  }
+
+  function plainTable(sel, rows, key, cols, numCols, swatch) {
+    const body = document.querySelector(sel + " tbody");
+    d3.select(body).selectAll("tr").data(rows, (r) => r[key]).join("tr").attr("data-key", (r) => r[key]).style("cursor", "default")
+      .each(function (r) {
+        d3.select(this).selectAll("td").data(cols).join("td")
+          .attr("class", (c) => (numCols.includes(c) ? "num" : null))
+          .each(function (c) {
+            const td = d3.select(this);
+            td.selectAll("*").remove();
+            const v = r[c] == null || (typeof r[c] === "number" && !Number.isFinite(r[c])) ? "" : String(r[c]);
+            if (c === key && swatch) {
+              const sp = td.text(null).append("span").attr("class", "sc-pill");
+              sp.append("i").attr("class", "sc-sw").style("background", col(r[key]));
+              sp.append("span").text(v);
+            } else td.text(v);
+          });
+      });
+  }
+
+  function drawCombine() {
+    const res = dash.data("combine_results");
+    if (res.status === "ok") colorOf = new Map(res.data.map((r, i) => [r.method, dash.colors[i % dash.colors.length]]));
+    fillMarks();
+
+    const cb = document.getElementById("cum-chart"), dl = dash.data("combine_daily");
+    if (ready(cb, res.status === "ok" ? dl.status : res.status)) {
+      cumChart(dl.data, res.data.map((r) => r.method));
+      legend(document.getElementById("cum-legend"), res.data.map((r) => [col(r.method), r.method + (isBench(r.method) ? " (benchmark)" : "")]));
+    }
+    const sb = document.getElementById("singles-chart"), sg = dash.data("combine_singles");
+    if (ready(sb, sg.status)) singlesChart(sg.data);
+    const wb = document.getElementById("weights-chart"), wa = dash.data("weight_avg");
+    if (ready(wb, wa.status)) weightsChart(wa.data);
+
+    if (res.status === "ok") plainTable("#cb-table", res.data, "method",
+      ["method", "net_sharpe", "annual_pct", "net_bp", "max_drawdown_pct", "turnover", "cost_bp", "funding_bp", "ic", "months_up", "vs_equal_t", "vs_single_t", "passes_bar"],
+      ["net_sharpe", "annual_pct", "net_bp", "max_drawdown_pct", "turnover", "cost_bp", "funding_bp", "ic", "months_up", "vs_equal_t", "vs_single_t"], true);
+    else document.querySelector("#cb-table tbody").replaceChildren();
+    const qt = dash.data("combine_quarter_table");
+    if (qt.status === "ok") plainTable("#cb-quarters", qt.data, "method", ["method", "Q1", "Q2", "Q3", "Q4"], ["Q1", "Q2", "Q3", "Q4"], true);
+    const ck = dash.data("combine_checks");
+    if (ck.status === "ok") plainTable("#cb-checks", ck.data, "what", ["what", "ic", "ic_t", "net_bp", "net_sharpe"], ["ic", "ic_t", "net_bp", "net_sharpe"], false);
+  }
+  dash.onData(drawCombine);
+})();
+</script>
