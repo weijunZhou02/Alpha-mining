@@ -118,7 +118,6 @@ card, series = ev.score(y.loc[m.start:m.end], m)  # card: ic, ic_t, ls_t, net_bp
 - Do not loosen the gates after seeing results. They were calibrated on luck items **before** the paid run. Any change to them is a design change that the owner approves first.
 - Every run looks at 2023 again. Declare runs and rounds before starting, and report all tries.
 - Kept so far: LLM_001 and LLM_002 (`data/llm/kept.csv`).
-- Open decisions for the owner:
-  1. More runs, for example with new data (Binance `metrics`: open interest, long/short ratios). Do this before the 2024 check, not after.
-  2. The one-time 2024 check: Trees · broad + kept against Trees · broad.
-  3. Freezing the `after-llm` tag for step 8.
+- The one-time 2024 check is done (`data/llm/final_2024.csv`). Adding the 2 kept alphas made **no clear difference**: Sharpe 0.10 vs 0.09, day-by-day t 0.03. It must not be run again (the script refuses), and 2024 must not be used to tune anything further.
+- 2024 has now been used twice: once to pick the step 6 method, once for this check. Only 2025-2026 remains unseen, and it is sealed for step 8.
+- Open decisions for the owner: freeze `after-llm` and run step 8 as sealed, or first add contenders (for example cost-aware versions designed on 2021-2023 only). New contenders must be declared in the README before the exam is opened.

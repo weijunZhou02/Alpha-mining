@@ -19,7 +19,7 @@ It follows the idea of the Alpha-GPT paper: an LLM proposes alpha formulas, and 
 | 4 | Report page: [Crypto alpha scorecard](https://claude.ai/artifact/XXQ1ThZC3xpi4dXtFYUzmB) (data from `src/build_report_data.py`, page copy in `report/`) | done |
 | 5 | Remove duplicates (`src/dedupe.py`): core list 15 alphas in 8 families, broad list 159 | done |
 | 6 | Combine (`src/combine.py`): equal weight, IC-weighted, ridge, boosted trees, walked forward through 2024 | done |
-| 7 | LLM loop (`src/llm_loop.py`): Claude Sonnet 5.5 invents alphas, kept only if they improve the blends on 2023 | first run done |
+| 7 | LLM loop (`src/llm_loop.py`): Claude Sonnet 5.5 kept 2 alphas; the one-time 2024 check found no clear difference | done |
 | 8 | Final exam: 2025-01 to 2026-10, run once, "before LLM" vs "after LLM" ([plan sealed](#step-8-plan-the-sealed-envelope)) | |
 
 ## Quick start
@@ -239,6 +239,19 @@ Both lose money on their own but improve the blend, which is what this step look
 **Caveats:**
 - 2023 was used to choose them (H1 seen by Claude, H2 hidden), so these gains are flattering.
 - The honest tests are the one-time 2024 check and the sealed final exam.
+
+**The one-time 2024 check** (`src/llm_final.py`). Its rules were pushed to GitHub before it ran (commit `67dd9fb`).
+- A first attempt was cut off when the Mac went to sleep, before it produced any number. Its log is kept as `logs/llm/final_2024_console_interrupted.log`.
+- The complete run then gave:
+
+| 2024, walked forward monthly | Rank IC | Before costs bp/day | After costs bp/day | Sharpe | Worst drop | Months up |
+| --- | --- | --- | --- | --- | --- | --- |
+| Trees · broad (step 6, unchanged) | 0.101 | +10.9 | +1.2 | 0.09 | −61% | 9 of 12 |
+| Trees · broad + LLM_001, LLM_002 | 0.100 | +11.1 | +1.4 | 0.10 | −46% | 9 of 12 |
+
+- **Verdict: no clear difference.** The day-by-day difference is +0.17 bp/day, with t 0.03.
+- The safety check passed: Trees · broad reproduced the step 6 numbers exactly.
+- The LLM alphas softened the worst drop (Q1 −13% instead of −31%) but gave back part of Q4.
 
 Records: `data/llm/tries.jsonl` (every try with its idea and scores), `kept.csv`, `runs.csv`, `luck_check.csv`. Raw prompts and replies are in `logs/llm/` (not in git).
 
