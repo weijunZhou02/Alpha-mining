@@ -4,3 +4,4 @@ pyarrow>=20
 requests>=2.32
 scikit-learn>=1.5    # step 6 boosted trees (also installs scipy)
 pytest>=8            # tests/
+anthropic>=0.40      # step 7: calls Claude

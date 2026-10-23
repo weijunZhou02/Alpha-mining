@@ -90,7 +90,7 @@ card, series = ev.score(y.loc[m.start:m.end], m)  # card: ic, ic_t, ls_t, net_bp
   - `gtja191`: also amount, ret, the benchmark (BTC) and the GTJA helpers.
   - `qlib`: `$open` … `$volume`.
   - `volume` means USDT volume (`quote_volume`).
-- Crypto-only panels (`funding`, `premium`, `trades`, `taker_buy_quote_volume`) are loaded in `eng.p` and used by `CUSTOM` alphas, but **no formula style exposes them yet**. Adding them is a step 7 design item.
+- Crypto-only panels (`funding`, `premium`, `trades`, `taker_buy_quote_volume`) are loaded in `eng.p` and used by `CUSTOM` alphas, and step 7's formulas can use them: `llm_loop.make_context` adds `funding`, `premium`, `trades`, `taker_buy_ratio`, `mkt_returns` and `btc_returns` to the `wq101` style.
 - `data/eval/combine/features.parquet`: index (date, coin) covering every universe coin-day from 2021 to 2024, with one column per broad-list alpha (159). Each value is the daily rank, centred on 0 and flipped so higher = better. Missing = 0. It is the input table for the blends.
 - Directions (+1/−1) come from the training rank IC: `data/eval/scorecard.csv` → `direction`.
 
@@ -110,15 +110,15 @@ card, series = ev.score(y.loc[m.start:m.end], m)  # card: ic, ic_t, ls_t, net_bp
 
 - 2026-10-23: the owner chose the "sealed envelope" for step 8. "Before LLM" is frozen at tag `before-llm`. The step 7 result gets its own tag (`after-llm`) before the exam is opened, and both are scored together once.
 
-## Next: step 7, the LLM loop (design NOT yet approved)
+## Step 7, the LLM loop (built; first real run done)
 
-Before writing any step 7 code, send the owner a design table and wait for "all OK". Open questions to cover:
-
-1. **Which LLM and how it is called** (the loop will run on the owner's Windows PC): API provider and model, API key in an environment variable or a `.env` file that is never committed, budget per run.
-2. **What the LLM sees:** operator list and formula syntax, available fields, the 8 existing families with examples, and a log of earlier tries with their scores. Never 2024 or 2025+ numbers, unless the design says so.
-3. **What counts as a good new alpha:** "adds to the blend", not "good alone". Suggested: the gain in the blend's training-period score (inner time split inside 2021–2023) when the new alpha is added, after a duplicate check against the broad list (similarity < 0.7).
-4. **Protecting 2024:** it has already been used once to pick the method. Testing hundreds of LLM alphas on it would turn it into training data. Suggested: judge LLM alphas on 2021–2023 only, then check the final blend on 2024 once.
-5. **Costs in the objective:** turnover was the main killer in 2024. Consider rewarding slower signals or a longer target (3–7 days).
-6. **New data the LLM may use:** expose `funding`, `premium`, `taker_buy_quote_volume`, `trades` to formulas; maybe download Binance `metrics` (open interest, long/short ratios).
-7. **Safety of LLM output:** formulas are parsed by `formula.py` (no `eval` of Python). Keep it that way. Reject formulas that read `fwd_ret` or anything from the future.
-8. **Logging:** every try (formula, explanation, scores, accepted or not) is saved to a CSV/JSONL file so runs can be reviewed and resumed.
+- Code: `src/llm_loop.py`, with tests in `tests/test_llm_loop.py`. The README section "Step 7" has the gates and the results.
+- The owner chose Claude through the API, run on the Mac. The Mac is the official machine. Results from the owner's Windows PC (local Qwen, see `step7_llm_runs_summary.md` on GitHub) are set aside: their steps 3-6 differed slightly because of floating-point rounding.
+- The API key lives only in `.env` (ANTHROPIC_API_KEY, LLM_MODEL). Never print, log or commit it.
+- Do not loosen the gates after seeing results. They were calibrated on luck items **before** the paid run. Any change to them is a design change that the owner approves first.
+- Every run looks at 2023 again. Declare runs and rounds before starting, and report all tries.
+- Kept so far: LLM_001 and LLM_002 (`data/llm/kept.csv`).
+- Open decisions for the owner:
+  1. More runs, for example with new data (Binance `metrics`: open interest, long/short ratios). Do this before the 2024 check, not after.
+  2. The one-time 2024 check: Trees · broad + kept against Trees · broad.
+  3. Freezing the `after-llm` tag for step 8.

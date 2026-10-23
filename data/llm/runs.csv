@@ -1,0 +1,3 @@
+run,model,declared_rounds,per_round,started,minutes,status,tries,kept,passed_screen,twins,weak,refused,compute_errors,coverage,lookahead,luck_screen_passes,luck_both_passes,calls,tokens_input,tokens_cache_write,tokens_cache_read,tokens_output,usd
+1,claude-sonnet-5-5,40,5,2026-10-23T10:38:56+00:00,0.0,"error: BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'tool_choice: type ""tool"" and ""any"" are not supported for this model.'}, 'request_id': 'req_011CgK2ckqEh7hw3H7",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0
+2,claude-sonnet-5-5,40,5,2026-10-23T10:42:29+00:00,16.5,stopped: nothing kept in 20 rounds,140,2,4,41,31,1,0,0,0,1,1,28,59898,13857,374139,46986,0.662

@@ -19,7 +19,7 @@ It follows the idea of the Alpha-GPT paper: an LLM proposes alpha formulas, and 
 | 4 | Report page: [Crypto alpha scorecard](https://claude.ai/artifact/XXQ1ThZC3xpi4dXtFYUzmB) (data from `src/build_report_data.py`, page copy in `report/`) | done |
 | 5 | Remove duplicates (`src/dedupe.py`): core list 15 alphas in 8 families, broad list 159 | done |
 | 6 | Combine (`src/combine.py`): equal weight, IC-weighted, ridge, boosted trees, walked forward through 2024 | done |
-| 7 | LLM loop: new alphas judged by what they add to the combination (design not yet agreed) | next |
+| 7 | LLM loop (`src/llm_loop.py`): Claude Sonnet 5.5 invents alphas, kept only if they improve the blends on 2023 | first run done |
 | 8 | Final exam: 2025-01 to 2026-10, run once, "before LLM" vs "after LLM" ([plan sealed](#step-8-plan-the-sealed-envelope)) | |
 
 ## Quick start
@@ -176,6 +176,71 @@ What it means:
 - Honesty check: the same ridge blend trained on shuffled answers scores about zero in 2024 (Sharpe −0.31, rank t 1.3), so the walk-forward does not leak the future.
 
 Files in `data/eval/combine/`: `results_2024.csv`, `quarters_2024.csv`, `daily_2024.parquet`, `singles.csv`, `weights.csv`, `settings.csv`, `checks.csv`, and `features.parquet`. That last one is a (date, coin) × 159 alphas table of direction-adjusted ranks for 2021–2024, ready for step 7.
+
+## Step 7: the LLM loop (Claude)
+
+```bash
+.venv/bin/python src/llm_loop.py --fake --rounds 2 --out /tmp/llm_test   # free test with ready-made formulas
+.venv/bin/python src/llm_loop.py --rounds 40 --per-round 5               # a real run: about $1 and 20 min with Sonnet 5.5
+```
+
+**Setup.** Make a `.env` file in the project folder (it is in `.gitignore`, so it never goes to GitHub):
+
+```
+ANTHROPIC_API_KEY=sk-ant-...
+LLM_MODEL=claude-sonnet-5-5
+```
+
+One API key works for every model; `LLM_MODEL` picks which one.
+
+**How a round works.**
+1. Claude gets a long, cached instruction. It covers:
+   - the formula language and the 13 fields (including funding, premium, taker_buy_ratio, trades, mkt_returns and btc_returns);
+   - the 8 families;
+   - all 159 existing alphas;
+   - the lessons so far.
+2. It also gets a theme for the round and its latest 15 tries with their results. It writes 5 formulas, each with its idea, why it is new and why it should survive fees.
+3. Our code checks and scores each formula through gates, from cheap to expensive. A formula is kept only if it passes them all.
+
+| Gate | Test | Data |
+| --- | --- | --- |
+| Safety | Only allowed fields and functions; windows are plain numbers (correlations ≥ 3 days); ≤ 300 characters; not a repeat | none |
+| Compute + cut-off test | Computes within 60 s; values don't change when later data is removed (no look-ahead) | 2021-2023 |
+| Coverage | Values on ≥ 80% of coin-days, varying across coins | 2021-2023 |
+| Own signal | Rank-IC t ≥ 2 or money t ≥ 2 | 2021-2022 (Claude sees these) |
+| Not a twin | Similarity < 0.7 to all 159 alphas, earlier keepers and this run's tries | 2021-2022 |
+| Screen | Ridge blend + the formula, against ridge blend + a dummy column of random numbers: rank IC +0.001 **and** money +1 bp/day | 2023 Jan-Jun (Claude sees these) |
+| Confirm | Trees blend (the step 6 method, averaged over 3 seeds) + the formula, against + a dummy column: money not lower | 2023 Jul-Dec (Claude sees only pass/fail) |
+
+A kept alpha joins both blends, so later formulas must add something beyond it too. The data is cut at 2023-12-31 before anything is computed, so 2024 and 2025+ cannot be reached.
+
+**Calibration before the paid run** (two free practice runs, 12 ready-made formulas and 80 luck items, scored on 2023):
+- Adding any column, even random numbers, raised the ridge blend's money by +1.5 bp/day on average, and reshuffled the trees blend by about −5 bp/day.
+- So both gates compare against a dummy column, the trees are averaged over 3 seeds, and the screen needs a rank-IC gain of +0.001; noise never reached more than +0.0009.
+- After that, pure noise passed 0 of 40 in each run.
+
+**Run 2 (2026-10-23, Sonnet 5.5).** Declared: 40 rounds × 5. It stopped at round 28 by the pre-set rule (nothing kept in 20 rounds). Run 1 failed at its first API call because the model refused a forced tool choice: 0 tries, $0.
+
+| | |
+| --- | --- |
+| Tries | 140: 2 kept, 2 passed the screen but failed the confirm, 63 failed the screen, 41 twins, 31 weak, 1 repeat |
+| Errors | 0 syntax or compute errors |
+| Variety | funding 22%, premium 12%, taker_buy_ratio 24%, trades 21%, btc_returns 11%; indneutralize only 7% |
+| Luck check | pure noise 0 of 20 passed; random formulas 1 of 20 (by chance a real funding signal, rank t −5.1) |
+| Cost | $0.66 (28 calls; most of the prompt was read from the cache) |
+
+| Kept | Formula | Idea | Alone, 2021-22 | Gain in the blends (2023) |
+| --- | --- | --- | --- | --- |
+| LLM_001 | `rank(sum(abs(close - open), 15) / (sum(high - low, 15) + 0.00001))` | Trend efficiency: how much of the daily range is a clean open-to-close move | rank t −2.1, after costs −2.4 bp/day | ridge +0.0016 IC, +3.8 bp/day; trees +7.6 bp/day |
+| LLM_002 | `rank(decay_linear(ts_rank(abs(returns) / volume, 60), 8))` | Price impact against the coin's own last 60 days (temporarily thin coins) | rank t 8.5, after costs −5.6 bp/day | ridge +0.0013 IC, +2.8 bp/day; trees +7.2 bp/day |
+
+Both lose money on their own but improve the blend, which is what this step looks for.
+
+**Caveats:**
+- 2023 was used to choose them (H1 seen by Claude, H2 hidden), so these gains are flattering.
+- The honest tests are the one-time 2024 check and the sealed final exam.
+
+Records: `data/llm/tries.jsonl` (every try with its idea and scores), `kept.csv`, `runs.csv`, `luck_check.csv`. Raw prompts and replies are in `logs/llm/` (not in git).
 
 ## Step 8 plan: the sealed envelope
 

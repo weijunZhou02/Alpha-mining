@@ -14,7 +14,8 @@ data/raw/
 # 61 MB: run src/run_step3.py
 data/eval/alpha_ranks.parquet
 
-# Logs and OS files
+# Logs and OS files (logs/llm holds raw LLM prompts and replies)
 *.log
+logs/
 .DS_Store
 Thumbs.db
