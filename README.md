@@ -20,7 +20,7 @@ It follows the idea of the Alpha-GPT paper: an LLM proposes alpha formulas, and 
 | 5 | Remove duplicates (`src/dedupe.py`): core list 15 alphas in 8 families, broad list 159 | done |
 | 6 | Combine (`src/combine.py`): equal weight, IC-weighted, ridge, boosted trees, walked forward through 2024 | done |
 | 7 | LLM loop: new alphas judged by what they add to the combination (design not yet agreed) | next |
-| 8 | Final exam: 2025–now, run once | |
+| 8 | Final exam: 2025-01 to 2026-10, run once, "before LLM" vs "after LLM" ([plan sealed](#step-8-plan-the-sealed-envelope)) | |
 
 ## Quick start
 
@@ -176,6 +176,34 @@ What it means:
 - Honesty check: the same ridge blend trained on shuffled answers scores about zero in 2024 (Sharpe −0.31, rank t 1.3), so the walk-forward does not leak the future.
 
 Files in `data/eval/combine/`: `results_2024.csv`, `quarters_2024.csv`, `daily_2024.parquet`, `singles.csv`, `weights.csv`, `settings.csv`, `checks.csv`, and `features.parquet`. That last one is a (date, coin) × 159 alphas table of direction-adjusted ranks for 2021–2024, ready for step 7.
+
+## Step 8 plan: the sealed envelope
+
+Agreed on 2026-10-23, **before anyone has looked at 2025–2026**. The git tag `before-llm` marks this exact version of the code, the alpha lists and this plan. To rebuild it anytime: `git checkout before-llm`.
+
+**The exam paper**
+- Test period: **2025-01-01 to 2026-10-21**, the data we have today (about 22 months). If newer days are added later, they are reported separately as extra; they don't change the verdict.
+- It is opened **once**, in one run that scores every contender below together. Until then, `Market("test")` stays locked and nobody looks at 2025–2026 results, not even for one alpha.
+
+**The contenders, fixed now**
+
+| Group | Contender | Defined by |
+| --- | --- | --- |
+| Before LLM (main) | **Trees · broad**, the step 6 winner | `src/combine.py` and `data/eval/dedupe/broad_list.csv` at tag `before-llm` |
+| Benchmark | Equal weight · core | `core_list.csv` at tag `before-llm` |
+| Benchmark | Single alpha A101_055 | the best alpha by 2021–2023 money t |
+| After LLM | The final blend from step 7 | Frozen with its own tag (`after-llm`) **before** the exam is opened |
+
+**Rules, the same as 2024**
+- Walk forward: each contender re-learns at the start of every test month using only earlier days, with settings picked inside its own training window, exactly as in step 6.
+- Long the top 20%, short the bottom 20%, daily. 0.05% fees plus funding. Tied coins share places.
+
+**How the winner is decided, written before seeing anything**
+- Main score: Sharpe after fees and funding over the whole test period.
+- **"The LLM helped"** only if the after-LLM blend has a higher Sharpe than Trees · broad **and** the day-by-day difference has t ≥ 2. A higher Sharpe with t < 2 is reported as "no clear difference".
+- Also reported for every contender: money before and after costs, t, worst drop, turnover, rank IC, each quarter, and each year (2025, 2026).
+- Safety check before opening: the exam code must reproduce the 2024 numbers in `data/eval/combine/results_2024.csv` exactly for the "before" contenders. That proves they were not changed.
+- If a bug is found after opening, both the original and the fixed result are reported. Nothing is re-run quietly.
 
 ## Data folders
 

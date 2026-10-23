@@ -19,7 +19,7 @@ PERIODS = {
     "train": ("2021-01-01", "2023-12-31"),
     "valid": ("2024-01-01", "2024-12-31"),
     "train+valid": ("2021-01-01", "2024-12-31"),   # step 6: walk forward from train into valid
-    "test": ("2025-01-01", None),
+    "test": ("2025-01-01", "2026-10-21"),         # sealed with the step 8 plan; newer days are reported separately
 }
 HORIZONS = (1, 3, 7, 14)
 N_GROUPS = 5

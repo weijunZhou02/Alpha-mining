@@ -18,7 +18,8 @@ Daily data for Binance USDT perpetual futures, 2020 to today. Each day the unive
 1. **Periods are fixed in `src/evaluate.py` → `PERIODS`:**
    - train: 2021-01-01 to 2023-12-31. Every choice about alphas (scores, verdicts, duplicate lists, directions) uses this period only.
    - valid: 2024. Used **once**, in step 6, to choose a **combining method**. It must not be used to choose or drop alphas: that would spoil it as a test.
-   - test: 2025-01-01 to today. **Locked.** `Market("test")` raises unless `unlock_test=True`. Only step 8 (the final exam) may unlock it, once, after the owner says so. Never unlock it to "just have a look".
+   - test: 2025-01-01 to 2026-10-21. **Locked.** `Market("test")` raises unless `unlock_test=True`. Only step 8 (the final exam) may unlock it, once, after the owner says so. Never unlock it to "just have a look", and never show the owner or the LLM any 2025–2026 result before then.
+   - **The step 8 plan is sealed** (README → "Step 8 plan: the sealed envelope", git tag `before-llm`). It fixes the contenders and how the winner is decided. Do not change it. The "before LLM" contenders must keep giving exactly the 2024 numbers in `data/eval/combine/results_2024.csv`. If step 7 needs changes to `combine.py` or `evaluate.py`, keep the old behaviour available for the "before" contenders, or run them from the tag (`git worktree add ../before before-llm`).
 2. **No look-ahead.**
    - `data/panel/fwd_ret_1d.parquet` is the answer key (next day's return). It may only be used for grading, never as an input to an alpha.
    - Time-series operators see each coin's full past history.
@@ -106,6 +107,8 @@ card, series = ev.score(y.loc[m.start:m.end], m)  # card: ic, ic_t, ls_t, net_bp
 - Platform notes:
   - LightGBM needs `libomp`, which was not available on the Mac, so `HistGradientBoostingRegressor` from scikit-learn is used. On Windows, `pip install lightgbm` works out of the box if you want the real thing; it is not required.
   - pandas 3 is used (copy-on-write; `DataFrame.stack()` keeps NaN).
+
+- 2026-10-23: the owner chose the "sealed envelope" for step 8. "Before LLM" is frozen at tag `before-llm`. The step 7 result gets its own tag (`after-llm`) before the exam is opened, and both are scored together once.
 
 ## Next: step 7, the LLM loop (design NOT yet approved)
 
