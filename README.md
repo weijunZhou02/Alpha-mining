@@ -20,6 +20,7 @@ It follows the idea of the Alpha-GPT paper: an LLM proposes alpha formulas, and 
 | 5 | Remove duplicates (`src/dedupe.py`): core list 15 alphas in 8 families, broad list 159 | done |
 | 6 | Combine (`src/combine.py`): equal weight, IC-weighted, ridge, boosted trees, walked forward through 2024 | done |
 | 7 | LLM loop (`src/llm_loop.py`): Claude Sonnet 5.5 kept 2 alphas; the one-time 2024 check found no clear difference | done |
+| 7b | Option B (`src/cost_aware.py`): trade the same signal with smaller bets on wild coins; chosen on 2022-2023 | done |
 | 8 | Final exam: 2025-01 to 2026-10, run once, "before LLM" vs "after LLM" ([plan sealed](#step-8-plan-the-sealed-envelope)) | |
 
 ## Quick start
@@ -255,6 +256,42 @@ Both lose money on their own but improve the blend, which is what this step look
 
 Records: `data/llm/tries.jsonl` (every try with its idea and scores), `kept.csv`, `runs.csv`, `luck_check.csv`. Raw prompts and replies are in `logs/llm/` (not in git).
 
+## Option B: cost- and risk-aware trading (chosen on 2022-2023)
+
+```bash
+.venv/bin/python src/cost_aware.py      # about 5 min -> data/eval/cost_aware/
+```
+
+**Why.** In 2024 the blend still ranked coins well, but fees and violent months (February, May and September lost 26-43% each) left nothing. Option B keeps the signal (Trees · broad + LLM) and changes only how it trades.
+- These ideas come partly from what we saw in 2024, so only the 2025-2026 exam can judge them.
+- Checked first on 2021-2023: the blend's market beta was about 0. It was not secretly betting against the market.
+
+**Agreed design.**
+- 6 versions: the trees learn the next 1 day or the next 5 days, times smoothing of the daily score (none, 3-day average, 7-day average).
+- Fixed rules in all 6: position size ∝ 1 / 30-day volatility inside each side, and volatility targeting (the book scales by usual / last-30-day volatility, 0.25x to 2x, past days only).
+- Chosen by learning from 2021 and trading 2022-2023 month by month, with data cut at 2023-12-31.
+- It enters the exam only if it beats the plain version.
+
+**Results, 2022-2023** (flattering: the alphas were picked on these years):
+
+| Version | Sharpe after costs | After costs bp/day | Fees bp/day | Turnover | Worst drop | Sharpe at double fees |
+| --- | --- | --- | --- | --- | --- | --- |
+| Plain (1-day, no smoothing, equal weight, as in step 6) | 1.38 | 19.8 | 8.3 | 1.66 | −43% | 0.80 |
+| **1-day target, no smoothing (winner)** | **1.75** | 19.4 | 8.5 | 1.69 | −36% | 0.98 |
+| 1-day target, 3-day average | 1.24 | 15.3 | 4.5 | 0.90 | −52% | 0.88 |
+| 1-day target, 7-day average | 0.90 | 11.8 | 2.8 | 0.57 | −57% | 0.68 |
+| 5-day target, no smoothing | 1.34 | 15.8 | 6.0 | 1.19 | −37% | 0.84 |
+| 5-day target, 3-day average | 1.18 | 13.7 | 3.5 | 0.70 | −42% | 0.88 |
+| 5-day target, 7-day average | 0.78 | 9.3 | 2.5 | 0.50 | −48% | 0.57 |
+| Winner without the smaller bets on wild coins | 1.46 | 17.7 | 7.9 | 1.59 | −55% | 0.81 |
+| Winner without volatility targeting | 1.77 | 21.8 | 8.9 | 1.78 | −38% | 1.05 |
+
+What it shows:
+- **Trading less does not pay.** Smoothing and the 5-day target cut fees by up to 70%, but the signal fades so fast that they lose more edge than they save.
+- **Smaller bets on wild coins is the real gain.** Sharpe went from 1.38 to 1.75 and the worst drop from −43% to −36%. Funding cost fell from 7.0 to 4.3 bp/day, because wild coins carry expensive funding. It also holds up better at double fees.
+- **Volatility targeting made no difference** (1.75 with it, 1.77 without). It stays in, because the agreed rule fixed it before the results.
+- The average daily return is about the same as plain (−0.5 bp/day, t −0.1). The gain is lower risk.
+
 ## Step 8 plan: the sealed envelope
 
 Agreed on 2026-10-23, **before anyone has looked at 2025–2026**. The git tag `before-llm` marks this exact version of the code, the alpha lists and this plan. To rebuild it anytime: `git checkout before-llm`.
@@ -270,7 +307,8 @@ Agreed on 2026-10-23, **before anyone has looked at 2025–2026**. The git tag `
 | Before LLM (main) | **Trees · broad**, the step 6 winner | `src/combine.py` and `data/eval/dedupe/broad_list.csv` at tag `before-llm` |
 | Benchmark | Equal weight · core | `core_list.csv` at tag `before-llm` |
 | Benchmark | Single alpha A101_055 | the best alpha by 2021–2023 money t |
-| After LLM | The final blend from step 7 | Frozen with its own tag (`after-llm`) **before** the exam is opened |
+| After LLM | **Trees · broad + LLM**: the step 6 trees on the broad list plus LLM_001 and LLM_002 | `src/combine.py`, `broad_list.csv` and `data/llm/kept.csv` at tag `after-llm` |
+| Option B (added 2026-10-24, before opening) | **Trees · broad + LLM, cost-aware**: 1-day target, no smoothing, size ∝ 1 / 30-day volatility, volatility targeting (0.25x-2x) | `src/cost_aware.py` and `data/eval/cost_aware/choice.json` at tag `after-llm` |
 
 **Rules, the same as 2024**
 - Walk forward: each contender re-learns at the start of every test month using only earlier days, with settings picked inside its own training window, exactly as in step 6.
@@ -280,6 +318,8 @@ Agreed on 2026-10-23, **before anyone has looked at 2025–2026**. The git tag `
 - Main score: Sharpe after fees and funding over the whole test period.
 - **"The LLM helped"** only if the after-LLM blend has a higher Sharpe than Trees · broad **and** the day-by-day difference has t ≥ 2. A higher Sharpe with t < 2 is reported as "no clear difference".
 - Also reported for every contender: money before and after costs, t, worst drop, turnover, rank IC, each quarter, and each year (2025, 2026).
+- **"Option B helped"** only if its Sharpe is higher than Trees · broad + LLM **and** the day-by-day difference has t ≥ 2; a higher Sharpe with t < 2 is "no clear difference".
+- Extra information, not part of any verdict: every contender also at double fees (0.10% per trade).
 - Safety check before opening: the exam code must reproduce the 2024 numbers in `data/eval/combine/results_2024.csv` exactly for the "before" contenders. That proves they were not changed.
 - If a bug is found after opening, both the original and the fixed result are reported. Nothing is re-run quietly.
 

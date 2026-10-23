@@ -120,4 +120,5 @@ card, series = ev.score(y.loc[m.start:m.end], m)  # card: ic, ic_t, ls_t, net_bp
 - Kept so far: LLM_001 and LLM_002 (`data/llm/kept.csv`).
 - The one-time 2024 check is done (`data/llm/final_2024.csv`). Adding the 2 kept alphas made **no clear difference**: Sharpe 0.10 vs 0.09, day-by-day t 0.03. It must not be run again (the script refuses), and 2024 must not be used to tune anything further.
 - 2024 has now been used twice: once to pick the step 6 method, once for this check. Only 2025-2026 remains unseen, and it is sealed for step 8.
-- Open decisions for the owner: freeze `after-llm` and run step 8 as sealed, or first add contenders (for example cost-aware versions designed on 2021-2023 only). New contenders must be declared in the README before the exam is opened.
+- Option B (`src/cost_aware.py`, chosen on 2022-2023 only) was added to the sealed contender list on 2026-10-24. The `after-llm` tag freezes the after-LLM and option B contenders.
+- Next: step 8, the final exam. Build its script to the sealed plan, check that it reproduces the 2024 numbers of the before contenders, and open 2025-2026 **once, only after the owner says so**.

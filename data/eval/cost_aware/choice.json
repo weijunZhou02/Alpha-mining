@@ -1,0 +1,14 @@
+{
+  "chosen": {
+    "target_days": 1,
+    "smooth_days": 1,
+    "inverse_vol": true,
+    "vol_target": true
+  },
+  "name": "1-day target, no smoothing",
+  "enters_exam": true,
+  "sharpe_2022_2023": 1.7468924578712257,
+  "plain_sharpe_2022_2023": 1.377582893219956,
+  "vs_plain_bp": -0.47957882020318066,
+  "vs_plain_t": -0.10536189675732378
+}
