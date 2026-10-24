@@ -1,0 +1,10 @@
+{
+  "the LLM helped?": "no clear difference",
+  "option B helped?": "no clear difference",
+  "best Sharpe after costs": "Single alpha \u00b7 A101_055",
+  "shuffled answers IC": 0.018036842089139152,
+  "shuffled answers IC t": 2.8639509200507116,
+  "shuffled answers Sharpe": -1.5689672639311494,
+  "days": 658,
+  "market-up days share": 0.44832826747720367
+}

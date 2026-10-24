@@ -21,7 +21,7 @@ It follows the idea of the Alpha-GPT paper: an LLM proposes alpha formulas, and 
 | 6 | Combine (`src/combine.py`): equal weight, IC-weighted, ridge, boosted trees, walked forward through 2024 | done |
 | 7 | LLM loop (`src/llm_loop.py`): Claude Sonnet 5.5 kept 2 alphas; the one-time 2024 check found no clear difference | done |
 | 7b | Option B (`src/cost_aware.py`): trade the same signal with smaller bets on wild coins; chosen on 2022-2023 | done |
-| 8 | Final exam: 2025-01 to 2026-10, run once, "before LLM" vs "after LLM" ([plan sealed](#step-8-plan-the-sealed-envelope)) | |
+| 8 | Final exam (`src/exam.py`): 2025-01 to 2026-10, opened once on 2026-10-24 ([plan](#step-8-plan-the-sealed-envelope), [results](#step-8-results-the-final-exam)) | done |
 
 ## Quick start
 
@@ -348,6 +348,55 @@ Written down before opening, for comparison: Trees · broad + LLM on 2022–2023
 - Option B's volatility targeting starts fresh on 2025-01-01 (about the first 80 days at 1x), exactly as it did when it was chosen on 2022–2023.
 - An honesty check runs too: ridge trained on answers shuffled within each day must score about 0 on 2025–2026.
 - How it runs: `src/exam.py --rehearsal` runs the same code on 2024 and must reproduce the frozen 2024 numbers of every "before" contender (step 6) and of Trees · broad + LLM (step 7 check). Only after that passes, `src/exam.py --open` opens 2025–2026, once. It refuses to run a second time. Results go to `data/exam/`.
+
+## Step 8 results: the final exam
+
+Opened once on 2026-10-24, after the plan and the exam code were pushed (tag `exam-plan`). Test period: 2025-01-01 to 2026-10-21, 658 trading days with a next-day answer. Files: `data/exam/`. The full console output is in `logs/exam/` (not in git).
+
+**Checks first**
+- Rehearsal on 2024: the exam code reproduced all 16 frozen 2024 numbers exactly.
+- The 2021–2024 alpha inputs built by the exam equal step 6's `features.parquet` exactly.
+- Shuffled answers: IC +0.018 (t 2.9). This is one random mix of the alphas, so `src/exam_noise_check.py` ran 20 more: average IC +0.002, spread 0.027. That is about 0, and the real model's 0.139 is far above it.
+
+**Accuracy: 5 UP calls + 5 DOWN calls a day (Trees · broad + LLM, top 80)**
+
+| 2025–2026 | Days | Accuracy | Random | Edge t | Verdict | Top 5 rose (any coin) | Bottom 5 fell (any coin) |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| All days | 658 | **55.9%** | 49.9% | +7.5 | **real skill** | 49.7% (45.6%) | 62.1% (54.2%) |
+| Market-DOWN days | 363 | 44.7% | 49.9% | −6.4 | no clear skill | 18.7% (21.9%) | 70.6% (77.9%) |
+| Market-UP days | 295 | 69.8% | 49.9% | +20.7 | real skill | 87.9% (74.7%) | 51.7% (25.0%) |
+| 2025 | 365 | 55.8% | 49.9% | +5.9 | real skill | | |
+| 2026 | 293 | 56.1% | 49.9% | +4.8 | real skill | | |
+
+- This is better than the 54.5% written down from 2022–2023, and both years pass on their own.
+- Right calls out of 10: 8 or more on 137 days (21%), 6 or more on 334 days (51%), 4 or fewer on 200 days (30%). There were 7 perfect days and none with 0.
+- Twenty random mixes of the same alphas got 50.1% on average, and 52.3% at best.
+- Whole market (extra): 56.5%, t +8.5; bottom 5 fell 64.8% vs 52.8% for any coin.
+- Trees · broad (before LLM) 55.7%; Equal weight · core 51.8%; Single alpha A101_055 51.9%.
+- **The owner's goal, half met:**
+  - Coins that fall even on rising days: yes. The bottom 5 fell on 51.7% of market-UP days, against 25.0% for any coin.
+  - Coins that rise even on falling days: no. The top 5 rose on 18.7% of market-DOWN days, against 21.9% for any coin.
+
+**Money (long top 20%, short bottom 20%, after 0.05% fees and funding)**
+
+| 2025–2026 | Rank IC | Before costs | Fees | Funding | After costs | Sharpe | 2025 / 2026 Sharpe |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Trees · broad (main) | 0.138 | +14.2 bp/day | −6.6 | −35.0 | −27.4 | −1.02 | −1.18 / −0.87 |
+| Equal weight · core | 0.031 | −12.8 | −10.0 | −17.4 | −40.2 | −1.79 | −1.83 / −1.77 |
+| Single alpha · A101_055 | 0.040 | +25.5 | −7.5 | −6.7 | **+11.3** | **+0.74** (t 1.0) | +0.71 / +0.79 |
+| Trees · broad + LLM | 0.139 | +17.2 | −6.6 | −34.5 | −23.9 | −0.89 | −0.85 / −0.94 |
+| Option B (cost-aware) | 0.139 | +10.7 | −7.0 | −24.0 | −20.3 | −1.09 | −1.05 / −1.13 |
+
+- **The LLM helped?** No clear difference: +3.5 bp/day, t +0.63.
+- **Option B helped?** No clear difference: +3.6 bp/day, t +0.37.
+- Best Sharpe: Single alpha A101_055, at +0.74. Its t of 1.0 is too weak to call real.
+- Double fees (extra): every Sharpe is lower; A101_055 is +0.25.
+- **Why the trees lost money although they forecast well:** funding.
+  - The coins the trees shorted really did fall, by 20 bp/day.
+  - But holding those shorts cost 35 bp/day in funding.
+  - In 2025–2026 many wild coins had very negative funding: shorts pay longs. One coin paid up to −1% an hour, checked against Binance's raw files.
+  - In other words, the market already expected these coins to fall and charged for the bet.
+  - In 2024, funding cost the same portfolio only about 2 bp/day.
 
 ## Data folders
 

@@ -38,7 +38,7 @@ Daily data for Binance USDT perpetual futures, 2020 to today. Each day the unive
 
 - Python 3.11+. Create `.venv` and `pip install -r requirements.txt`.
 - **Windows:** set `PYTHONUTF8=1` (PowerShell: `$env:PYTHONUTF8 = "1"`; permanent: `setx PYTHONUTF8 1`). Run scripts as `.venv\Scripts\python src\<script>.py`. Paths use `pathlib`, so they work on both systems.
-- Tests: `python -m pytest tests -q` (29 tests, hand-calculated). Run them after any change to `operators.py`, `formula.py` or `evaluate.py`.
+- Tests: `python -m pytest tests -q` (56 tests, hand-calculated). Run them after any change to `operators.py`, `formula.py` or `evaluate.py`.
 - Scripts import each other by plain module name (`import evaluate as ev`). Run them from anywhere as `python src/<script>.py`, or add `src` to `sys.path` in notebooks.
 - `data/raw/` is not in git. You only need it to rebuild panels (`src/download_data.py` then `src/build_panels.py`, about 11 min). Everything else runs from `data/panel/`.
 
@@ -121,4 +121,12 @@ card, series = ev.score(y.loc[m.start:m.end], m)  # card: ic, ic_t, ls_t, net_bp
 - The one-time 2024 check is done (`data/llm/final_2024.csv`). Adding the 2 kept alphas made **no clear difference**: Sharpe 0.10 vs 0.09, day-by-day t 0.03. It must not be run again (the script refuses), and 2024 must not be used to tune anything further.
 - 2024 has now been used twice: once to pick the step 6 method, once for this check. Only 2025-2026 remains unseen, and it is sealed for step 8.
 - Option B (`src/cost_aware.py`, chosen on 2022-2023 only) was added to the sealed contender list on 2026-10-24. The `after-llm` tag freezes the after-LLM and option B contenders.
-- Next: step 8, the final exam. Build its script to the sealed plan, check that it reproduces the 2024 numbers of the before contenders, and open 2025-2026 **once, only after the owner says so**.
+- Step 8 is done (see below).
+
+## Step 8, the final exam (opened once on 2026-10-24)
+
+- Code: `src/exam.py` (`--rehearsal` on 2024, `--open` for 2025-2026; it refuses to open twice). Results: `data/exam/`, README section "Step 8 results". `src/exam_noise_check.py` is an extra noise check that was run after opening.
+- **2025-2026 is now used up, like 2024.** Do not tune anything on it. Any new idea needs a fresh test, for example days after 2026-10-21 as they arrive, declared before looking.
+- Accuracy, 5 UP + 5 DOWN calls a day with Trees · broad + LLM on the top 80: 55.9% vs 49.9% random, t 7.5, which is "real skill". It is strong on market-UP days (69.8%) and below random on market-DOWN days (44.7%).
+- Money: every tree contender lost after costs (Sharpe −0.89 to −1.09). They earned +14 to +17 bp/day before costs, but funding on the short side cost about 35 bp/day: wild coins carried very negative funding in 2025-2026. Only Single alpha A101_055 made money (Sharpe +0.74, t 1.0, not significant). LLM: no clear difference. Option B: no clear difference.
+- Platform note: `Market` now locks any period that reaches past 2024 (`LOCKED_AFTER`); the new `all` period covers 2021 to 2026-10-21.

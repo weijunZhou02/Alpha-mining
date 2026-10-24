@@ -1,0 +1,6 @@
+method,pick from,0 of 10,1 of 10,2 of 10,3 of 10,4 of 10,5 of 10,6 of 10,7 of 10,8 of 10,9 of 10,10 of 10
+Trees · broad + LLM,top 80,0,6,29,76,89,124,124,73,84,46,7
+Trees · broad,top 80,0,7,32,73,98,128,93,93,83,42,9
+Equal weight · core,top 80,1,5,32,68,103,172,141,85,40,10,1
+Single alpha · A101_055,top 80,1,0,14,62,132,203,124,75,38,8,1
+Trees · broad + LLM,whole market,1,3,22,66,114,130,94,86,89,42,11

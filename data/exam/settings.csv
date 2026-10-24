@@ -1,0 +1,89 @@
+method,month,leaves,trees
+Equal weight · core,2025-01,,
+Equal weight · core,2025-02,,
+Equal weight · core,2025-03,,
+Equal weight · core,2025-04,,
+Equal weight · core,2025-05,,
+Equal weight · core,2025-06,,
+Equal weight · core,2025-07,,
+Equal weight · core,2025-08,,
+Equal weight · core,2025-09,,
+Equal weight · core,2025-10,,
+Equal weight · core,2025-11,,
+Equal weight · core,2025-12,,
+Equal weight · core,2026-01,,
+Equal weight · core,2026-02,,
+Equal weight · core,2026-03,,
+Equal weight · core,2026-04,,
+Equal weight · core,2026-05,,
+Equal weight · core,2026-06,,
+Equal weight · core,2026-07,,
+Equal weight · core,2026-08,,
+Equal weight · core,2026-09,,
+Equal weight · core,2026-10,,
+Trees · broad,2025-01,7.0,60.0
+Trees · broad,2025-02,7.0,150.0
+Trees · broad,2025-03,7.0,300.0
+Trees · broad,2025-04,7.0,240.0
+Trees · broad,2025-05,7.0,280.0
+Trees · broad,2025-06,7.0,280.0
+Trees · broad,2025-07,7.0,250.0
+Trees · broad,2025-08,7.0,300.0
+Trees · broad,2025-09,31.0,100.0
+Trees · broad,2025-10,31.0,50.0
+Trees · broad,2025-11,31.0,80.0
+Trees · broad,2025-12,7.0,140.0
+Trees · broad,2026-01,31.0,70.0
+Trees · broad,2026-02,31.0,80.0
+Trees · broad,2026-03,31.0,40.0
+Trees · broad,2026-04,7.0,110.0
+Trees · broad,2026-05,7.0,100.0
+Trees · broad,2026-06,31.0,210.0
+Trees · broad,2026-07,31.0,220.0
+Trees · broad,2026-08,7.0,230.0
+Trees · broad,2026-09,31.0,120.0
+Trees · broad,2026-10,7.0,180.0
+Trees · broad + LLM,2025-01,7.0,120.0
+Trees · broad + LLM,2025-02,7.0,290.0
+Trees · broad + LLM,2025-03,7.0,130.0
+Trees · broad + LLM,2025-04,7.0,120.0
+Trees · broad + LLM,2025-05,7.0,300.0
+Trees · broad + LLM,2025-06,31.0,70.0
+Trees · broad + LLM,2025-07,31.0,70.0
+Trees · broad + LLM,2025-08,31.0,90.0
+Trees · broad + LLM,2025-09,7.0,260.0
+Trees · broad + LLM,2025-10,31.0,60.0
+Trees · broad + LLM,2025-11,31.0,50.0
+Trees · broad + LLM,2025-12,7.0,170.0
+Trees · broad + LLM,2026-01,31.0,70.0
+Trees · broad + LLM,2026-02,31.0,70.0
+Trees · broad + LLM,2026-03,7.0,90.0
+Trees · broad + LLM,2026-04,31.0,40.0
+Trees · broad + LLM,2026-05,7.0,190.0
+Trees · broad + LLM,2026-06,31.0,260.0
+Trees · broad + LLM,2026-07,7.0,270.0
+Trees · broad + LLM,2026-08,31.0,300.0
+Trees · broad + LLM,2026-09,7.0,280.0
+Trees · broad + LLM,2026-10,7.0,250.0
+Trees · broad + LLM (whole market),2025-01,31.0,80.0
+Trees · broad + LLM (whole market),2025-02,31.0,60.0
+Trees · broad + LLM (whole market),2025-03,7.0,150.0
+Trees · broad + LLM (whole market),2025-04,7.0,170.0
+Trees · broad + LLM (whole market),2025-05,7.0,180.0
+Trees · broad + LLM (whole market),2025-06,7.0,140.0
+Trees · broad + LLM (whole market),2025-07,7.0,140.0
+Trees · broad + LLM (whole market),2025-08,7.0,130.0
+Trees · broad + LLM (whole market),2025-09,31.0,90.0
+Trees · broad + LLM (whole market),2025-10,31.0,80.0
+Trees · broad + LLM (whole market),2025-11,31.0,70.0
+Trees · broad + LLM (whole market),2025-12,31.0,90.0
+Trees · broad + LLM (whole market),2026-01,31.0,80.0
+Trees · broad + LLM (whole market),2026-02,31.0,120.0
+Trees · broad + LLM (whole market),2026-03,31.0,110.0
+Trees · broad + LLM (whole market),2026-04,31.0,200.0
+Trees · broad + LLM (whole market),2026-05,31.0,290.0
+Trees · broad + LLM (whole market),2026-06,31.0,250.0
+Trees · broad + LLM (whole market),2026-07,31.0,240.0
+Trees · broad + LLM (whole market),2026-08,31.0,280.0
+Trees · broad + LLM (whole market),2026-09,31.0,300.0
+Trees · broad + LLM (whole market),2026-10,31.0,260.0
