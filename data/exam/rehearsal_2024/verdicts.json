@@ -1,0 +1,10 @@
+{
+  "the LLM helped?": "no clear difference",
+  "option B helped?": "no clear difference",
+  "best Sharpe after costs": "Trees \u00b7 broad + LLM",
+  "shuffled answers IC": 0.010503951676836935,
+  "shuffled answers IC t": 1.2856850639790927,
+  "shuffled answers Sharpe": -0.3062735299825998,
+  "days": 365,
+  "market-up days share": 0.4438356164383562
+}

@@ -25,7 +25,9 @@ PERIODS = {
     "screen": ("2023-01-01", "2023-06-30"),
     "confirm": ("2023-07-01", "2023-12-31"),
     "test": ("2025-01-01", "2026-10-21"),         # sealed with the step 8 plan; newer days are reported separately
+    "all": ("2021-01-01", "2026-10-21"),          # step 8 walks forward from 2021 into the test period
 }
+LOCKED_AFTER = "2024-12-31"                       # any period reaching past this day is locked
 HORIZONS = (1, 3, 7, 14)
 N_GROUPS = 5
 FEE = 0.0005           # 0.05% per unit of notional traded (Binance standard taker fee)
@@ -39,9 +41,9 @@ class Market:
     """Everything an alpha is graded against, cut to one period."""
 
     def __init__(self, period="train", unlock_test=False):
-        if period == "test" and not unlock_test:
-            raise PermissionError("the test period is locked until the final exam (pass unlock_test=True)")
         start, end = PERIODS[period]
+        if pd.Timestamp(end) > pd.Timestamp(LOCKED_AFTER) and not unlock_test:
+            raise PermissionError("the test period is locked until the final exam (pass unlock_test=True)")
         self.period, self.start = period, start
         close = pd.read_parquet(PANEL / "close.parquet")
         self.end = end or str(close.index[-1].date())

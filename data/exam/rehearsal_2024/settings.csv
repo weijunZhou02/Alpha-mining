@@ -1,0 +1,39 @@
+method,month,leaves,trees
+Equal weight · core,2024-01,,
+Equal weight · core,2024-02,,
+Equal weight · core,2024-03,,
+Equal weight · core,2024-04,,
+Equal weight · core,2024-05,,
+Equal weight · core,2024-06,,
+Equal weight · core,2024-07,,
+Equal weight · core,2024-08,,
+Equal weight · core,2024-09,,
+Equal weight · core,2024-10,,
+Equal weight · core,2024-11,,
+Equal weight · core,2024-12,,
+Trees · broad,2024-01,31.0,180.0
+Trees · broad,2024-02,31.0,80.0
+Trees · broad,2024-03,7.0,160.0
+Trees · broad,2024-04,31.0,90.0
+Trees · broad,2024-05,31.0,90.0
+Trees · broad,2024-06,31.0,50.0
+Trees · broad,2024-07,7.0,50.0
+Trees · broad,2024-08,31.0,40.0
+Trees · broad,2024-09,31.0,30.0
+Trees · broad,2024-10,7.0,40.0
+Trees · broad,2024-11,7.0,50.0
+Trees · broad,2024-12,7.0,40.0
+Trees · broad + LLM,2024-01,7.0,300.0
+Trees · broad + LLM,2024-02,31.0,90.0
+Trees · broad + LLM,2024-03,31.0,110.0
+Trees · broad + LLM,2024-04,31.0,80.0
+Trees · broad + LLM,2024-05,31.0,90.0
+Trees · broad + LLM,2024-06,31.0,70.0
+Trees · broad + LLM,2024-07,7.0,80.0
+Trees · broad + LLM,2024-08,31.0,30.0
+Trees · broad + LLM,2024-09,31.0,30.0
+Trees · broad + LLM,2024-10,7.0,60.0
+Trees · broad + LLM,2024-11,7.0,30.0
+Trees · broad + LLM,2024-12,7.0,30.0
+Trees · broad + LLM (whole market),2024-11,31.0,30.0
+Trees · broad + LLM (whole market),2024-12,31.0,60.0

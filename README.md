@@ -323,6 +323,32 @@ Agreed on 2026-10-23, **before anyone has looked at 2025–2026**. The git tag `
 - Safety check before opening: the exam code must reproduce the 2024 numbers in `data/eval/combine/results_2024.csv` exactly for the "before" contenders. That proves they were not changed.
 - If a bug is found after opening, both the original and the fixed result are reported. Nothing is re-run quietly.
 
+**Accuracy test (added 2026-10-24, before opening; no money involved)**
+
+The owner's question: when the model calls coins UP and DOWN for tomorrow, how often is it right?
+- **The calls (approach 1):** each day the trees score the top 80 coins. The 5 highest are called **UP**, the 5 lowest **DOWN**. That makes 10 calls a day. Coins tied at the edge share the places.
+- **Daily accuracy** = right calls ÷ 10. An UP call is right if the coin's next-day return is above 0; a DOWN call is right if it is below 0. A pick with no next-day price is left out of that day.
+- **Against luck:** a random pick of 5 UP and 5 DOWN from the same coins that day. It gets about 50% whatever the market does.
+- **Verdict:** "real skill" if the daily edge over random (accuracy − random, day by day) has t ≥ 3; "maybe" if t ≥ 2; otherwise "no clear skill".
+- **Headline model:** Trees · broad + LLM, picking from the top 80. Also reported: Trees · broad, Equal weight · core and Single alpha A101_055 (top 80), and Trees · broad + LLM picking from the whole market (every coin that trades with 60+ days of history) as extra information. Option B makes the same calls as Trees · broad + LLM, so it is not repeated.
+- **Also reported:** top 5 that rose vs any coin, and bottom 5 that fell vs any coin, each with its own t; the same split into market-UP and market-DOWN days (market day = the median top-80 coin's next-day return), and by year; the share of days at 60%, 70% and 80% or better; how many days had 0, 1, … 10 right calls; and picks really among the day's 5 best or 5 worst, vs chance.
+
+Written down before opening, for comparison: Trees · broad + LLM on 2022–2023 (walked forward, top 80):
+
+| 2022–2023 | Accuracy | Random | Edge t | Top 5 rose (any coin) | Bottom 5 fell (any coin) |
+| --- | --- | --- | --- | --- | --- |
+| All days (729) | 54.5% | 49.8% | +8.1 | 51.4% (48.7%) | 57.7% (50.9%) |
+| Market-DOWN days (382) | 46.1% | 49.8% | −5.6 | 17.7% (19.1%) | 74.5% (80.6%) |
+| Market-UP days (347) | 63.9% | 49.8% | +19.7 | 88.5% (81.4%) | 39.1% (18.2%) |
+
+- 70% or better on 27% of days; 40% or worse on 27% of days.
+- On market-DOWN days the calls were worse than random: the DOWN calls are mostly wild coins, and they bounce more often than calm coins on bad days.
+
+**Other details fixed before opening**
+- Option B's volatility targeting starts fresh on 2025-01-01 (about the first 80 days at 1x), exactly as it did when it was chosen on 2022–2023.
+- An honesty check runs too: ridge trained on answers shuffled within each day must score about 0 on 2025–2026.
+- How it runs: `src/exam.py --rehearsal` runs the same code on 2024 and must reproduce the frozen 2024 numbers of every "before" contender (step 6) and of Trees · broad + LLM (step 7 check). Only after that passes, `src/exam.py --open` opens 2025–2026, once. It refuses to run a second time. Results go to `data/exam/`.
+
 ## Data folders
 
 ```
